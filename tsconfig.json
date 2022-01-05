@@ -1,0 +1,51 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "src",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "types": [
+        "cordova-plugin-file-transfer",
+        "cordova-plugin-inappbrowser",
+        "cordova",
+        "dom-mediacapture-record",
+        "faker",
+        "jest",
+        "node",
+        "resize-observer-browser",
+        "webpack-env"
+    ],
+    "paths": {
+      "@addons/*": ["addons/*"],
+      "@classes/*": ["core/classes/*"],
+      "@components/*": ["core/components/*"],
+      "@directives/*": ["core/directives/*"],
+      "@features/*": ["core/features/*"],
+      "@guards/*": ["core/guards/*"],
+      "@pipes/*": ["core/pipes/*"],
+      "@services/*": ["core/services/*"],
+      "@singletons": ["core/singletons/index"],
+      "@singletons/*": ["core/singletons/*"],
+      "@/*": ["*"]
+    }
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
+  }
+}

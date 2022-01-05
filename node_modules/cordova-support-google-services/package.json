@@ -1,0 +1,65 @@
+{
+  "_args": [
+    [
+      "cordova-support-google-services@1.2.1",
+      "/Users/gpc/Downloads/EtonKids/GROWLA Project/Soft Launch/App/APP验收 2/growla-app"
+    ]
+  ],
+  "_development": true,
+  "_from": "cordova-support-google-services@1.2.1",
+  "_id": "cordova-support-google-services@1.2.1",
+  "_inBundle": false,
+  "_integrity": "sha1-SeihSDPFnqsBcbNM1whzOXr4eXs=",
+  "_location": "/cordova-support-google-services",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "cordova-support-google-services@1.2.1",
+    "name": "cordova-support-google-services",
+    "escapedName": "cordova-support-google-services",
+    "rawSpec": "1.2.1",
+    "saveSpec": null,
+    "fetchSpec": "1.2.1"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmmirror.com/cordova-support-google-services/download/cordova-support-google-services-1.2.1.tgz",
+  "_spec": "1.2.1",
+  "_where": "/Users/gpc/Downloads/EtonKids/GROWLA Project/Soft Launch/App/APP验收 2/growla-app",
+  "author": {
+    "name": "Maksim Chemerisuk",
+    "email": "chemerisuk@gmail.com",
+    "url": "https://github.com/chemerisuk"
+  },
+  "bugs": {
+    "url": "https://github.com/chemerisuk/cordova-support-google-services/issues"
+  },
+  "cordova": {
+    "id": "cordova-support-google-services",
+    "platforms": [
+      "android"
+    ]
+  },
+  "description": "Cordova plugin to add google service support",
+  "homepage": "https://github.com/chemerisuk/cordova-support-google-services#readme",
+  "keywords": [
+    "cordova",
+    "google services",
+    "firebase",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "license": "MIT",
+  "name": "cordova-support-google-services",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chemerisuk/cordova-support-google-services.git"
+  },
+  "scripts": {
+    "postversion": "git push && git push --tags",
+    "version": "replace -s 'version=\"(.+)(?=\">)' 'version=\"'$npm_package_version plugin.xml && git add plugin.xml"
+  },
+  "version": "1.2.1"
+}
