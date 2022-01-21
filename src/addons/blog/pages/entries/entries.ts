@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -158,7 +158,7 @@ export class AddonBlogEntriesPage implements OnInit {
                         break;
                 }
 
-                // Calculate the context. This code was inspired by calendar events, Moodle doesn't do this for blogs.
+                // Calculate the context. This code was inspired by calendar events, GROWLA doesn't do this for blogs.
                 if (entry.moduleid || entry.coursemoduleid) {
                     entry.contextLevel = ContextLevel.MODULE;
                     entry.contextInstanceId = entry.moduleid || entry.coursemoduleid;

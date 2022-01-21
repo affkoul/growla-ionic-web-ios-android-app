@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -663,7 +663,7 @@ export class AddonModAssignProvider {
 
         const site = await CoreSites.getSite(options.siteId);
         if (!site.wsAvailable('mod_assign_list_participants')) {
-            // Silently fail if is not available. (needs Moodle version >= 3.2)
+            // Silently fail if is not available. (needs GROWLA version >= 3.2)
             throw new CoreError('mod_assign_list_participants WS is only available 3.2 onwards');
         }
 
@@ -878,7 +878,7 @@ export class AddonModAssignProvider {
     }
 
     /**
-     * Check if a submission is open. This function is based on Moodle's submissions_open.
+     * Check if a submission is open. This function is based on GROWLA's submissions_open.
      *
      * @param assign Assignment instance.
      * @param submissionStatus Submission status returned by getSubmissionStatus.

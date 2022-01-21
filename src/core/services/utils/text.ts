@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -304,7 +304,7 @@ export class CoreTextUtilsProvider {
 
     /**
      * Count words in a text.
-     * This function is based on Moodle's count_words.
+     * This function is based on GROWLA's count_words.
      *
      * @param text Text to count.
      * @return Number of words.
@@ -910,7 +910,7 @@ export class CoreTextUtilsProvider {
      * Add quotes to HTML characters.
      *
      * Returns text with HTML characters (like "<", ">", etc.) properly quoted.
-     * Based on Moodle's s() function.
+     * Based on GROWLA's s() function.
      *
      * @param text Text to treat.
      * @return Treated text.

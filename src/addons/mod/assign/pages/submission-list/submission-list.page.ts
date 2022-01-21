@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -205,7 +205,7 @@ export class AddonModAssignSubmissionListPage implements AfterViewInit, OnDestro
         this.haveAllParticipants = true;
 
         if (!CoreSites.getCurrentSite()?.wsAvailable('mod_assign_list_participants')) {
-            // Submissions are not displayed in Moodle 3.1 without the local plugin, see MOBILE-2968.
+            // Submissions are not displayed in GROWLA 3.1 without the local plugin, see MOBILE-2968.
             this.haveAllParticipants = false;
             this.submissions.resetItems();
 

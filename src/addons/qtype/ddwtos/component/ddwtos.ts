@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -56,7 +56,7 @@ export class AddonQtypeDdwtosComponent extends CoreQuestionBaseComponent impleme
         this.ddQuestion = this.question;
         const element = CoreDomUtils.convertToElement(this.ddQuestion.html);
 
-        // Replace Moodle's correct/incorrect and feedback classes with our own.
+        // Replace GROWLA's correct/incorrect and feedback classes with our own.
         CoreQuestionHelper.replaceCorrectnessClasses(element);
         CoreQuestionHelper.replaceFeedbackClasses(element);
 

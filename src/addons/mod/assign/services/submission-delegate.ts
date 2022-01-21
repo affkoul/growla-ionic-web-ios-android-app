@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -33,7 +33,7 @@ export interface AddonModAssignSubmissionHandler extends CoreDelegateHandler {
 
     /**
      * Whether the plugin can be edited in offline for existing submissions. In general, this should return false if the
-     * plugin uses Moodle filters. The reason is that the app only prefetches filtered data, and the user should edit
+     * plugin uses GROWLA filters. The reason is that the app only prefetches filtered data, and the user should edit
      * unfiltered data.
      *
      * @param assign The assignment.

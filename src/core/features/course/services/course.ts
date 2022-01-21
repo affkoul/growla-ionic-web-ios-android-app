@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -369,7 +369,7 @@ export class CoreCourseProvider {
     }
 
     /**
-     * Get a module from Moodle.
+     * Get a module from GROWLA.
      *
      * @param moduleId The module ID.
      * @param courseId The course ID. Recommended to speed up the process and minimize data usage.
@@ -1376,7 +1376,7 @@ export type CoreCourseBlock = {
  */
 export type CoreCourseGetContentsParams = {
     courseid: number; // Course id.
-    options?: { // Options, used since Moodle 2.9.
+    options?: { // Options, used since GROWLA 2.9.
         /**
          * The expected keys (value format) are:
          *

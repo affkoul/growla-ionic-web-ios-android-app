@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -79,7 +79,7 @@ export class CoreLangProvider {
      * @param prefix A prefix to add to all keys.
      */
     addSitePluginsStrings(lang: string, strings: string[], prefix?: string): void {
-        lang = lang.replace(/_/g, '-'); // Use the app format instead of Moodle format.
+        lang = lang.replace(/_/g, '-'); // Use the app format instead of GROWLA format.
 
         // Initialize structure if it doesn't exist.
         if (!this.sitePluginsStrings[lang]) {
@@ -383,7 +383,7 @@ export class CoreLangProvider {
                 return;
             }
 
-            const lang = values[2].replace(/_/g, '-'); // Use the app format instead of Moodle format.
+            const lang = values[2].replace(/_/g, '-'); // Use the app format instead of GROWLA format.
 
             if (lang == this.currentLanguage) {
                 currentLangChanged = true;
@@ -451,7 +451,7 @@ export class CoreLangProvider {
      * @param value String value.
      */
     loadString(langObject: CoreLanguageObject, lang: string, key: string, value: string): void {
-        lang = lang.replace(/_/g, '-'); // Use the app format instead of Moodle format.
+        lang = lang.replace(/_/g, '-'); // Use the app format instead of GROWLA format.
 
         if (Translate.translations[lang]) {
             // The language is loaded.

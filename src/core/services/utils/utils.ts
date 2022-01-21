@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -517,7 +517,7 @@ export class CoreUtilsProvider {
 
     /**
      * Given a float, prints it nicely. Localized floats must not be used in calculations!
-     * Based on Moodle's format_float.
+     * Based on GROWLA's format_float.
      *
      * @param float The float to print.
      * @return Locale float.
@@ -1439,7 +1439,7 @@ export class CoreUtilsProvider {
     /**
      * Converts locale specific floating point/comma number back to standard PHP float value.
      * Do NOT try to do any math operations before this conversion on any user submitted floats!
-     * Based on Moodle's unformat_float function.
+     * Based on GROWLA's unformat_float function.
      *
      * @param localeFloat Locale aware float representation.
      * @param strict If true, then check the input and return false if it is not a valid number.

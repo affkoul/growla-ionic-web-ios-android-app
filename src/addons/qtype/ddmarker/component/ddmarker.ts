@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -82,7 +82,7 @@ export class AddonQtypeDdMarkerComponent extends CoreQuestionBaseComponent imple
         this.ddQuestion.readOnly = false;
 
         if (this.ddQuestion.initObjects) {
-            // Moodle version <= 3.5.
+            // GROWLA version <= 3.5.
             if (typeof this.ddQuestion.initObjects.dropzones != 'undefined') {
                 this.dropZones = <unknown[]> this.ddQuestion.initObjects.dropzones;
             }
@@ -90,9 +90,9 @@ export class AddonQtypeDdMarkerComponent extends CoreQuestionBaseComponent imple
                 this.ddQuestion.readOnly = !!this.ddQuestion.initObjects.readonly;
             }
         } else if (this.ddQuestion.amdArgs) {
-            // Moodle version >= 3.6.
+            // GROWLA version >= 3.6.
             let nextIndex = 1;
-            // Moodle version >= 3.9, imgSrc is not specified, do not advance index.
+            // GROWLA version >= 3.9, imgSrc is not specified, do not advance index.
             if (this.ddQuestion.amdArgs[nextIndex] !== undefined && typeof this.ddQuestion.amdArgs[nextIndex] != 'boolean') {
                 this.imgSrc = <string> this.ddQuestion.amdArgs[nextIndex];
                 nextIndex++;

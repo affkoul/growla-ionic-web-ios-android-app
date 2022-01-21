@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -322,7 +322,7 @@ export class AddonModAssignSyncProvider extends CoreCourseActivitySyncBaseProvid
         const submission = AddonModAssign.getSubmissionObjectFromAttempt(assign, status.lastattempt);
 
         if (submission && submission.timemodified != offlineData.onlinetimemodified) {
-            // The submission was modified in Moodle, discard the submission.
+            // The submission was modified in GROWLA, discard the submission.
             this.addOfflineDataDeletedWarning(
                 warnings,
                 assign.name,
@@ -446,7 +446,7 @@ export class AddonModAssignSyncProvider extends CoreCourseActivitySyncBaseProvid
         const timemodified = (status.feedback && (status.feedback.gradeddate || status.feedback.grade?.timemodified)) || 0;
 
         if (timemodified > offlineData.timemodified) {
-            // The submission grade was modified in Moodle, discard it.
+            // The submission grade was modified in GROWLA, discard it.
             this.addOfflineDataDeletedWarning(
                 warnings,
                 assign.name,

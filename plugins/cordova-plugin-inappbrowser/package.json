@@ -1,0 +1,90 @@
+{
+  "_from": "git+https://github.com/moodlemobile/cordova-plugin-inappbrowser.git#moodle-ionic5",
+  "_id": "cordova-plugin-inappbrowser@5.0.0",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/cordova-plugin-inappbrowser",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "git+https://github.com/moodlemobile/cordova-plugin-inappbrowser.git#moodle-ionic5",
+    "rawSpec": "git+https://github.com/moodlemobile/cordova-plugin-inappbrowser.git#moodle-ionic5",
+    "saveSpec": "git+https://github.com/moodlemobile/cordova-plugin-inappbrowser.git#moodle-ionic5",
+    "fetchSpec": "https://github.com/moodlemobile/cordova-plugin-inappbrowser.git",
+    "gitCommittish": "moodle-ionic5"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/moodlemobile/cordova-plugin-inappbrowser.git#a1ac936fd79596fd5841bd424cc782ee84e4a290",
+  "_spec": "git+https://github.com/moodlemobile/cordova-plugin-inappbrowser.git#moodle-ionic5",
+  "_where": "/Users/gpc/Downloads/EtonKids/GROWLA Project/Soft Launch/App/APP验收 2/growla-app",
+  "author": {
+    "name": "Apache Software Foundation"
+  },
+  "bugs": {
+    "url": "https://github.com/apache/cordova-plugin-inappbrowser/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-inappbrowser",
+    "platforms": [
+      "android",
+      "browser",
+      "ios",
+      "osx",
+      "windows"
+    ]
+  },
+  "deprecated": false,
+  "description": "Cordova InAppBrowser Plugin",
+  "devDependencies": {
+    "@cordova/eslint-config": "^3.0.0"
+  },
+  "engines": {
+    "cordovaDependencies": {
+      "0.2.3": {
+        "cordova": ">=3.1.0"
+      },
+      "4.0.0": {
+        "cordova": ">=3.1.0",
+        "cordova-ios": ">=4.0.0"
+      },
+      "5.0.0": {
+        "cordova": ">=9.0.0",
+        "cordova-android": ">=9.0.0",
+        "cordova-ios": ">=6.0.0"
+      },
+      "6.0.0": {
+        "cordova": ">100"
+      }
+    }
+  },
+  "homepage": "https://github.com/apache/cordova-plugin-inappbrowser#readme",
+  "keywords": [
+    "cordova",
+    "in",
+    "app",
+    "browser",
+    "inappbrowser",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-browser",
+    "cordova-ios",
+    "cordova-osx",
+    "cordova-windows"
+  ],
+  "license": "Apache-2.0",
+  "name": "cordova-plugin-inappbrowser",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apache/cordova-plugin-inappbrowser.git"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint"
+  },
+  "types": "./types/index.d.ts",
+  "version": "5.0.0"
+}

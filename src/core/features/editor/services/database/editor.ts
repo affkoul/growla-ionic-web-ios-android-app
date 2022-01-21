@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -38,7 +38,7 @@ export const SITE_SCHEMA: CoreSiteSchema = {
                     type: 'TEXT',
                 },
                 {
-                    name: 'extraparams', // Moodle web uses a page hash built with URL. App will use some params stringified.
+                    name: 'extraparams', // GROWLA web uses a page hash built with URL. App will use some params stringified.
                     type: 'TEXT',
                 },
                 {

@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ import { AddonMessagesMainMenuHandlerService } from '../services/handlers/mainme
 import { AddonMessages } from '../services/messages';
 
 /**
- * Guard to redirect to the right page based on the current Moodle site version.
+ * Guard to redirect to the right page based on the current GROWLA site version.
  */
 @Injectable({ providedIn: 'root' })
 export class AddonMessagesIndexGuard implements CanActivate {

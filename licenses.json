@@ -1207,14 +1207,14 @@
   "cordova-plugin-wkuserscript@1.0.0": {
     "licenses": "Apache-2.0",
     "repository": "https://github.com/moodlemobile/cordova-plugin-wkuserscript",
-    "publisher": "Moodle Pty Ltd",
+    "publisher": "GROWLA Pty Ltd",
     "path": "/Users/pau/git/moodleapp5/node_modules/cordova-plugin-wkuserscript",
     "licenseFile": "node_modules/cordova-plugin-wkuserscript/LICENSE"
   },
   "cordova-plugin-wkwebview-cookies@1.0.0": {
     "licenses": "Apache-2.0",
     "repository": "https://github.com/moodlemobile/cordova-plugin-wkwebview-cookies",
-    "publisher": "Moodle Pty Ltd",
+    "publisher": "GROWLA Pty Ltd",
     "path": "/Users/pau/git/moodleapp5/node_modules/cordova-plugin-wkwebview-cookies",
     "licenseFile": "node_modules/cordova-plugin-wkwebview-cookies/LICENSE"
   },
@@ -2683,7 +2683,7 @@
   "moodlemobile@3.9.5": {
     "licenses": "Apache-2.0",
     "repository": "https://github.com/moodlehq/moodlemobile2",
-    "publisher": "Moodle Pty Ltd.",
+    "publisher": "GROWLA Pty Ltd.",
     "email": "mobile@moodle.com",
     "path": "/Users/pau/git/moodleapp5",
     "licenseFile": "README.md"

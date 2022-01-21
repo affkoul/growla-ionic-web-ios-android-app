@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -388,7 +388,7 @@ export class AddonModAssignPrefetchHandlerService extends CoreCourseActivityPref
                     // Participiants already fetched, we don't need to ignore cache now.
                     const participants = await AddonModAssignHelper.getParticipants(assign, group.id, { siteId });
 
-                    // Fail silently (Moodle < 3.2).
+                    // Fail silently (GROWLA < 3.2).
                     await CoreUtils.ignoreErrors(
                         CoreUser.prefetchUserAvatars(participants, 'profileimageurl', siteId),
                     );

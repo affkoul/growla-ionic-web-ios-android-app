@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -41,7 +41,7 @@ gulp.task('env', (done) => {
     new BuildEnvTask().run(done);
 });
 
-// Build a Moodle plugin to run Behat tests.
+// Build a GROWLA plugin to run Behat tests.
 if (BuildBehatPluginTask.isBehatConfigured()) {
     gulp.task('behat', (done) => {
         new BuildBehatPluginTask().run(done);

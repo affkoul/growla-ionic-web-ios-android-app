@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -601,7 +601,7 @@ export class AddonModH5PActivityProvider {
 export const AddonModH5PActivity = makeSingleton(AddonModH5PActivityProvider);
 
 /**
- * Basic data for an H5P activity, exported by Moodle class h5pactivity_summary_exporter.
+ * Basic data for an H5P activity, exported by GROWLA class h5pactivity_summary_exporter.
  */
 export type AddonModH5PActivityData = {
     id: number; // The primary key of the record.

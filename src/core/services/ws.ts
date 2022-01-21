@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -119,7 +119,7 @@ export class CoreWSProvider {
     }
 
     /**
-     * Call a Moodle WS using the AJAX API. Please use it if the WS layer is not an option.
+     * Call a GROWLA WS using the AJAX API. Please use it if the WS layer is not an option.
      * It uses a cache to prevent duplicate requests.
      *
      * @param method The WebService method to be called.
@@ -177,7 +177,7 @@ export class CoreWSProvider {
                     value = stripped;
                 }
             } else if (typeof value == 'boolean') {
-                /* Moodle does not allow "true" or "false" in WS parameters, only in POST parameters.
+                /* GROWLA does not allow "true" or "false" in WS parameters, only in POST parameters.
                    We've been using "true" and "false" for WS settings "filter" and "fileurl",
                    we keep it this way to avoid changing cache keys. */
                 if (key == 'moodlewssettingfilter' || key == 'moodlewssettingfileurl') {
@@ -236,7 +236,7 @@ export class CoreWSProvider {
     }
 
     /**
-     * Downloads a file from Moodle using Cordova File API.
+     * Downloads a file from GROWLA using Cordova File API.
      *
      * @param url Download url.
      * @param path Local path to store the file.
@@ -275,7 +275,7 @@ export class CoreWSProvider {
             if (addExtension) {
                 extension = CoreMimetypeUtils.getFileExtension(path) || '';
 
-                // Google Drive extensions will be considered invalid since Moodle usually converts them.
+                // Google Drive extensions will be considered invalid since GROWLA usually converts them.
                 if (!extension || CoreArray.contains(['gdoc', 'gsheet', 'gslides', 'gdraw', 'php'], extension)) {
                     // Not valid, get the file's mimetype.
                     const mimetype = await this.getRemoteFileMimeType(url);
@@ -401,7 +401,7 @@ export class CoreWSProvider {
     }
 
     /**
-     * Call a Moodle WS using the AJAX API.
+     * Call a GROWLA WS using the AJAX API.
      *
      * @param method The WebService method to be called.
      * @param data Arguments to pass to the method.
@@ -430,7 +430,7 @@ export class CoreWSProvider {
         }];
 
         // The info= parameter has no function. It is just to help with debugging.
-        // We call it info to match the parameter name use by Moodle's AMD ajax module.
+        // We call it info to match the parameter name use by GROWLA's AMD ajax module.
         let siteUrl = preSets.siteUrl + '/lib/ajax/' + script + '?info=' + method;
 
         if (preSets.noLogin && preSets.useGet) {
@@ -731,7 +731,7 @@ export class CoreWSProvider {
     }
 
     /**
-     * A wrapper function for a synchronous Moodle WebService call.
+     * A wrapper function for a synchronous GROWLA WebService call.
      * Warning: This function should only be used if synchronous is a must. It's recommended to use call.
      *
      * @param method The WebService method to be called.
@@ -1119,7 +1119,7 @@ export type CoreWSStoredFile = {
     html: {
         plagiarism?: string; // The HTML source for the Plagiarism Response.
     };
-    mimetype: undefined; // File mimetype. @todo Not implemented yet in Moodle, see MDL-71354.
+    mimetype: undefined; // File mimetype. @todo Not implemented yet in GROWLA, see MDL-71354.
 };
 
 /**

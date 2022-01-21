@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -67,7 +67,7 @@ export class CoreSite {
 
     static readonly MINIMUM_MOODLE_VERSION = '3.1';
 
-    // Versions of Moodle releases.
+    // Versions of GROWLA releases.
     protected readonly MOODLE_RELEASES = {
         '3.1': 2016052300,
         '3.2': 2016120500,
@@ -408,7 +408,7 @@ export class CoreSite {
     }
 
     /**
-     * Fetch site info from the Moodle site.
+     * Fetch site info from the GROWLA site.
      *
      * @return A promise to be resolved when the site info is retrieved.
      */
@@ -427,7 +427,7 @@ export class CoreSite {
     }
 
     /**
-     * Read some data from the Moodle site using WS. Requests are cached by default.
+     * Read some data from the GROWLA site using WS. Requests are cached by default.
      *
      * @param method WS method to use.
      * @param data Data to send to the WS.
@@ -451,7 +451,7 @@ export class CoreSite {
     }
 
     /**
-     * Sends some data to the Moodle site using WS. Requests are NOT cached by default.
+     * Sends some data to the GROWLA site using WS. Requests are NOT cached by default.
      *
      * @param method WS method to use.
      * @param data Data to send to the WS.
@@ -1193,7 +1193,7 @@ export class CoreSite {
     }
 
     /**
-     * Generic function for adding the wstoken to Moodle urls and for pointing to the correct script.
+     * Generic function for adding the wstoken to GROWLA urls and for pointing to the correct script.
      * Uses CoreUtilsProvider.fixPluginfileURL, passing site's token.
      *
      * @param url The url to be fixed.
@@ -1272,10 +1272,10 @@ export class CoreSite {
     }
 
     /**
-     * Returns the URL to the documentation of the app, based on Moodle version and current language.
+     * Returns the URL to the documentation of the app, based on GROWLA version and current language.
      *
      * @param page Docs page to go to.
-     * @return Promise resolved with the Moodle docs URL.
+     * @return Promise resolved with the GROWLA docs URL.
      */
     getDocsUrl(page?: string): Promise<string> {
         const release = this.infos?.release ? this.infos.release : undefined;
@@ -1296,7 +1296,7 @@ export class CoreSite {
     }
 
     /**
-     * Check if the local_mobile plugin is installed in the Moodle site.
+     * Check if the local_mobile plugin is installed in the GROWLA site.
      *
      * @param retrying True if we're retrying the check.
      * @return Promise resolved when the check is done.
@@ -1365,7 +1365,7 @@ export class CoreSite {
     }
 
     /**
-     * Check if local_mobile has been installed in Moodle.
+     * Check if local_mobile has been installed in GROWLA.
      *
      * @return Whether the App is able to use local_mobile plugin for this site.
      */
@@ -1386,7 +1386,7 @@ export class CoreSite {
     }
 
     /**
-     * Check if local_mobile has been installed in Moodle but the app is not using it.
+     * Check if local_mobile has been installed in GROWLA but the app is not using it.
      *
      * @return Promise resolved it local_mobile was added, rejected otherwise.
      */
@@ -1468,7 +1468,7 @@ export class CoreSite {
     }
 
     /**
-     * Open a URL in browser using auto-login in the Moodle site if available.
+     * Open a URL in browser using auto-login in the GROWLA site if available.
      *
      * @param url The URL to open.
      * @param alertMessage If defined, an alert will be shown before opening the browser.
@@ -1479,7 +1479,7 @@ export class CoreSite {
     }
 
     /**
-     * Open a URL in browser using auto-login in the Moodle site if available and the URL belongs to the site.
+     * Open a URL in browser using auto-login in the GROWLA site if available and the URL belongs to the site.
      *
      * @param url The URL to open.
      * @param alertMessage If defined, an alert will be shown before opening the browser.
@@ -1490,7 +1490,7 @@ export class CoreSite {
     }
 
     /**
-     * Open a URL in inappbrowser using auto-login in the Moodle site if available.
+     * Open a URL in inappbrowser using auto-login in the GROWLA site if available.
      *
      * @param url The URL to open.
      * @param options Override default options passed to InAppBrowser.
@@ -1504,7 +1504,7 @@ export class CoreSite {
     }
 
     /**
-     * Open a URL in inappbrowser using auto-login in the Moodle site if available and the URL belongs to the site.
+     * Open a URL in inappbrowser using auto-login in the GROWLA site if available and the URL belongs to the site.
      *
      * @param url The URL to open.
      * @param options Override default options passed to inappbrowser.
@@ -1522,7 +1522,7 @@ export class CoreSite {
     }
 
     /**
-     * Open a URL in browser or InAppBrowser using auto-login in the Moodle site if available.
+     * Open a URL in browser or InAppBrowser using auto-login in the GROWLA site if available.
      *
      * @param inApp True to open it in InAppBrowser, false to open in browser.
      * @param url The URL to open.
@@ -1560,7 +1560,7 @@ export class CoreSite {
     }
 
     /**
-     * Open a URL in browser or InAppBrowser using auto-login in the Moodle site if available and the URL belongs to the site.
+     * Open a URL in browser or InAppBrowser using auto-login in the GROWLA site if available and the URL belongs to the site.
      *
      * @param inApp True to open it in InAppBrowser, false to open in browser.
      * @param url The URL to open.
@@ -1799,7 +1799,7 @@ export class CoreSite {
 
     /**
      * Get a version number from a release version.
-     * If release version is valid but not found in the list of Moodle releases, it will use the last released major version.
+     * If release version is valid but not found in the list of GROWLA releases, it will use the last released major version.
      *
      * @param version Release version to convert to version number.
      * @return Version number, 0 if invalid.
@@ -2130,8 +2130,8 @@ export type CoreSiteInfoResponse = {
     }[];
     downloadfiles?: number; // 1 if users are allowed to download files, 0 if not.
     uploadfiles?: number; // 1 if users are allowed to upload files, 0 if not.
-    release?: string; // Moodle release number.
-    version?: string; // Moodle version number.
+    release?: string; // GROWLA release number.
+    version?: string; // GROWLA version number.
     mobilecssurl?: string; // Mobile custom CSS theme.
     advancedfeatures?: { // Advanced features availability.
         name: string; // Feature name.

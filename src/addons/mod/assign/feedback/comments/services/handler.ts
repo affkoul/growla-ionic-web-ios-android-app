@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -193,7 +193,7 @@ export class AddonModAssignFeedbackCommentsHandlerService implements AddonModAss
      */
     async isEnabled(): Promise<boolean> {
         // In here we should check if comments is not disabled in site.
-        // But due to this is not a common comments place and it can be disabled separately into Moodle (disabling the plugin).
+        // But due to this is not a common comments place and it can be disabled separately into GROWLA (disabling the plugin).
         // We are leaving it always enabled. It's also a teacher's feature.
         return true;
     }

@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -35,7 +35,7 @@ export class AddonModUrlProvider {
     static readonly COMPONENT = 'mmaModUrl';
 
     /**
-     * Get the final display type for a certain URL. Based on Moodle's url_get_final_display_type.
+     * Get the final display type for a certain URL. Based on GROWLA's url_get_final_display_type.
      *
      * @param url URL data.
      * @return Final display type.
@@ -147,7 +147,7 @@ export class AddonModUrlProvider {
     }
 
     /**
-     * Guess the icon for a certain URL. Based on Moodle's url_guess_icon.
+     * Guess the icon for a certain URL. Based on GROWLA's url_guess_icon.
      *
      * @param url URL to check.
      * @return Icon, empty if it should use the default icon.

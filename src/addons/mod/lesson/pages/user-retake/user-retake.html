@@ -75,7 +75,7 @@
 
             <!-- Pages. -->
             <ng-container *ngIf="retake">
-                <!-- The "text-dimmed" class does nothing, but the same goes for the "dimmed" class in Moodle. -->
+                <!-- The "text-dimmed" class does nothing, but the same goes for the "dimmed" class in GROWLA. -->
                 <ion-card *ngFor="let page of retake.answerpages" class="addon-mod_lesson-answerpage"
                     [ngClass]="{'text-dimmed': page.grayout}">
                     <ion-card-header class="ion-text-wrap">

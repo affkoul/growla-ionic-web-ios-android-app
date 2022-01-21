@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -96,7 +96,7 @@ export class AddonMessagesProvider {
      * @param userId User ID of the person to add.
      * @param siteId Site ID. If not defined, use current site.
      * @return Resolved when done.
-     * @deprecatedonmoodle since Moodle 3.6
+     * @deprecatedonmoodle since GROWLA 3.6
      */
     protected async addContact(userId: number, siteId?: string): Promise<void> {
         const site = await CoreSites.getSite(siteId);
@@ -122,7 +122,7 @@ export class AddonMessagesProvider {
 
         try {
             if (site.wsAvailable('core_message_block_user')) {
-                // Since Moodle 3.6
+                // Since GROWLA 3.6
                 const params: AddonMessagesBlockUserWSParams = {
                     userid: site.getUserId(),
                     blockeduserid: userId,
@@ -581,7 +581,7 @@ export class AddonMessagesProvider {
      *
      * @param siteId Site ID. If not defined, use current site.
      * @return Promise resolved with the WS data.
-     * @deprecatedonmoodle since Moodle 3.6
+     * @deprecatedonmoodle since GROWLA 3.6
      */
     async getAllContacts(siteId?: string): Promise<AddonMessagesGetContactsWSResponse> {
         siteId = siteId || CoreSites.getCurrentSiteId();
@@ -633,7 +633,7 @@ export class AddonMessagesProvider {
      *
      * @param siteId Site ID. If not defined, use current site.
      * @return Promise resolved with the WS data.
-     * @deprecatedonmoodle since Moodle 3.6
+     * @deprecatedonmoodle since GROWLA 3.6
      */
     async getContacts(siteId?: string): Promise<AddonMessagesGetContactsWSResponse> {
         const site = await CoreSites.getSite(siteId);
@@ -1032,7 +1032,7 @@ export class AddonMessagesProvider {
     }
 
     /**
-     * Get the discussions of a certain user. This function is used in Moodle sites higher than 3.6.
+     * Get the discussions of a certain user. This function is used in GROWLA sites higher than 3.6.
      * If the site is older than 3.6, please use getDiscussions.
      *
      * @param type Filter by type.
@@ -1225,7 +1225,7 @@ export class AddonMessagesProvider {
     }
 
     /**
-     * Get the discussions of the current user. This function is used in Moodle sites older than 3.6.
+     * Get the discussions of the current user. This function is used in GROWLA sites older than 3.6.
      * If the site is 3.6 or higher, please use getConversations.
      *
      * @param siteId Site ID. If not defined, current site.
@@ -2187,7 +2187,7 @@ export class AddonMessagesProvider {
      *
      * @param userIdFrom User Id for the sender.
      * @return Promise resolved with boolean marking success or not.
-     * @deprecatedonmoodle since Moodle 3.6
+     * @deprecatedonmoodle since GROWLA 3.6
      */
     async markAllMessagesRead(userIdFrom?: number): Promise<boolean> {
         const params: AddonMessagesMarkAllMessagesAsReadWSParams = {
@@ -2867,7 +2867,7 @@ export class AddonMessagesProvider {
 
         try {
             if (site.wsAvailable('core_message_unblock_user')) {
-                // Since Moodle 3.6
+                // Since GROWLA 3.6
                 const params: AddonMessagesUnblockUserWSParams = {
                     userid: site.getUserId(),
                     unblockeduserid: userId,
@@ -3630,7 +3630,7 @@ type AddonMessagesMarkAllConversationMessagesAsReadWSParams = {
 };
 
 /**
- * Params of core_message_mark_all_messages_as_read WS. Deprecated on Moodle 3.6
+ * Params of core_message_mark_all_messages_as_read WS. Deprecated on GROWLA 3.6
  */
 type AddonMessagesMarkAllMessagesAsReadWSParams = {
     useridto: number; // The user id who received the message, 0 for any user.

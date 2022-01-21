@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -28,10 +28,10 @@ import { CoreError } from '@classes/errors/error';
 @Injectable({ providedIn: 'root' })
 export class CoreGradesProvider {
 
-    static readonly TYPE_NONE = 0; // Moodle's GRADE_TYPE_NONE.
-    static readonly TYPE_VALUE = 1; // Moodle's GRADE_TYPE_VALUE.
-    static readonly TYPE_SCALE = 2; // Moodle's GRADE_TYPE_SCALE.
-    static readonly TYPE_TEXT = 3; // Moodle's GRADE_TYPE_TEXT.
+    static readonly TYPE_NONE = 0; // GROWLA's GRADE_TYPE_NONE.
+    static readonly TYPE_VALUE = 1; // GROWLA's GRADE_TYPE_VALUE.
+    static readonly TYPE_SCALE = 2; // GROWLA's GRADE_TYPE_SCALE.
+    static readonly TYPE_TEXT = 3; // GROWLA's GRADE_TYPE_TEXT.
 
     protected readonly ROOT_CACHE_KEY = 'mmGrades:';
 
@@ -87,7 +87,7 @@ export class CoreGradesProvider {
 
     /**
      * Get the grade items for a certain module. Keep in mind that may have more than one item to include outcomes and scales.
-     * Fallback function only used if 'gradereport_user_get_grade_items' WS is not available Moodle < 3.2.
+     * Fallback function only used if 'gradereport_user_get_grade_items' WS is not available GROWLA < 3.2.
      *
      * @param courseId ID of the course to get the grades from.
      * @param userId ID of the user to get the grades from. If not defined use site's current user.
@@ -307,7 +307,7 @@ export class CoreGradesProvider {
      *
      * @param siteId Site ID. If not defined, current site.
      * @return Resolve with true if plugin is enabled, false otherwise.
-     * @since Moodle 3.2
+     * @since GROWLA 3.2
      */
     async isCourseGradesEnabled(siteId?: string): Promise<boolean> {
         const site = await CoreSites.getSite(siteId);
@@ -344,7 +344,7 @@ export class CoreGradesProvider {
      *
      * @param siteId Site ID. If not defined, current site.
      * @return True if ws is available, false otherwise.
-     * @since Moodle 3.2
+     * @since GROWLA 3.2
      */
     async isGradeItemsAvailable(siteId?: string): Promise<boolean> {
         const site = await CoreSites.getSite(siteId);
@@ -353,7 +353,7 @@ export class CoreGradesProvider {
     }
 
     /**
-     * Log Course grades view in Moodle.
+     * Log Course grades view in GROWLA.
      *
      * @param courseId Course ID.
      * @param userId User ID.
@@ -388,7 +388,7 @@ export class CoreGradesProvider {
     }
 
     /**
-     * Log Courses grades view in Moodle.
+     * Log Courses grades view in GROWLA.
      *
      * @param courseId Course ID. If not defined, site Home ID.
      * @return Promise resolved when done.

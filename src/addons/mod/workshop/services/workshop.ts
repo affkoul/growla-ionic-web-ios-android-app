@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -275,7 +275,7 @@ export class AddonModWorkshopProvider {
             throw new CoreError('Activity not found');
         }
 
-        // Set submission types for Moodle 3.5 and older.
+        // Set submission types for GROWLA 3.5 and older.
         if (typeof workshop.submissiontypetext == 'undefined') {
             if (typeof workshop.nattachments != 'undefined' && workshop.nattachments > 0) {
                 workshop.submissiontypetext = AddonModWorkshopSubmissionType.SUBMISSION_TYPE_AVAILABLE;

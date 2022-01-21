@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -33,7 +33,7 @@ export class AddonMessageOutputAirnotifierProvider {
 
     constructor() {
         CoreEvents.on(CoreEvents.DEVICE_REGISTERED_IN_MOODLE, async (data: CoreEventSiteData) => {
-            // Get user devices to make Moodle send the devices data to Airnotifier.
+            // Get user devices to make GROWLA send the devices data to Airnotifier.
             this.getUserDevices(true, data.siteId);
         });
     }

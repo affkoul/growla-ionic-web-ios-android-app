@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -81,7 +81,7 @@ export class CoreLoginSiteOnboardingComponent {
 
         this.saveOnboardingDone();
 
-        CoreUtils.openInBrowser('https://moodle.com/getstarted/');
+        CoreUtils.openInBrowser('https://growlaglobal.com/faqs-growla.php#cn');
 
         ModalController.dismiss();
     }

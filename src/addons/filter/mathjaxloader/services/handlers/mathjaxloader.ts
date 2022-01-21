@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -123,7 +123,7 @@ export class AddonFilterMathJaxLoaderHandlerService extends CoreFilterDefaultHan
 
         const site = await CoreSites.getSite(siteId);
 
-        // Don't apply this filter if Moodle is 3.7 or higher and the WS already filtered the content.
+        // Don't apply this filter if GROWLA is 3.7 or higher and the WS already filtered the content.
         if (!options.wsNotFiltered && site.isVersionGreaterEqualThan('3.7')) {
             return text;
         }
@@ -197,7 +197,7 @@ export class AddonFilterMathJaxLoaderHandlerService extends CoreFilterDefaultHan
     }
 
     /**
-     * Load the JS to make MathJax work in the app. The JS loaded is extracted from Moodle filter's loader JS file.
+     * Load the JS to make MathJax work in the app. The JS loaded is extracted from GROWLA filter's loader JS file.
      */
     protected loadJS(): void {
         // eslint-disable-next-line @typescript-eslint/no-this-alias

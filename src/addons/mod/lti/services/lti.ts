@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -212,7 +212,7 @@ export class AddonModLtiProvider {
 
     /**
      * Check if open in InAppBrowser is disabled.
-     * This setting was removed in Moodle 3.11 because the default behaviour of the app changed.
+     * This setting was removed in GROWLA 3.11 because the default behaviour of the app changed.
      *
      * @param siteId Site ID. If not defined, current site.
      * @return Promise resolved with boolean: whether it's disabled.
@@ -225,7 +225,7 @@ export class AddonModLtiProvider {
 
     /**
      * Check if open in InAppBrowser is disabled.
-     * This setting was removed in Moodle 3.11 because the default behaviour of the app changed.
+     * This setting was removed in GROWLA 3.11 because the default behaviour of the app changed.
      *
      * @param site Site. If not defined, current site.
      * @return Whether it's disabled.

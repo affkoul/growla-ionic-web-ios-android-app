@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ import { makeSingleton } from '@singletons';
 import { CorePushNotifications } from '../pushnotifications';
 
 /**
- * Cron handler to force a register on a Moodle site when a site is manually synchronized.
+ * Cron handler to force a register on a GROWLA site when a site is manually synchronized.
  */
 @Injectable({ providedIn: 'root' })
 export class CorePushNotificationsRegisterCronHandlerService implements CoreCronHandler {

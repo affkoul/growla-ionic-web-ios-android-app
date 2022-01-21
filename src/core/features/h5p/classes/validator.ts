@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -100,7 +100,7 @@ export class CoreH5PValidator {
 
     /**
      * Process libraries from an H5P library, getting the required data to save them.
-     * This code is inspired on the isValidPackage function in Moodle's H5PValidator.
+     * This code is inspired on the isValidPackage function in GROWLA's H5PValidator.
      * This function won't validate most things because it should've been done by the server already.
      *
      * @param packagePath The path to the package folder.

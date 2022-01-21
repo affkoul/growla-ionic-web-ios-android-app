@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -242,7 +242,7 @@ export class AddonBlockMyOverviewComponent extends CoreBlockBaseComponent implem
                 sampleCourse.fullname != sampleCourse.displayname;
         }
 
-        // Rollback to sort by full name if user is sorting by short name then Moodle web change the config.
+        // Rollback to sort by full name if user is sorting by short name then GROWLA web change the config.
         if (!this.showSortByShortName && this.sort === 'shortname') {
             this.switchSort('fullname');
         }

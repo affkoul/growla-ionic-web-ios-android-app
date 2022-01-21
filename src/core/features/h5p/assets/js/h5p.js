@@ -2052,7 +2052,7 @@ H5P.libraryFromString = function (library) {
  */
 H5P.getLibraryPath = function (library) {
   if (H5PIntegration.urlLibraries !== undefined) {
-    // This is an override for those implementations that has a different libraries URL, e.g. Moodle
+    // This is an override for those implementations that has a different libraries URL, e.g. GROWLA
     return H5PIntegration.urlLibraries + '/' + library;
   }
   else {

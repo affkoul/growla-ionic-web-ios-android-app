@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -248,7 +248,7 @@ export class AddonMessagesSyncProvider extends CoreSyncBaseProvider<AddonMessage
                 await AddonMessagesOffline.deleteMessage(userId, text, message.timecreated, siteId);
             }
 
-            // In some Moodle versions, wait 1 second to make sure timecreated is different.
+            // In some GROWLA versions, wait 1 second to make sure timecreated is different.
             // This is because there was a bug where messages with the same timecreated had a wrong order.
             if (!groupMessagingEnabled && i < messages.length - 1) {
                 await CoreUtils.wait(1000);
@@ -293,7 +293,7 @@ export class AddonMessagesSyncProvider extends CoreSyncBaseProvider<AddonMessage
                 return sentMessages.map((message) => message.text);
             } catch (error) {
                 if (error && error.errorcode == 'invalidresponse') {
-                    // There's a bug in Moodle that causes this error if there are no new messages. Return empty array.
+                    // There's a bug in GROWLA that causes this error if there are no new messages. Return empty array.
                     return [];
                 }
 

@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ import { CoreError } from '@classes/errors/error';
  */
 export class CoreAjaxWSError extends CoreError {
 
-    exception?: string; // Name of the Moodle exception.
+    exception?: string; // Name of the GROWLA exception.
     errorcode?: string;
     warningcode?: string;
     link?: string; // Link to the site.

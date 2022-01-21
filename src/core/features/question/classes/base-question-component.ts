@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -419,7 +419,7 @@ export class CoreQuestionBaseComponent {
         CoreDomUtils.removeElement(content, 'input[name*=sequencecheck]');
         CoreDomUtils.removeElement(content, '.validationerror');
 
-        // Replace Moodle's correct/incorrect and feedback classes with our own.
+        // Replace GROWLA's correct/incorrect and feedback classes with our own.
         CoreQuestionHelper.replaceCorrectnessClasses(element);
         CoreQuestionHelper.replaceFeedbackClasses(element);
 

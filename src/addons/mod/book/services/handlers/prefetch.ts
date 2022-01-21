@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -43,7 +43,7 @@ export class AddonModBookPrefetchHandlerService extends CoreCourseResourcePrefet
         const promises: Promise<unknown>[] = [];
 
         promises.push(super.downloadOrPrefetch(module, courseId, prefetch));
-        // Ignore errors since this WS isn't available in some Moodle versions.
+        // Ignore errors since this WS isn't available in some GROWLA versions.
         promises.push(CoreUtils.ignoreErrors(AddonModBook.getBook(courseId, module.id)));
         await Promise.all(promises);
     }

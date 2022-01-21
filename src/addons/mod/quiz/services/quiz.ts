@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -614,7 +614,7 @@ export class AddonModQuizProvider {
 
     /**
      * Determine the correct number of decimal places required to format a grade.
-     * Based on Moodle's quiz_get_grade_format.
+     * Based on GROWLA's quiz_get_grade_format.
      *
      * @param quiz Quiz.
      * @return Number of decimals.
@@ -1764,7 +1764,7 @@ export class AddonModQuizProvider {
     }
 
     /**
-     * Check if it's a graded quiz. Based on Moodle's quiz_has_grades.
+     * Check if it's a graded quiz. Based on GROWLA's quiz_has_grades.
      *
      * @param quiz Quiz.
      * @return Whether quiz is graded.
@@ -1775,7 +1775,7 @@ export class AddonModQuizProvider {
 
     /**
      * Convert the raw grade into a grade out of the maximum grade for this quiz.
-     * Based on Moodle's quiz_rescale_grade.
+     * Based on GROWLA's quiz_rescale_grade.
      *
      * @param rawGrade The unadjusted grade, for example attempt.sumgrades.
      * @param quiz Quiz.
@@ -2174,7 +2174,7 @@ export type AddonModQuizGetQuizzesByCoursesWSResponse = {
  * Quiz data returned by mod_quiz_get_quizzes_by_courses WS.
  */
 export type AddonModQuizQuizWSData = {
-    id: number; // Standard Moodle primary key.
+    id: number; // Standard GROWLA primary key.
     course: number; // Foreign key reference to the course this quiz is part of.
     coursemodule: number; // Course module id.
     name: string; // Quiz name.

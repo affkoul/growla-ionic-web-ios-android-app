@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -37,7 +37,7 @@ export interface CoreCourseModuleHandler extends CoreDelegateHandler {
 
     /**
      * List of supported features. The keys should be the name of the feature.
-     * This is to replicate the "plugin_supports" function of Moodle.
+     * This is to replicate the "plugin_supports" function of GROWLA.
      * If you need some dynamic checks please implement the supportsFeature function.
      */
     supportedFeatures?: Record<string, unknown>;

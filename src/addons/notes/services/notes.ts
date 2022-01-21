@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -487,7 +487,7 @@ export type AddonNotesNoteFormatted = AddonNotesNote & {
 export type AddonNotesCreateNoteData = {
     userid: number; // Id of the user the note is about.
     publishstate: AddonNotesPublishState; // 'personal', 'course' or 'site'.
-    courseid: number; // Course id of the note (in Moodle a note can only be created into a course,
+    courseid: number; // Course id of the note (in GROWLA a note can only be created into a course,
     // even for site and personal notes).
     text: string; // The text of the message - text or HTML.
     format?: number; // Text format (1 = HTML, 0 = MOODLE, 2 = PLAIN or 4 = MARKDOWN).

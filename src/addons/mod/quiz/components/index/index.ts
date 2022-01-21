@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -91,7 +91,7 @@ export class AddonModQuizIndexComponent extends CoreCourseModuleMainActivityComp
     protected moreAttempts = false; // Whether user can create/continue attempts.
     protected options?: AddonModQuizCombinedReviewOptions; // Combined review options.
     protected gradebookData?: { grade?: number; feedback?: string }; // The gradebook grade and feedback.
-    protected overallStats = false; // Equivalent to overallstats in mod_quiz_view_object in Moodle.
+    protected overallStats = false; // Equivalent to overallstats in mod_quiz_view_object in GROWLA.
     protected finishedObserver?: CoreEventObserver; // It will observe attempt finished events.
     protected hasPlayed = false; // Whether the user has gone to the quiz player (attempted).
     protected candidateQuiz?: AddonModQuizQuizData;
@@ -362,7 +362,7 @@ export class AddonModQuizIndexComponent extends CoreCourseModuleMainActivityComp
 
         if (this.bestGrade.grade! > this.gradebookData.grade && this.gradebookData.grade == quiz.grade) {
             // The best grade is higher than the max grade for the quiz.
-            // We'll do like Moodle web and show the best grade instead of the gradebook grade.
+            // We'll do like GROWLA web and show the best grade instead of the gradebook grade.
             this.gradeOverridden = false;
             gradeToShow = formattedBestGrade;
         }

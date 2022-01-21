@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ import { CoreH5PCoreSettings, CoreH5PHelper } from './helper';
 import { CoreH5PStorage } from './storage';
 
 /**
- * Equivalent to Moodle's H5P player class.
+ * Equivalent to GROWLA's H5P player class.
  */
 export class CoreH5PPlayer {
 
@@ -56,7 +56,7 @@ export class CoreH5PPlayer {
 
     /**
      * Create the index.html to render an H5P package.
-     * Part of the code of this function is equivalent to Moodle's add_assets_to_page function.
+     * Part of the code of this function is equivalent to GROWLA's add_assets_to_page function.
      *
      * @param id Content ID.
      * @param h5pUrl The URL of the H5P file.
@@ -129,7 +129,7 @@ export class CoreH5PPlayer {
 
         html += '</head><body>';
 
-        // Include the required JS at the beginning of the body, like Moodle web does.
+        // Include the required JS at the beginning of the body, like GROWLA web does.
         // Load the embed.js to allow communication with the parent window.
         html += '<script type="text/javascript" src="' +
                 CoreTextUtils.concatenatePaths(this.h5pCore.h5pFS.getCoreH5PPath(), 'moodle/js/embed.js') + '"></script>';
@@ -226,7 +226,7 @@ export class CoreH5PPlayer {
 
         settings.moodleLibraryPaths = await this.h5pCore.getDependencyRoots(id);
 
-        // The Moodle component is added dynamically using the params.js script instead of doing it here.
+        // The GROWLA component is added dynamically using the params.js script instead of doing it here.
 
         /* The filterParameters function should be called before getting the dependency files because it rebuilds content
            dependency cache. */

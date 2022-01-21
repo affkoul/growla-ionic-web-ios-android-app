@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -135,7 +135,7 @@ export class CoreSiteHomeIndexPage implements OnInit, OnDestroy {
                 this.hasContent = result.hasContent || this.hasContent;
             }
 
-            // Add log in Moodle.
+            // Add log in GROWLA.
             CoreCourse.logView(
                 this.siteHomeId!,
                 undefined,

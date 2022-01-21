@@ -1,5 +1,5 @@
 {
-    "app_id": "com.moodle.moodlemobile",
+    "app_id": "com.growla.growlamobile",
     "appname": "GROWLA",
     "versioncode": 3950,
     "versionname": "3.9.5",
@@ -65,14 +65,20 @@
     "wsextservice": "local_mobile",
     "demo_sites": {
         "student": {
-            "url": "https:\/\/school.moodledemo.net",
-            "username": "student",
-            "password": "moodle"
+            // "url": "https:\/\/school.moodledemo.net",
+            // "username": "student",
+            // "password": "moodle"
+            "url": "https:\/\/growlaglobal.com",
+            "username": "teststdu",
+            "password": "1QAZ3edc!"
         },
         "teacher": {
-            "url": "https:\/\/school.moodledemo.net",
-            "username": "teacher",
-            "password": "moodle"
+            // "url": "https:\/\/school.moodledemo.net",
+            // "username": "teacher",
+            // "password": "moodle"
+            "url": "https:\/\/growlaglobal.com",
+            "username": "guoruinext",
+            "password": "%GuoRuiNext69"
         }
     },
     "zoomlevels": {
@@ -80,7 +86,7 @@
         "low": 110,
         "high": 120
     },
-    "customurlscheme": "moodlemobile",
+    "customurlscheme": "growlamobile",
     "siteurl": "",
     "sitename": "",
     "multisitesdisplay": "",
@@ -88,7 +94,7 @@
     "onlyallowlistedsites": false,
     "skipssoconfirmation": false,
     "forcedefaultlanguage": false,
-    "privacypolicy": "https:\/\/moodle.net\/moodle-app-privacy\/",
+    "privacypolicy": "https:\/\/growlaglobal.com\/privacy-policy.php#cn\/",
     "notificoncolor": "#4dbec1",
     "enableanalytics": false,
     "enableonboarding": true,

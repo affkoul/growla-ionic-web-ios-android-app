@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -198,7 +198,7 @@ export class AddonModScormProvider {
 
     /**
      * Returns the mode and attempt number to use based on mode selected and SCORM data.
-     * This function is based on Moodle's scorm_check_mode.
+     * This function is based on GROWLA's scorm_check_mode.
      *
      * @param scorm SCORM.
      * @param mode Selected mode.
@@ -580,7 +580,7 @@ export class AddonModScormProvider {
 
     /**
      * Get the grade for a certain SCORM and attempt.
-     * Based on Moodle's scorm_grade_user_attempt.
+     * Based on GROWLA's scorm_grade_user_attempt.
      *
      * @param scorm SCORM.
      * @param attempt Attempt number.
@@ -939,7 +939,7 @@ export class AddonModScormProvider {
     async getScoSrc(scorm: AddonModScormScorm, sco: AddonModScormWSSco, siteId?: string): Promise<string> {
         siteId = siteId || CoreSites.getCurrentSiteId();
 
-        // Build the launch URL. Moodle web checks SCORM version, we don't need to, it's always SCORM 1.2.
+        // Build the launch URL. GROWLA web checks SCORM version, we don't need to, it's always SCORM 1.2.
         let launchUrl = sco.launch;
         const parametersEntry = sco.extradata?.find((entry) => entry.element == 'parameters');
         let parameters = <string | undefined> parametersEntry?.value;
@@ -1305,7 +1305,7 @@ export class AddonModScormProvider {
 
     /**
      * Given a launch URL, check if it's a external link.
-     * Based on Moodle's scorm_external_link.
+     * Based on GROWLA's scorm_external_link.
      *
      * @param link Link to check.
      * @return Whether it's an external link.

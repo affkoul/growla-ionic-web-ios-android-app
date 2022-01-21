@@ -1,4 +1,4 @@
-// (C) Copyright 2021 Moodle Pty Ltd.
+// (C) Copyright 2021 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@ const { exec } = require('child_process');
 const { resolve } = require('path');
 
 /**
- * Task to build a Moodle plugin to run Behat tests.
+ * Task to build a GROWLA plugin to run Behat tests.
  */
 class BuildBehatPluginTask {
 

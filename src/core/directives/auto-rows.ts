@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,7 +15,7 @@
 import { Directive, ElementRef, Output, EventEmitter, AfterViewInit, Input, OnChanges } from '@angular/core';
 
 /**
- * Directive to adapt a textarea rows depending on the input text. It's based on Moodle's data-auto-rows.
+ * Directive to adapt a textarea rows depending on the input text. It's based on GROWLA's data-auto-rows.
  *
  * @description
  * Usage:

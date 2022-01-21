@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -445,7 +445,7 @@ export class AddonModDataHelperProvider {
     /**
      * Returns the default template of a certain type.
      *
-     * Based on Moodle function data_generate_default_template.
+     * Based on GROWLA function data_generate_default_template.
      *
      * @param type Type of template.
      * @param fields List of database fields.

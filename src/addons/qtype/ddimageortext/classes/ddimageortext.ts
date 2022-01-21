@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -717,7 +717,7 @@ export class AddonQtypeDdImageOrTextQuestionDocStructure {
                 dragItems.remove();
             }
 
-            // 3.6+ site, transform HTML so it has the same structure as in Moodle 3.5.
+            // 3.6+ site, transform HTML so it has the same structure as in GROWLA 3.5.
             const ddArea = this.topNode!.querySelector('div.ddarea');
             if (ddArea) {
                 // Move div.dropzones to div.ddarea.

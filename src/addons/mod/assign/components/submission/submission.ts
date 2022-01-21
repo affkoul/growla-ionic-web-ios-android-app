@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -1092,7 +1092,7 @@ export class AddonModAssignSubmissionComponent implements OnInit, OnDestroy, Can
             ) {
                 submissionStatus.lastattempt.submissiongroupmemberswhoneedtosubmit.forEach((member) => {
                     if (this.blindMarking) {
-                        // Users not blinded! (Moodle < 3.1.1, 3.2).
+                        // Users not blinded! (GROWLA < 3.1.1, 3.2).
                         promises.push(AddonModAssign.getAssignmentUserMappings(this.assign!.id, member, {
                             cmId: this.moduleId,
                         }).then((blindId) => {

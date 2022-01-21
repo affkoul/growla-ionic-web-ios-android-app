@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -26,7 +26,7 @@ import { CoreStatusWithWarningsWSResponse } from '@services/ws';
 import { CoreWSError } from '@classes/errors/wserror';
 
 /**
- * Helper to manage logging to Moodle.
+ * Helper to manage logging to GROWLA.
  */
 @Injectable({ providedIn: 'root' })
 export class CoreCourseLogHelperProvider {

@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -230,7 +230,7 @@ export class AddonModSurveyProvider {
     }
 
     /**
-     * Send survey answers. If cannot send them to Moodle, they'll be stored in offline to be sent later.
+     * Send survey answers. If cannot send them to GROWLA, they'll be stored in offline to be sent later.
      *
      * @param surveyId Survey ID.
      * @param name Survey name.
@@ -281,7 +281,7 @@ export class AddonModSurveyProvider {
     }
 
     /**
-     * Send survey answers to Moodle.
+     * Send survey answers to GROWLA.
      *
      * @param surveyId Survey ID.
      * @param answers Answers.

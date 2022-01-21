@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -416,7 +416,7 @@ export class AddonModDataIndexComponent extends CoreCourseModuleMainActivityComp
 
         try {
             await this.fetchEntriesData();
-            // Log activity view for coherence with Moodle web.
+            // Log activity view for coherence with GROWLA web.
             await this.logView();
         } catch (error) {
             CoreDomUtils.showErrorModalDefault(error, 'core.course.errorgetmodule', true);
@@ -462,7 +462,7 @@ export class AddonModDataIndexComponent extends CoreCourseModuleMainActivityComp
         try {
             await this.fetchEntriesData();
 
-            // Log activity view for coherence with Moodle web.
+            // Log activity view for coherence with GROWLA web.
             return this.logView();
         } catch (error) {
             CoreDomUtils.showErrorModalDefault(error, 'core.course.errorgetmodule', true);

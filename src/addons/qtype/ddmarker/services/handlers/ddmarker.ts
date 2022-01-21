@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -72,7 +72,7 @@ export class AddonQtypeDdMarkerHandlerService implements CoreQuestionHandler {
         component: string, // eslint-disable-line @typescript-eslint/no-unused-vars
         componentId: string | number, // eslint-disable-line @typescript-eslint/no-unused-vars
     ): number {
-        // If 1 dragitem is set we assume the answer is complete (like Moodle does).
+        // If 1 dragitem is set we assume the answer is complete (like GROWLA does).
         for (const name in answers) {
             if (answers[name]) {
                 return 1;
@@ -141,7 +141,7 @@ export class AddonQtypeDdMarkerHandlerService implements CoreQuestionHandler {
         CoreQuestionHelper.extractQuestionScripts(treatedQuestion, usageId);
 
         if (treatedQuestion.amdArgs && typeof treatedQuestion.amdArgs[1] == 'string') {
-            // Moodle 3.6+.
+            // GROWLA 3.6+.
             return [{
                 fileurl: treatedQuestion.amdArgs[1],
             }];

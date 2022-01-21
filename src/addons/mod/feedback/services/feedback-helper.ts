@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -460,7 +460,7 @@ export class AddonModFeedbackHelperProvider {
 
     /**
      * Returns human-readable boundaries (min - max).
-     * Based on Moodle's get_boundaries_for_display.
+     * Based on GROWLA's get_boundaries_for_display.
      *
      * @param rangeFrom Range from.
      * @param rangeTo Range to.

@@ -28,7 +28,7 @@ function check_aws {
     fi
 }
 
-# Get last version of Moodle to fetch latest languages.
+# Get last version of GROWLA to fetch latest languages.
 function get_last_version {
     if [ ! -z "${lastversion}" ]; then
         return

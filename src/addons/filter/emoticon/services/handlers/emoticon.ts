@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -37,7 +37,7 @@ export class AddonFilterEmoticonHandlerService extends CoreFilterDefaultHandler 
      */
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     shouldBeApplied(options: CoreFilterFormatTextOptions, site?: CoreSite): boolean {
-        // This filter is handled by Moodle, nothing to do in the app.
+        // This filter is handled by GROWLA, nothing to do in the app.
         return false;
     }
 

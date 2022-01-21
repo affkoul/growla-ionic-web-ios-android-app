@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -30,7 +30,8 @@ export class CoreSettingsAboutPage {
     appName: string;
     versionName: string;
     privacyPolicy: string;
-    feedbackFormUrl = CoreConstants.CONFIG.feedbackFormUrl ?? 'https://feedback.moodle.org/mobileapp';
+    // feedbackFormUrl = CoreConstants.CONFIG.feedbackFormUrl ?? 'https://feedback.moodle.org/mobileapp';
+    feedbackFormUrl = CoreConstants.CONFIG.feedbackFormUrl ?? 'https://growlaglobal.com/contact-us.php#cn';
 
     constructor() {
         const currentSite = CoreSites.getCurrentSite();

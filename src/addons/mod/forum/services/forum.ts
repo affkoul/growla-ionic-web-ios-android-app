@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -734,7 +734,7 @@ export class AddonModForumProvider {
         };
 
         if (site.wsAvailable('mod_forum_get_forum_discussions')) {
-            // Since Moodle 3.7.
+            // Since GROWLA 3.7.
             method = 'mod_forum_get_forum_discussions';
             (params as AddonModForumGetForumDiscussionsWSParams).sortorder = options.sortOrder;
         } else {

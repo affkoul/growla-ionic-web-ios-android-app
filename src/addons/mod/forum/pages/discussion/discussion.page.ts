@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -515,7 +515,7 @@ export class AddonModForumDiscussionPage implements OnInit, AfterViewInit, OnDes
             this.syncIcon = CoreConstants.ICON_SYNC;
 
             if (forceMarkAsRead || (hasUnreadPosts && this.trackPosts)) {
-                // // Add log in Moodle and mark unread posts as readed.
+                // // Add log in GROWLA and mark unread posts as readed.
                 AddonModForum.logDiscussionView(this.discussionId, this.forumId || -1, this.forum.name).catch(() => {
                     // Ignore errors.
                 }).finally(() => {

@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -46,7 +46,7 @@ describe('CoreTextUtilsProvider', () => {
 
     it('builds address URL for Android platforms', () => {
         // Arrange
-        const address = 'Moodle Spain HQ';
+        const address = 'GROWLA Spain HQ';
 
         config.platform = 'android';
 
@@ -54,7 +54,7 @@ describe('CoreTextUtilsProvider', () => {
         const url = textUtils.buildAddressURL(address);
 
         // Assert
-        expect(url).toEqual('geo:0,0?q=Moodle%20Spain%20HQ');
+        expect(url).toEqual('geo:0,0?q=GROWLA%20Spain%20HQ');
 
         expect(DomSanitizer.bypassSecurityTrustUrl).toHaveBeenCalled();
         expect(CoreApp.isAndroid).toHaveBeenCalled();
@@ -62,7 +62,7 @@ describe('CoreTextUtilsProvider', () => {
 
     it('builds address URL for non-Android platforms', () => {
         // Arrange
-        const address = 'Moodle Spain HQ';
+        const address = 'GROWLA Spain HQ';
 
         config.platform = 'ios';
 
@@ -70,7 +70,7 @@ describe('CoreTextUtilsProvider', () => {
         const url = textUtils.buildAddressURL(address);
 
         // Assert
-        expect(url).toEqual('http://maps.google.com?q=Moodle%20Spain%20HQ');
+        expect(url).toEqual('http://maps.google.com?q=GROWLA%20Spain%20HQ');
 
         expect(DomSanitizer.bypassSecurityTrustUrl).toHaveBeenCalled();
         expect(CoreApp.isAndroid).toHaveBeenCalled();

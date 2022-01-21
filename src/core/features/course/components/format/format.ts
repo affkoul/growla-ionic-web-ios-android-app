@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -409,7 +409,7 @@ export class CoreCourseFormatComponent implements OnInit, OnChanges, OnDestroy {
         }
 
         if (!previousValue || previousValue.id != newSection.id) {
-            // First load or section changed, add log in Moodle.
+            // First load or section changed, add log in GROWLA.
             CoreUtils.ignoreErrors(
                 CoreCourse.logView(this.course!.id, newSection.section, undefined, this.course!.fullname),
             );

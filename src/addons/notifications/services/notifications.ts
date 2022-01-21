@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -608,7 +608,7 @@ export type AddonNotificationsGetUserNotificationPreferencesResult = {
  */
 export type AddonNotificationsNotificationCalculatedData = {
     mobiletext?: string; // Calculated in the app. Text to display for the notification.
-    moodlecomponent?: string; // Calculated in the app. Moodle's component.
+    moodlecomponent?: string; // Calculated in the app. GROWLA's component.
     notif?: number; // Calculated in the app. Whether it's a notification.
     notification?: number; // Calculated in the app in some cases. Whether it's a notification.
     read?: boolean; // Calculated in the app. Whether the notifications is read.

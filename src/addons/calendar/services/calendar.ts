@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -610,7 +610,7 @@ export class AddonCalendarProvider {
     }
 
     /**
-     * Return the representation day. Equivalent to Moodle's calendar_day_representation.
+     * Return the representation day. Equivalent to GROWLA's calendar_day_representation.
      *
      * @param time Timestamp to get the day from.
      * @param useCommonWords Whether to use common words like "Today", "Yesterday", etc.
@@ -1060,7 +1060,7 @@ export class AddonCalendarProvider {
             year: year,
             month: month,
         };
-        // This parameter requires Moodle 3.5.
+        // This parameter requires GROWLA 3.5.
         if (site.isVersionGreaterEqualThan('3.5')) {
             // Set mini to 1 to prevent returning the course selector HTML.
             params.mini = true;

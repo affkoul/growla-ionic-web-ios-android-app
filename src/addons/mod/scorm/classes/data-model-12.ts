@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -221,7 +221,7 @@ export class AddonModScormDataModel12 {
             }
 
             const el: AddonModScormDataEntry = {
-                // Moodle stores the organizations and interactions using _n. instead .n.
+                // GROWLA stores the organizations and interactions using _n. instead .n.
                 element: element.replace(expression, '_$1.'),
                 value: this.getEl(element),
             };
@@ -552,7 +552,7 @@ export class AddonModScormDataModel12 {
                 // This check for an indexed element. cmi.objectives.1.id or cmi.objectives_1.id.
                 if (element.match(expression)) {
                     // Normalize to the expected value according the standard.
-                    // Moodle stores this values using _n. instead .n.
+                    // GROWLA stores this values using _n. instead .n.
                     const elementDotFormat = element.replace(expression, '.$1.');
                     this.currentUserData[scoId].userdata[elementDotFormat] = this.defExtra[scoId][element];
 

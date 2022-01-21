@@ -1,0 +1,64 @@
+{
+  "_args": [
+    [
+      "cordova-plugin-prevent-override@github:moodlemobile/cordova-plugin-prevent-override",
+      "/Users/gpc/Downloads/EtonKids/GROWLA Project/Soft Launch/App/APP验收 2/growla-app"
+    ]
+  ],
+  "_development": true,
+  "_from": "cordova-plugin-prevent-override@github:moodlemobile/cordova-plugin-prevent-override",
+  "_id": "cordova-plugin-prevent-override@git+ssh://git@github.com/moodlemobile/cordova-plugin-prevent-override.git#49507eda3c929e488e58b8402cfc7e1521ebc400",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/cordova-plugin-prevent-override",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "cordova-plugin-prevent-override@github:moodlemobile/cordova-plugin-prevent-override",
+    "name": "cordova-plugin-prevent-override",
+    "escapedName": "cordova-plugin-prevent-override",
+    "rawSpec": "github:moodlemobile/cordova-plugin-prevent-override",
+    "saveSpec": "github:moodlemobile/cordova-plugin-prevent-override",
+    "fetchSpec": null,
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "git+ssh://git@github.com/moodlemobile/cordova-plugin-prevent-override.git#49507eda3c929e488e58b8402cfc7e1521ebc400",
+  "_spec": "github:moodlemobile/cordova-plugin-prevent-override",
+  "_where": "/Users/gpc/Downloads/EtonKids/GROWLA Project/Soft Launch/App/APP验收 2/growla-app",
+  "author": {
+    "name": "Moodle Pty Ltd"
+  },
+  "bugs": {
+    "url": "https://github.com/moodlemobile/cordova-plugin-prevent-override/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-prevent-override",
+    "platforms": [
+      "android"
+    ]
+  },
+  "description": "Cordova Prevent Override Plugin",
+  "engines": {
+    "cordovaDependencies": {
+      "3.0.0": {
+        "cordova": ">100"
+      }
+    }
+  },
+  "homepage": "https://github.com/moodlemobile/cordova-plugin-prevent-override#readme",
+  "keywords": [
+    "cordova",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "license": "Apache-2.0",
+  "name": "cordova-plugin-prevent-override",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moodlemobile/cordova-plugin-prevent-override.git"
+  },
+  "version": "1.0.0"
+}

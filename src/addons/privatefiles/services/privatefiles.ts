@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -397,7 +397,7 @@ export class AddonPrivateFilesProvider {
     }
 
     /**
-     * Check the Moodle version in order to check if upload files is working.
+     * Check the GROWLA version in order to check if upload files is working.
      *
      * @param siteId Site ID. If not defined, use current site.
      * @return Promise resolved with true if WS is working, false otherwise.
@@ -405,7 +405,7 @@ export class AddonPrivateFilesProvider {
     async versionCanUploadFiles(siteId?: string): Promise<boolean> {
         const site = await CoreSites.getSite(siteId);
 
-        // Upload private files doesn't work for Moodle 3.1.0 due to a bug.
+        // Upload private files doesn't work for GROWLA 3.1.0 due to a bug.
         return site.isVersionGreaterEqualThan('3.1.1');
     }
 

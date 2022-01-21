@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -212,7 +212,7 @@ export class AddonModScormSyncProvider extends CoreCourseActivitySyncBaseProvide
             return result;
         }
 
-        // Check if an attempt was finished in Moodle.
+        // Check if an attempt was finished in GROWLA.
         // Get attempt count again to check if an attempt was finished.
         const attemptsData = await AddonModScorm.getAttemptCount(scorm.id, { cmId: scorm.coursemodule, siteId });
 
@@ -398,7 +398,7 @@ export class AddonModScormSyncProvider extends CoreCourseActivitySyncBaseProvide
 
     /**
      * Compares an attempt's snapshot with the data retrieved from the site.
-     * It only compares elements with dot notation. This means that, if some SCO has been added to Moodle web
+     * It only compares elements with dot notation. This means that, if some SCO has been added to GROWLA web
      * but the user hasn't generated data for it, then the snapshot will be detected as equal.
      *
      * @param snapshot Attempt's snapshot.
@@ -655,7 +655,7 @@ export class AddonModScormSyncProvider extends CoreCourseActivitySyncBaseProvide
                 return this.finishSync(siteId, scorm, warnings, lastOnline, lastOnlineWasFinished, initialCount, false);
             }
 
-            // No collisions and last attempt is complete. Send offline attempts to Moodle.
+            // No collisions and last attempt is complete. Send offline attempts to GROWLA.
             await Promise.all(attemptsData.offline.map(async (attempt) => {
                 if (!scorm.maxattempt || attempt <= scorm.maxattempt) {
                     await this.syncAttempt(scorm.id, attempt, scorm.coursemodule, siteId);

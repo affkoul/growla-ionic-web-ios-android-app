@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-// (C) Copyright 2021 Moodle Pty Ltd.
+// (C) Copyright 2021 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.

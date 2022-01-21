@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -94,7 +94,7 @@ export class CoreConstants {
     static readonly ICON_REFRESH = 'fas-redo-alt';
     static readonly ICON_SYNC = 'fas-sync-alt';
 
-    // Constants from Moodle's resourcelib.
+    // Constants from GROWLA's resourcelib.
     static readonly RESOURCELIB_DISPLAY_AUTO = 0; // Try the best way.
     static readonly RESOURCELIB_DISPLAY_EMBED = 1; // Display using object tag.
     static readonly RESOURCELIB_DISPLAY_FRAME = 2; // Display inside frame.

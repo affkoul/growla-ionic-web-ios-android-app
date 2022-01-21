@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -184,7 +184,7 @@ export class CoreH5PContentValidator {
      */
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     validateContentFiles(contentPath: string, isLibrary: boolean = false): boolean {
-        // Nothing to do, already checked by Moodle.
+        // Nothing to do, already checked by GROWLA.
         return true;
     }
 

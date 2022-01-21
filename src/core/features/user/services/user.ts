@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -542,7 +542,7 @@ export class CoreUserProvider {
     }
 
     /**
-     * Log User Profile View in Moodle.
+     * Log User Profile View in GROWLA.
      *
      * @param userId User ID.
      * @param courseId Course ID.
@@ -567,7 +567,7 @@ export class CoreUserProvider {
     }
 
     /**
-     * Log Participants list view in Moodle.
+     * Log Participants list view in GROWLA.
      *
      * @param courseId Course ID.
      * @return Promise resolved when done.
@@ -988,7 +988,7 @@ export type CoreUserSummary = {
  * User data returned by core_enrol_get_enrolled_users WS.
  */
 export type CoreUserParticipant = CoreUserBasicData & {
-    username?: string; // Username policy is defined in Moodle security config.
+    username?: string; // Username policy is defined in GROWLA security config.
     firstname?: string; // The first name(s) of the user.
     lastname?: string; // The family name of the user.
     email?: string; // An email address - allow email as root@localhost.

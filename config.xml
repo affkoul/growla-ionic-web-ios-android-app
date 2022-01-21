@@ -339,7 +339,7 @@
             <false />
         </config-file>
         <config-file parent="NSCrossWebsiteTrackingUsageDescription" target="*-Info.plist">
-            <string>This app needs third party cookies to correctly render embedded content from the Moodle site.</string>
+            <string>This app needs third party cookies to correctly render embedded content from GROWLA website.</string>
         </config-file>
         <config-file parent="CFBundleDocumentTypes" target="*-Info.plist">
             <array>
@@ -720,5 +720,6 @@
                 </dict>
             </array>
         </config-file>
+        <preference name="UseSwiftLanguageVersion" value="3" />
     </platform>
 </widget>

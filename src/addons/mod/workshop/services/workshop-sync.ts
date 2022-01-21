@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -299,7 +299,7 @@ export class AddonModWorkshopSyncProvider extends CoreSyncBaseProvider<AddonModW
         }
 
         if (timemodified < 0 || timemodified >= submissionActions[0].timemodified) {
-            // The entry was not found in Moodle or the entry has been modified, discard the action.
+            // The entry was not found in GROWLA or the entry has been modified, discard the action.
             result.updated = true;
             discardError = Translate.instant('addon.mod_workshop.warningsubmissionmodified');
 
@@ -436,7 +436,7 @@ export class AddonModWorkshopSyncProvider extends CoreSyncBaseProvider<AddonModW
         }
 
         if (timemodified < 0 || timemodified >= assessmentData.timemodified) {
-            // The entry was not found in Moodle or the entry has been modified, discard the action.
+            // The entry was not found in GROWLA or the entry has been modified, discard the action.
             result.updated = true;
             discardError = Translate.instant('addon.mod_workshop.warningassessmentmodified');
 
@@ -522,7 +522,7 @@ export class AddonModWorkshopSyncProvider extends CoreSyncBaseProvider<AddonModW
         }
 
         if (timemodified < 0 || timemodified >= evaluate.timemodified) {
-            // The entry was not found in Moodle or the entry has been modified, discard the action.
+            // The entry was not found in GROWLA or the entry has been modified, discard the action.
             result.updated = true;
             discardError = Translate.instant('addon.mod_workshop.warningsubmissionmodified');
 
@@ -594,7 +594,7 @@ export class AddonModWorkshopSyncProvider extends CoreSyncBaseProvider<AddonModW
         }
 
         if (timemodified < 0 || timemodified >= evaluate.timemodified) {
-            // The entry was not found in Moodle or the entry has been modified, discard the action.
+            // The entry was not found in GROWLA or the entry has been modified, discard the action.
             result.updated = true;
             discardError = Translate.instant('addon.mod_workshop.warningassessmentmodified');
 

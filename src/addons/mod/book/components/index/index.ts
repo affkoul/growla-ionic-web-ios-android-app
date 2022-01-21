@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -133,7 +133,7 @@ export class AddonModBookIndexComponent extends CoreCourseModuleMainResourceComp
         const promises: Promise<void>[] = [];
         let downloadResult: CoreCourseResourceDownloadResult | undefined;
 
-        // Try to get the book data. Ignore errors since this WS isn't available in some Moodle versions.
+        // Try to get the book data. Ignore errors since this WS isn't available in some GROWLA versions.
         promises.push(CoreUtils.ignoreErrors(AddonModBook.getBook(this.courseId, this.module.id))
             .then((book) => {
                 if (!book) {

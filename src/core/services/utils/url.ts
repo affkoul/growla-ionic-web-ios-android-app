@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -154,8 +154,8 @@ export class CoreUrlUtilsProvider {
     }
 
     /**
-     * Generic function for adding the wstoken to Moodle urls and for pointing to the correct script.
-     * For download remote files from Moodle we need to use the special /webservice/pluginfile passing
+     * Generic function for adding the wstoken to GROWLA urls and for pointing to the correct script.
+     * For download remote files from GROWLA we need to use the special /webservice/pluginfile passing
      * the ws token as a get parameter.
      *
      * @param url The url to be fixed.
@@ -224,14 +224,15 @@ export class CoreUrlUtilsProvider {
     }
 
     /**
-     * Returns the URL to the documentation of the app, based on Moodle version and current language.
+     * Returns the URL to the documentation of the app, based on GROWLA version and current language.
      *
-     * @param release Moodle release.
+     * @param release GROWLA release.
      * @param page Docs page to go to.
-     * @return Promise resolved with the Moodle docs URL.
+     * @return Promise resolved with the GROWLA docs URL.
      */
     async getDocsUrl(release?: string, page: string = 'Mobile_app'): Promise<string> {
-        let docsUrl = 'https://docs.moodle.org/en/' + page;
+        // let docsUrl = 'https://docs.moodle.org/en/' + page;
+        let docsUrl = 'https://growlaglobal.com/contact-us-new.php#cn';
 
         if (typeof release != 'undefined') {
             const version = CoreSites.getMajorReleaseNumber(release).replace('.', '');
@@ -239,7 +240,8 @@ export class CoreUrlUtilsProvider {
             // Check is a valid number.
             if (Number(version) >= 24) {
                 // Append release number.
-                docsUrl = docsUrl.replace('https://docs.moodle.org/', 'https://docs.moodle.org/' + version + '/');
+                // docsUrl = docsUrl.replace('https://docs.moodle.org/', 'https://docs.moodle.org/' + version + '/');
+                docsUrl = docsUrl.replace('https://growlaglobal.com/contact-us-new.php#cn', 'https://growlaglobal.com/contact-us-new.php#cn');
             }
         }
 
@@ -304,7 +306,8 @@ export class CoreUrlUtilsProvider {
             }
         }
 
-        return this.addParamsToUrl('https://www.youtube.com/embed/' + videoId, params);
+        // return this.addParamsToUrl('https://www.youtube.com/embed/' + videoId, params);
+        return this.addParamsToUrl('https://growla.oss-cn-beijing.aliyuncs.com/video/intro/1.m4v');
     }
 
     /**

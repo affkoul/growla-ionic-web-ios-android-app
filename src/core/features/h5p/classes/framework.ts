@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -44,7 +44,7 @@ import { CoreH5PLibraryAddTo, CoreH5PLibraryMetadataSettings } from './validator
 import { CoreH5PMetadata } from './metadata';
 
 /**
- * Equivalent to Moodle's implementation of H5PFrameworkInterface.
+ * Equivalent to GROWLA's implementation of H5PFrameworkInterface.
  */
 export class CoreH5PFramework {
 
@@ -459,7 +459,7 @@ export class CoreH5PFramework {
         // Load the main library data.
         const libData = await this.getLibraryById(contentData.mainlibraryid, siteId);
 
-        // Map the values to the names used by the H5P core (it's the same Moodle web does).
+        // Map the values to the names used by the H5P core (it's the same GROWLA web does).
         const content = {
             id: contentData.id,
             params: contentData.jsoncontent,

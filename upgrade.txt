@@ -1,4 +1,4 @@
-This files describes API changes in the Moodle Mobile app,
+This files describes API changes in the GROWLA Mobile app,
 information provided here is intended especially for developers.
 
 === 3.9.5 ===

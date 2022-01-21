@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -42,13 +42,13 @@ export class AddonModAssignSubmissionOnlineTextHandlerService implements AddonMo
 
     /**
      * Whether the plugin can be edited in offline for existing submissions. In general, this should return false if the
-     * plugin uses Moodle filters. The reason is that the app only prefetches filtered data, and the user should edit
+     * plugin uses GROWLA filters. The reason is that the app only prefetches filtered data, and the user should edit
      * unfiltered data.
      *
      * @return Boolean or promise resolved with boolean: whether it can be edited in offline.
      */
     canEditOffline(): boolean {
-        // This plugin uses Moodle filters, it cannot be edited in offline.
+        // This plugin uses GROWLA filters, it cannot be edited in offline.
         return false;
     }
 
@@ -224,7 +224,7 @@ export class AddonModAssignSubmissionOnlineTextHandlerService implements AddonMo
      * @return Whether or not the handler is enabled for edit on a site level.
      */
     isEnabledForEdit(): boolean {
-        // There's a bug in Moodle 3.1.0 that doesn't allow submitting HTML, so we'll disable this plugin in that case.
+        // There's a bug in GROWLA 3.1.0 that doesn't allow submitting HTML, so we'll disable this plugin in that case.
         // Bug was fixed in 3.1.1 minor release and in 3.2.
         const currentSite = CoreSites.getCurrentSite();
 

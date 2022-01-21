@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -48,11 +48,11 @@ declare module '@singletons/events' {
 /**
  * Service that provides some features for lesson.
  *
- * Lesson terminology is a bit confusing and ambiguous in Moodle. For that reason, in the app it has been decided to use
+ * Lesson terminology is a bit confusing and ambiguous in GROWLA. For that reason, in the app it has been decided to use
  * the following terminology:
- *     - Retake: An attempt in a lesson. In Moodle it's sometimes called "attempt", "try" or "retry".
+ *     - Retake: An attempt in a lesson. In GROWLA it's sometimes called "attempt", "try" or "retry".
  *     - Attempt: An attempt in a page inside a retake. In the app, this includes content pages.
- *     - Content page: A page with only content (no question). In Moodle it's sometimes called "branch table".
+ *     - Content page: A page with only content (no question). In GROWLA it's sometimes called "branch table".
  *     - Page answers: List of possible answers for a page (configured by the teacher). NOT the student answer for the page.
  *
  * This terminology sometimes won't match with WebServices names, params or responses.
@@ -262,7 +262,7 @@ export class AddonModLessonProvider {
 
     /**
      * Calculate the progress of the current user in the lesson.
-     * Based on Moodle's calculate_progress.
+     * Based on GROWLA's calculate_progress.
      *
      * @param lessonId Lesson ID.
      * @param accessInfo Access info.
@@ -326,7 +326,7 @@ export class AddonModLessonProvider {
 
     /**
      * Check if the answer provided by the user is correct or not and return the result object.
-     * This method is based on the check_answer implementation of all page types (Moodle).
+     * This method is based on the check_answer implementation of all page types (GROWLA).
      *
      * @param lesson Lesson.
      * @param pageData Page data.
@@ -1043,7 +1043,7 @@ export class AddonModLessonProvider {
 
     /**
      * Create the data returned by finishRetakeOffline, to display the EOL page. It won't return all the possible data.
-     * This code is based in Moodle's process_eol_page.
+     * This code is based in GROWLA's process_eol_page.
      *
      * @param lesson Lesson.
      * @param courseId Course ID the lesson belongs to.
@@ -1061,7 +1061,7 @@ export class AddonModLessonProvider {
             throw new CoreError('Access info not supplied to finishRetake.');
         }
 
-        // This code is based in Moodle's process_eol_page.
+        // This code is based in GROWLA's process_eol_page.
         const result: AddonModLessonFinishRetakeResponse = {
             data: {},
             messages: [],
@@ -1351,7 +1351,7 @@ export class AddonModLessonProvider {
 
     /**
      * Get the last page seen.
-     * Based on Moodle's get_last_page_seen.
+     * Based on GROWLA's get_last_page_seen.
      *
      * @param lessonId Lesson ID.
      * @param retake Retake number.
@@ -1810,7 +1810,7 @@ export class AddonModLessonProvider {
     /**
      * Get different informative messages when processing a lesson page.
      * Please try to use WS response messages instead of this function if possible.
-     * Based on Moodle's add_messages_on_page_process.
+     * Based on GROWLA's add_messages_on_page_process.
      *
      * @param lesson Lesson.
      * @param accessInfo Access info.
@@ -1883,7 +1883,7 @@ export class AddonModLessonProvider {
     /**
      * Get different informative messages when viewing a lesson page.
      * Please try to use WS response messages instead of this function if possible.
-     * Based on Moodle's add_messages_on_page_view.
+     * Based on GROWLA's add_messages_on_page_view.
      *
      * @param lesson Lesson.
      * @param accessInfo Access info. Required if offline is true.
@@ -2058,7 +2058,7 @@ export class AddonModLessonProvider {
     }
 
     /**
-     * Get the overview of retakes in a lesson (named "attempts overview" in Moodle).
+     * Get the overview of retakes in a lesson (named "attempts overview" in GROWLA).
      *
      * @param lessonId Lesson ID.
      * @param options Other options.
@@ -2132,7 +2132,7 @@ export class AddonModLessonProvider {
     /**
      * Finds all pages that appear to be a subtype of the provided pageId until an end point specified within "ends" is
      * encountered or no more pages exist.
-     * Based on Moodle's get_sub_pages_of.
+     * Based on GROWLA's get_sub_pages_of.
      *
      * @param pages Index of lesson pages, indexed by page ID. See createPagesIndex.
      * @param pageId Page ID to get subpages of.
@@ -2376,7 +2376,7 @@ export class AddonModLessonProvider {
 
     /**
      * Check if a jump is correct.
-     * Based in Moodle's jumpto_is_correct.
+     * Based in GROWLA's jumpto_is_correct.
      *
      * @param pageId ID of the page from which you are jumping from.
      * @param jumpTo The jumpto number.
@@ -2785,7 +2785,7 @@ export class AddonModLessonProvider {
 
     /**
      * Checks to see if a LESSON_CLUSTERJUMP or a LESSON_UNSEENBRANCHPAGE is used in a lesson.
-     * Based on Moodle's lesson_display_teacher_warning.
+     * Based on GROWLA's lesson_display_teacher_warning.
      *
      * @param jumps Possible jumps.
      * @return Whether the lesson uses one of those jumps.
@@ -2812,7 +2812,7 @@ export class AddonModLessonProvider {
 
     /**
      * Calculates a user's grade for a lesson.
-     * Based on Moodle's lesson_grade.
+     * Based on GROWLA's lesson_grade.
      *
      * @param lesson Lesson.
      * @param retake Retake number.
@@ -3138,7 +3138,7 @@ export class AddonModLessonProvider {
 
     /**
      * Records an attempt on a certain page.
-     * Based on Moodle's record_attempt.
+     * Based on GROWLA's record_attempt.
      *
      * @param lesson Lesson.
      * @param courseId Course ID the lesson belongs to.
@@ -3174,7 +3174,7 @@ export class AddonModLessonProvider {
         // Processes inmediate jumps.
         if (result.inmediatejump) {
             if (pageData.page?.qtype == AddonModLessonProvider.LESSON_PAGE_BRANCHTABLE) {
-                // Store the content page data. In Moodle this is stored in a separate table, during checkAnswer.
+                // Store the content page data. In GROWLA this is stored in a separate table, during checkAnswer.
                 await AddonModLessonOffline.processPage(
                     lesson.id,
                     courseId,
@@ -3382,7 +3382,7 @@ export class AddonModLessonProvider {
     /**
      * Function to determine if a page is a valid page. It will add the page to validPages if valid. It can also
      * modify the list of viewedPagesIds for cluster pages.
-     * Based on Moodle's valid_page_and_view.
+     * Based on GROWLA's valid_page_and_view.
      *
      * @param pages Index of lesson pages, indexed by page ID. See createPagesIndex.
      * @param page Page to check.
@@ -3716,7 +3716,7 @@ export type AddonModLessonGetLessonsByCoursesWSResponse = {
  * Lesson data returned by WS.
  */
 export type AddonModLessonLessonWSData = {
-    id: number; // Standard Moodle primary key.
+    id: number; // Standard GROWLA primary key.
     course: number; // Foreign key reference to the course this lesson is part of.
     coursemodule: number; // Course module id.
     name: string; // Lesson name.
@@ -3902,7 +3902,7 @@ export type AddonModLessonGetPagesWSResponse = {
  */
 export type AddonModLessonGetPagesPageWSData = {
     page: AddonModLessonPageWSData; // Page fields.
-    answerids: number[]; // List of answers ids (empty for content pages in Moodle 1.9).
+    answerids: number[]; // List of answers ids (empty for content pages in GROWLA 1.9).
     jumps: number[]; // List of possible page jumps.
     filescount: number; // The total number of files attached to the page.
     filessizetotal: number; // The total size of the files.
@@ -4085,7 +4085,7 @@ export type AddonModLessonUserAttemptAnswerPageWSData = {
     contents: string; // Page contents.
     qtype: string; // Identifies the page type of this page.
     grayout: number; // If is required to apply a grayout.
-    answerdata?: AddonModLessonUserAttemptAnswerData; // Answer data (empty in content pages created in Moodle 1.x).
+    answerdata?: AddonModLessonUserAttemptAnswerData; // Answer data (empty in content pages created in GROWLA 1.x).
 };
 
 /**

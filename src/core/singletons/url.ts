@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -112,13 +112,13 @@ export class CoreUrl {
     }
 
     /**
-     * Guess the Moodle domain from a site url.
+     * Guess the GROWLA domain from a site url.
      *
      * @param url Site url.
-     * @return Guessed Moodle domain.
+     * @return Guessed GROWLA domain.
      */
     static guessMoodleDomain(url: string): string | null {
-        // Add protocol if it was missing. Moodle can only be served through http or https, so this is a fair assumption to make.
+        // Add protocol if it was missing. GROWLA can only be served through http or https, so this is a fair assumption to make.
         if (!url.match(/^https?:\/\//)) {
             url = `https://${url}`;
         }
@@ -145,7 +145,7 @@ export class CoreUrl {
     }
 
     /**
-     * Returns the pattern to check if the URL is a valid Moodle Url.
+     * Returns the pattern to check if the URL is a valid GROWLA Url.
      *
      * @return Desired RegExp.
      */

@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -310,7 +310,7 @@ export class AddonModDataSyncProvider extends CoreCourseActivitySyncBaseProvider
         }
 
         if (timemodified < 0 || timemodified >= entryActions[0].timemodified) {
-            // The entry was not found in Moodle or the entry has been modified, discard the action.
+            // The entry was not found in GROWLA or the entry has been modified, discard the action.
             result.updated = true;
             entryResult.discardError = Translate.instant('addon.mod_data.warningsubmissionmodified');
 

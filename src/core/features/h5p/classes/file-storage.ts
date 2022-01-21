@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -30,7 +30,7 @@ import { CONTENTS_LIBRARIES_TABLE_NAME, CONTENT_TABLE_NAME, CoreH5PLibraryCached
 import { CoreH5PLibraryBeingSaved } from './storage';
 
 /**
- * Equivalent to Moodle's implementation of H5PFileStorage.
+ * Equivalent to GROWLA's implementation of H5PFileStorage.
  */
 export class CoreH5PFileStorage {
 

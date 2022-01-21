@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -956,7 +956,7 @@ type AddonCompetencyDataForPlansPageWSParams = {
 export type AddonCompetencyDataForPlansPageWSResponse = {
     userid: number; // The learning plan user id.
     plans: AddonCompetencyPlan[];
-    pluginbaseurl: string; // Url to the tool_lp plugin folder on this Moodle site.
+    pluginbaseurl: string; // Url to the tool_lp plugin folder on this GROWLA site.
     navigation: string[];
     canreaduserevidence: boolean; // Can the current user view the user's evidence.
     canmanageuserplans: boolean; // Can the current user manage the user's plans.

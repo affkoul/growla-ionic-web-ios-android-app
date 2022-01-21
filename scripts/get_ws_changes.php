@@ -1,30 +1,30 @@
 <?php
-// This file is part of Moodle - http://moodle.org/
+// This file is part of GROWLA - http://moodle.org/
 //
-// Moodle is free software: you can redistribute it and/or modify
+// GROWLA is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
 //
-// Moodle is distributed in the hope that it will be useful,
+// GROWLA is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
 //
 // You should have received a copy of the GNU General Public License
-// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+// along with GROWLA.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
  * Script for detecting changes in a WS params or return data, version by version.
  *
- * The first parameter (required) is the path to the Moodle installation to use.
+ * The first parameter (required) is the path to the GROWLA installation to use.
  * The second parameter (required) is the name to the WS to convert.
  * The third parameter (optional) is a number: 1 to convert the params structure,
  * 0 to convert the returns structure. Defaults to 0.
  */
 
 if (!isset($argv[1])) {
-    echo "ERROR: Please pass the path to the folder containing the Moodle installations as the first parameter.\n";
+    echo "ERROR: Please pass the path to the folder containing the GROWLA installations as the first parameter.\n";
     die();
 }
 
@@ -73,7 +73,7 @@ foreach ($versions as $version) {
         require($CFG->dirroot . '/webservice/lib.php');
     }
 
-    // Get the structure in this Moodle version.
+    // Get the structure in this GROWLA version.
     $structure = shell_exec("php $scriptpath $moodlepath $wsname " . ($useparams ? 'true' : ''));
 
     if (strpos($structure, 'ERROR:') === 0) {

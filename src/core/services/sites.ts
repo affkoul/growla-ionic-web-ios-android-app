@@ -1,4 +1,4 @@
-// (C) Copyright 2015 Moodle Pty Ltd.
+// (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -630,7 +630,7 @@ export class CoreSitesProvider {
     }
 
     /**
-     * Check if needs to be redirected to specific Workplace App or general Moodle App.
+     * Check if needs to be redirected to specific Workplace App or general GROWLA App.
      *
      * @param info Site info.
      * @return Either VALID_VERSION, WORKPLACE_APP or MOODLE_APP.
@@ -835,7 +835,7 @@ export class CoreSitesProvider {
             return false;
         }
 
-        // Check if local_mobile was installed to Moodle.
+        // Check if local_mobile was installed to GROWLA.
         try {
             await site.checkIfLocalMobileInstalledAndNotUsed();
 
@@ -1328,7 +1328,7 @@ export class CoreSitesProvider {
 
             const versionCheck = this.isValidMoodleVersion(info);
             if (versionCheck != CoreSitesProvider.VALID_VERSION) {
-                // The Moodle version is not supported, reject.
+                // The GROWLA version is not supported, reject.
                 return this.treatInvalidAppVersion(versionCheck, site.getURL(), site.getId());
             }
 
