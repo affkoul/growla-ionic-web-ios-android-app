@@ -1635,7 +1635,7 @@
     "core.login.webservicesnotenabled": "您的站点未开启网络服务。如果您觉得应当启用移动接入功能，请与站点管理员联系。",
     "core.lostconnection": "您的身份验证令牌无效或已过期。 您必须重新连接到该站点。",
     "core.mainmenu.appsettings": "应用设置",
-    "core.mainmenu.changesite": "切换站点",
+    "core.mainmenu.changesite": "切换账号",
     "core.mainmenu.help": "帮助",
     "core.mainmenu.logout": "退出登录",
     "core.mainmenu.website": "网站",

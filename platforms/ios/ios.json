@@ -10,7 +10,7 @@
           "NSLocationWhenInUseUsageDescription": [
             {
               "xml": "<string>We need your location so you can attach it as part of your submissions.</string>",
-              "count": 2,
+              "count": 1,
               "mode": "merge",
               "id": "config.xml"
             }
@@ -18,19 +18,15 @@
           "NSLocationAlwaysUsageDescription": [
             {
               "xml": "<string>We need your location so you can attach it as part of your submissions.</string>",
-              "count": 2,
+              "count": 1,
               "mode": "merge",
               "id": "config.xml"
             }
           ],
           "NSCameraUsageDescription": [
             {
-              "xml": "<string>This app requires camera access to function properly.</string>",
-              "count": 1
-            },
-            {
               "xml": "<string>We need camera access to take pictures so you can attach them as part of your submissions.</string>",
-              "count": 2,
+              "count": 1,
               "mode": "merge",
               "id": "config.xml"
             }
@@ -38,7 +34,7 @@
           "NSMicrophoneUsageDescription": [
             {
               "xml": "<string>We need microphone access to record sounds so you can attach them as part of your submissions.</string>",
-              "count": 2,
+              "count": 1,
               "mode": "merge",
               "id": "config.xml"
             }
@@ -46,7 +42,7 @@
           "NSPhotoLibraryUsageDescription": [
             {
               "xml": "<string>We need photo library access to get pictures from there so you can attach them as part of your submissions.</string>",
-              "count": 2,
+              "count": 1,
               "mode": "merge",
               "id": "config.xml"
             }
@@ -78,42 +74,52 @@
           "FIREBASE_ANALYTICS_COLLECTION_DEACTIVATED": [
             {
               "xml": "<string>YES</string>",
-              "count": 3
+              "count": 10
             }
           ],
           "UISupportedInterfaceOrientations": [
             {
               "xml": "<array><string>UIInterfaceOrientationPortrait</string><string>UIInterfaceOrientationPortraitUpsideDown</string><string>UIInterfaceOrientationLandscapeLeft</string><string>UIInterfaceOrientationLandscapeRight</string></array>",
-              "count": 3
+              "count": 10
             }
           ],
           "UISupportedInterfaceOrientations~ipad": [
             {
               "xml": "<array><string>UIInterfaceOrientationPortrait</string><string>UIInterfaceOrientationPortraitUpsideDown</string><string>UIInterfaceOrientationLandscapeLeft</string><string>UIInterfaceOrientationLandscapeRight</string></array>",
-              "count": 3
+              "count": 10
             }
           ],
           "UIRequiresFullScreen": [
             {
               "xml": "<false />",
-              "count": 3
+              "count": 10
             }
           ],
           "NSCrossWebsiteTrackingUsageDescription": [
             {
               "xml": "<string>This app needs third party cookies to correctly render embedded content from GROWLA website.</string>",
-              "count": 3
+              "count": 10
             }
           ],
           "CFBundleDocumentTypes": [
             {
               "xml": "<array><dict><key>CFBundleTypeName</key><string>Unknown File</string><key>LSHandlerRank</key><string>Alternate</string><key>LSItemContentTypes</key><array><string>public.calendar-event</string><string>public.database</string><string>public.executable</string><string>public.data</string><string>public.content </string><string>public.item</string></array></dict><dict><key>CFBundleTypeName</key><string>Video</string><key>LSHandlerRank</key><string>Alternate</string><key>LSItemContentTypes</key><array><string>public.video</string></array></dict><dict><key>CFBundleTypeName</key><string>Image</string><key>LSHandlerRank</key><string>Alternate</string><key>LSItemContentTypes</key><array><string>public.image</string></array></dict><dict><key>CFBundleTypeName</key><string>Web Archive</string><key>LSHandlerRank</key><string>Alternate</string><key>LSItemContentTypes</key><array><string>com.apple.webarchive</string></array></dict><dict><key>CFBundleTypeName</key><string>iWork Keynote</string><key>LSHandlerRank</key><string>Alternate</string><key>LSItemContentTypes</key><array><string>com.apple.keynote.key</string><string>com.apple.iwork.keynote.key</string><string>com.apple.iwork.keynote.kth</string></array></dict><dict><key>CFBundleTypeName</key><string>iWork Numbers</string><key>LSHandlerRank</key><string>Alternate</string><key>LSItemContentTypes</key><array><string>com.apple.numbers.numbers</string><string>com.apple.iwork.numbers.numbers</string><string>com.apple.iwork.numbers.template</string></array></dict><dict><key>CFBundleTypeName</key><string>iWork Pages</string><key>LSHandlerRank</key><string>Alternate</string><key>LSItemContentTypes</key><array><string>com.apple.page.pages</string><string>com.apple.iwork.pages.pages</string><string>com.apple.iwork.pages.template</string></array></dict><dict><key>CFBundleTypeName</key><string>OpenDocument Spreadsheet</string><key>LSHandlerRank</key><string>Alternate</string><key>LSItemContentTypes</key><array><string>org.oasis.opendocument.spreadsheet</string></array></dict><dict><key>CFBundleTypeName</key><string>OpenDocument Presentation</string><key>LSHandlerRank</key><string>Alternate</string><key>LSItemContentTypes</key><array><string>org.oasis.opendocument.presentation</string></array></dict><dict><key>CFBundleTypeName</key><string>OpenDocument Text</string><key>LSHandlerRank</key><string>Alternate</string><key>LSItemContentTypes</key><array><string>org.oasis.opendocument.text</string></array></dict><dict><key>CFBundleTypeName</key><string>Folder</string><key>LSHandlerRank</key><string>Alternate</string><key>LSItemContentTypes</key><array><string>public.folder</string></array></dict><dict><key>CFBundleTypeName</key><string>Audio</string><key>LSHandlerRank</key><string>Alternate</string><key>LSItemContentTypes</key><array><string>public.audio</string><string>public.mp3</string><string>public.mpeg-4-audio</string><string>com.apple.protected-​mpeg-4-audio</string><string>public.aifc-audio</string><string>com.apple.coreaudio-​format</string><string>public.aiff-audio</string></array></dict><dict><key>CFBundleTypeName</key><string>Movie</string><key>LSHandlerRank</key><string>Alternate</string><key>LSItemContentTypes</key><array><string>public.movie</string><string>public.3gpp2</string><string>public.3gpp</string><string>public.mpeg</string><string>com.apple.quicktime-movie</string><string>public.mpeg-4</string></array></dict><dict><key>CFBundleTypeName</key><string>GIF image</string><key>LSHandlerRank</key><string>Alternate</string><key>LSItemContentTypes</key><array><string>com.compuserve.gif</string></array></dict><dict><key>CFBundleTypeName</key><string>PNG image</string><key>LSHandlerRank</key><string>Alternate</string><key>LSItemContentTypes</key><array><string>public.png</string></array></dict><dict><key>CFBundleTypeName</key><string>TIFF image</string><key>LSHandlerRank</key><string>Alternate</string><key>LSItemContentTypes</key><array><string>public.tiff</string></array></dict><dict><key>CFBundleTypeName</key><string>JPEG image</string><key>LSHandlerRank</key><string>Alternate</string><key>LSItemContentTypes</key><array><string>public.jpeg</string></array></dict><dict><key>CFBundleTypeName</key><string>XML</string><key>LSHandlerRank</key><string>Alternate</string><key>LSItemContentTypes</key><array><string>public.xml</string></array></dict><dict><key>CFBundleTypeName</key><string>HTML</string><key>LSHandlerRank</key><string>Alternate</string><key>LSItemContentTypes</key><array><string>public.html</string><string>public.xhtml</string></array></dict><dict><key>CFBundleTypeName</key><string>Rich Text</string><key>LSHandlerRank</key><string>Alternate</string><key>LSItemContentTypes</key><array><string>public.rtf</string><string>com.apple.rtfd</string><string>com.apple.flat-rtfd</string></array></dict><dict><key>CFBundleTypeName</key><string>Text</string><key>LSHandlerRank</key><string>Alternate</string><key>LSItemContentTypes</key><array><string>public.text</string><string>public.plain-text</string><string>public.utf8-plain-text</string><string>public.utf16-external-plain-​text</string><string>public.utf16-plain-text</string><string>com.apple.traditional-mac-​plain-text</string><string>public.source-code</string><string>public.c-source</string><string>public.objective-c-source</string><string>public.c-plus-plus-source</string><string>public.objective-c-plus-​plus-source</string><string>public.c-header</string><string>public.c-plus-plus-header</string><string>com.sun.java-source</string><string>public.script</string><string>public.shell-script</string></array></dict><dict><key>CFBundleTypeExtensions</key><array><string>zip</string><string>zipx</string></array><key>CFBundleTypeName</key><string>Zip archive</string><key>LSHandlerRank</key><string>Alternate</string><key>LSItemContentTypes</key><array><string>public.zip-archive</string><string>public.archive</string><string>com.pkware.zip-archive</string><string>com.pkware.zipx-archive</string></array></dict><dict><key>CFBundleTypeExtensions</key><array><string>rar</string><string>RAR</string></array><key>CFBundleTypeName</key><string>Rar archive</string><key>LSHandlerRank</key><string>Alternate</string><key>LSItemContentTypes</key><array><string>com.rarlab.rar-archive</string><string>public.archive</string></array></dict><dict><key>CFBundleTypeExtensions</key><array><string>7z</string><string>7Z</string></array><key>CFBundleTypeName</key><string>7z archive</string><key>LSHandlerRank</key><string>Alternate</string><key>LSItemContentTypes</key><array><string>org.7-zip.7-zip-archive</string><string>public.archive</string></array></dict><dict><key>CFBundleTypeName</key><string>Waveform audio</string><key>LSHandlerRank</key><string>Alternate</string><key>LSItemContentTypes</key><array><string>com.microsoft.waveform-​audio</string></array></dict><dict><key>CFBundleTypeName</key><string>Windows icon image</string><key>LSHandlerRank</key><string>Alternate</string><key>LSItemContentTypes</key><array><string>com.microsoft.ico</string><string>com.apple.icns</string></array></dict><dict><key>CFBundleTypeName</key><string>Windows bitmap image</string><key>LSHandlerRank</key><string>Alternate</string><key>LSItemContentTypes</key><array><string>com.microsoft.bmp</string></array></dict><dict><key>CFBundleTypeName</key><string>Microsoft PowerPoint</string><key>LSHandlerRank</key><string>Alternate</string><key>LSItemContentTypes</key><array><string>com.microsoft.powerpoint.​ppt</string><string>org.openxmlformats.presentationml.presentation</string></array></dict><dict><key>CFBundleTypeName</key><string>Microsoft Excel</string><key>LSHandlerRank</key><string>Alternate</string><key>LSItemContentTypes</key><array><string>org.openxmlformats.spreadsheetml.sheet</string><string>com.microsoft.excel.xls</string></array></dict><dict><key>CFBundleTypeName</key><string>Microsoft Word</string><key>LSHandlerRank</key><string>Alternate</string><key>LSItemContentTypes</key><array><string>com.microsoft.word.doc</string><string>com.microsoft.word.wordml</string><string>org.openxmlformats.wordprocessingml.document</string></array></dict><dict><key>CFBundleTypeName</key><string>PDF</string><key>LSHandlerRank</key><string>Alternate</string><key>LSItemContentTypes</key><array><string>com.adobe.pdf</string></array></dict></array>",
-              "count": 3
+              "count": 10
             }
           ],
           "CFBundleURLTypes": [
             {
               "xml": "<array><dict><key>CFBundleURLSchemes</key><array><string>moodlemobile</string></array></dict></array>",
+              "count": 1
+            }
+          ],
+          "UIBackgroundModes": [
+            {
+              "xml": "<array><string>audio</string></array>",
+              "count": 1
+            },
+            {
+              "xml": "<array><string>remote-notification</string></array>",
               "count": 1
             }
           ],
@@ -158,16 +164,6 @@
               "xml": "<string>This app requires motion detection access to function properly.</string>",
               "count": 1
             }
-          ],
-          "UIBackgroundModes": [
-            {
-              "xml": "<array><string>audio</string></array>",
-              "count": 1
-            },
-            {
-              "xml": "<array><string>remote-notification</string></array>",
-              "count": 2
-            }
           ]
         }
       },
@@ -175,15 +171,15 @@
         "parents": {
           "/*": [
             {
-              "xml": "<feature name=\"Clipboard\"><param name=\"ios-package\" value=\"CDVClipboard\" /></feature>",
-              "count": 1
-            },
-            {
               "xml": "<feature name=\"File\"><param name=\"ios-package\" value=\"CDVFile\" /><param name=\"onload\" value=\"true\" /></feature>",
               "count": 1
             },
             {
               "xml": "<feature name=\"CordovaHttpPlugin\"><param name=\"ios-package\" value=\"CordovaHttpPlugin\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"Clipboard\"><param name=\"ios-package\" value=\"CDVClipboard\" /></feature>",
               "count": 1
             },
             {
@@ -211,23 +207,7 @@
               "count": 1
             },
             {
-              "xml": "<feature name=\"FileTransfer\"><param name=\"ios-package\" value=\"CDVFileTransfer\" /></feature>",
-              "count": 1
-            },
-            {
               "xml": "<feature name=\"Geolocation\"><param name=\"ios-package\" value=\"CDVLocation\" /></feature>",
-              "count": 1
-            },
-            {
-              "xml": "<feature name=\"Globalization\"><param name=\"ios-package\" value=\"CDVGlobalization\" /></feature>",
-              "count": 1
-            },
-            {
-              "xml": "<feature name=\"InAppBrowser\"><param name=\"ios-package\" value=\"CDVWKInAppBrowser\" /><param name=\"onload\" value=\"true\" /></feature>",
-              "count": 1
-            },
-            {
-              "xml": "<feature name=\"CDVIonicKeyboard\"><param name=\"ios-package\" onload=\"true\" value=\"CDVIonicKeyboard\" /></feature>",
               "count": 1
             },
             {
@@ -247,10 +227,6 @@
               "count": 1
             },
             {
-              "xml": "<feature name=\"LocalNotification\"><param name=\"ios-package\" onload=\"true\" value=\"APPLocalNotification\" /><param name=\"onload\" value=\"true\" /></feature>",
-              "count": 1
-            },
-            {
               "xml": "<feature name=\"Media\"><param name=\"ios-package\" value=\"CDVSound\" /></feature>",
               "count": 1
             },
@@ -259,19 +235,7 @@
               "count": 1
             },
             {
-              "xml": "<feature name=\"Capture\"><param name=\"ios-package\" value=\"CDVCapture\" /></feature>",
-              "count": 1
-            },
-            {
               "xml": "<feature name=\"NetworkStatus\"><param name=\"ios-package\" value=\"CDVConnection\" /></feature>",
-              "count": 1
-            },
-            {
-              "xml": "<feature name=\"QRScanner\"><param name=\"ios-package\" value=\"QRScanner\" /></feature>",
-              "count": 1
-            },
-            {
-              "xml": "<feature name=\"CDVOrientation\"><param name=\"ios-package\" value=\"CDVOrientation\" /></feature>",
               "count": 1
             },
             {
@@ -287,15 +251,11 @@
               "count": 1
             },
             {
-              "xml": "<feature name=\"WKUserScript\"><param name=\"ios-package\" value=\"CDVWKUserScript\" /></feature>",
-              "count": 1
-            },
-            {
-              "xml": "<feature name=\"WKWebViewCookies\"><param name=\"ios-package\" value=\"CDVWKWebViewCookies\" /></feature>",
-              "count": 1
-            },
-            {
               "xml": "<feature name=\"SQLitePlugin\"><param name=\"ios-package\" value=\"SQLitePlugin\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"BackgroundAudio\"><param name=\"ios-package\" onload=\"true\" value=\"BackgroundAudio\" /><param name=\"onload\" value=\"true\" /></feature>",
               "count": 1
             },
             {
@@ -343,12 +303,48 @@
               "count": 1
             },
             {
-              "xml": "<feature name=\"BackgroundAudio\"><param name=\"ios-package\" onload=\"true\" value=\"BackgroundAudio\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "xml": "<feature name=\"Globalization\"><param name=\"ios-package\" value=\"CDVGlobalization\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"FileTransfer\"><param name=\"ios-package\" value=\"CDVFileTransfer\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"InAppBrowser\"><param name=\"ios-package\" value=\"CDVWKInAppBrowser\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"LocalNotification\"><param name=\"ios-package\" onload=\"true\" value=\"APPLocalNotification\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"QRScanner\"><param name=\"ios-package\" value=\"QRScanner\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"WKUserScript\"><param name=\"ios-package\" value=\"CDVWKUserScript\" /></feature>",
               "count": 1
             },
             {
               "xml": "<feature name=\"PushNotification\"><param name=\"ios-package\" value=\"PushPlugin\" /></feature>",
-              "count": 2
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"CDVIonicKeyboard\"><param name=\"ios-package\" onload=\"true\" value=\"CDVIonicKeyboard\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"Capture\"><param name=\"ios-package\" value=\"CDVCapture\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"CDVOrientation\"><param name=\"ios-package\" value=\"CDVOrientation\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"WKWebViewCookies\"><param name=\"ios-package\" value=\"CDVWKWebViewCookies\" /></feature>",
+              "count": 1
             }
           ],
           "/widget": [
@@ -364,7 +360,7 @@
           "aps-environment": [
             {
               "xml": "<string>development</string>",
-              "count": 2
+              "count": 1
             }
           ]
         }
@@ -374,7 +370,7 @@
           "aps-environment": [
             {
               "xml": "<string>production</string>",
-              "count": 2
+              "count": 1
             }
           ]
         }
@@ -382,28 +378,22 @@
     }
   },
   "installed_plugins": {
-    "com-darryncampbell-cordova-plugin-intent": {
-      "PACKAGE_NAME": "com.growlaapp.mobile"
-    },
-    "cordova-android-support-gradle-release": {
-      "PACKAGE_NAME": "com.growlaapp.mobile"
-    },
-    "cordova-clipboard": {
-      "PACKAGE_NAME": "com.growlaapp.mobile"
-    },
-    "cordova-plugin-add-swift-support": {
-      "PACKAGE_NAME": "com.growlaapp.mobile"
-    },
     "cordova-plugin-file": {
       "PACKAGE_NAME": "com.growlaapp.mobile"
     },
     "cordova-plugin-advanced-http": {
       "PACKAGE_NAME": "com.growlaapp.mobile"
     },
+    "cordova-clipboard": {
+      "PACKAGE_NAME": "com.growlaapp.mobile"
+    },
     "cordova-plugin-badge": {
       "PACKAGE_NAME": "com.growlaapp.mobile"
     },
     "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.growlaapp.mobile"
+    },
+    "cordova-plugin-add-swift-support": {
       "PACKAGE_NAME": "com.growlaapp.mobile"
     },
     "cordova-plugin-chooser": {
@@ -419,45 +409,18 @@
     "cordova-plugin-file-opener2": {
       "PACKAGE_NAME": "com.growlaapp.mobile"
     },
-    "cordova-plugin-file-transfer": {
-      "PACKAGE_NAME": "com.growlaapp.mobile"
-    },
     "cordova-plugin-geolocation": {
       "GPS_REQUIRED": "false",
       "PACKAGE_NAME": "com.growlaapp.mobile"
     },
-    "cordova-plugin-globalization": {
-      "PACKAGE_NAME": "com.growlaapp.mobile"
-    },
-    "cordova-plugin-inappbrowser": {
-      "PACKAGE_NAME": "com.growlaapp.mobile"
-    },
-    "cordova-plugin-ionic-keyboard": {
-      "PACKAGE_NAME": "com.growlaapp.mobile"
-    },
     "cordova-plugin-ionic-webview": {
-      "PACKAGE_NAME": "com.growlaapp.mobile"
-    },
-    "cordova-plugin-local-notification": {
       "PACKAGE_NAME": "com.growlaapp.mobile"
     },
     "cordova-plugin-media": {
       "KEEP_AVAUDIOSESSION_ALWAYS_ACTIVE": "NO",
       "PACKAGE_NAME": "com.growlaapp.mobile"
     },
-    "cordova-plugin-media-capture": {
-      "PACKAGE_NAME": "com.growlaapp.mobile"
-    },
     "cordova-plugin-network-information": {
-      "PACKAGE_NAME": "com.growlaapp.mobile"
-    },
-    "cordova-plugin-prevent-override": {
-      "PACKAGE_NAME": "com.growlaapp.mobile"
-    },
-    "cordova-plugin-qrscanner": {
-      "PACKAGE_NAME": "com.growlaapp.mobile"
-    },
-    "cordova-plugin-screen-orientation": {
       "PACKAGE_NAME": "com.growlaapp.mobile"
     },
     "cordova-plugin-splashscreen": {
@@ -469,59 +432,63 @@
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.growlaapp.mobile"
     },
-    "cordova-plugin-wkuserscript": {
-      "PACKAGE_NAME": "com.growlaapp.mobile"
-    },
-    "cordova-plugin-wkwebview-cookies": {
-      "PACKAGE_NAME": "com.growlaapp.mobile"
-    },
     "cordova-plugin-zip": {
       "PACKAGE_NAME": "com.growlaapp.mobile"
     },
     "cordova-sqlite-storage": {
       "PACKAGE_NAME": "com.growlaapp.mobile"
     },
-    "cordova-support-google-services": {
+    "nl.kingsquare.cordova.background-audio": {
+      "PACKAGE_NAME": "com.growlaapp.mobile"
+    },
+    "cordova-android-support-gradle-release": {
       "PACKAGE_NAME": "com.growlaapp.mobile"
     },
     "cordova.plugins.diagnostic": {
       "PACKAGE_NAME": "com.growlaapp.mobile"
     },
-    "es6-promise-plugin": {
+    "cordova-plugin-globalization": {
       "PACKAGE_NAME": "com.growlaapp.mobile"
     },
-    "nl.kingsquare.cordova.background-audio": {
+    "cordova-plugin-file-transfer": {
       "PACKAGE_NAME": "com.growlaapp.mobile"
     },
-    "phonegap-plugin-multidex": {
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.growlaapp.mobile"
+    },
+    "cordova-plugin-local-notification": {
+      "PACKAGE_NAME": "com.growlaapp.mobile"
+    },
+    "cordova-plugin-qrscanner": {
+      "PACKAGE_NAME": "com.growlaapp.mobile"
+    },
+    "cordova-plugin-wkuserscript": {
       "PACKAGE_NAME": "com.growlaapp.mobile"
     },
     "phonegap-plugin-push": {
       "PACKAGE_NAME": "com.growlaapp.mobile"
     },
-    "@moodlehq/phonegap-plugin-push": {
-      "IOS_FIREBASE_MESSAGING_VERSION": "~> 6.32.2",
+    "cordova-plugin-prevent-override": {
+      "PACKAGE_NAME": "com.growlaapp.mobile"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "com.growlaapp.mobile"
+    },
+    "cordova-plugin-media-capture": {
+      "PACKAGE_NAME": "com.growlaapp.mobile"
+    },
+    "cordova-plugin-screen-orientation": {
+      "PACKAGE_NAME": "com.growlaapp.mobile"
+    },
+    "cordova-plugin-wkwebview-cookies": {
+      "PACKAGE_NAME": "com.growlaapp.mobile"
+    },
+    "com-darryncampbell-cordova-plugin-intent": {
       "PACKAGE_NAME": "com.growlaapp.mobile"
     }
   },
   "dependent_plugins": {},
   "modules": [
-    {
-      "id": "com-darryncampbell-cordova-plugin-intent.IntentShim",
-      "file": "plugins/com-darryncampbell-cordova-plugin-intent/www/IntentShim.js",
-      "pluginId": "com-darryncampbell-cordova-plugin-intent",
-      "clobbers": [
-        "intentShim"
-      ]
-    },
-    {
-      "id": "cordova-clipboard.Clipboard",
-      "file": "plugins/cordova-clipboard/www/clipboard.js",
-      "pluginId": "cordova-clipboard",
-      "clobbers": [
-        "cordova.plugins.clipboard"
-      ]
-    },
     {
       "id": "cordova-plugin-file.DirectoryEntry",
       "file": "plugins/cordova-plugin-file/www/DirectoryEntry.js",
@@ -769,6 +736,14 @@
       ]
     },
     {
+      "id": "cordova-clipboard.Clipboard",
+      "file": "plugins/cordova-clipboard/www/clipboard.js",
+      "pluginId": "cordova-clipboard",
+      "clobbers": [
+        "cordova.plugins.clipboard"
+      ]
+    },
+    {
       "id": "cordova-plugin-badge.Badge",
       "file": "plugins/cordova-plugin-badge/www/badge.js",
       "pluginId": "cordova-plugin-badge",
@@ -841,22 +816,6 @@
       ]
     },
     {
-      "id": "cordova-plugin-file-transfer.FileTransferError",
-      "file": "plugins/cordova-plugin-file-transfer/www/FileTransferError.js",
-      "pluginId": "cordova-plugin-file-transfer",
-      "clobbers": [
-        "window.FileTransferError"
-      ]
-    },
-    {
-      "id": "cordova-plugin-file-transfer.FileTransfer",
-      "file": "plugins/cordova-plugin-file-transfer/www/FileTransfer.js",
-      "pluginId": "cordova-plugin-file-transfer",
-      "clobbers": [
-        "window.FileTransfer"
-      ]
-    },
-    {
       "id": "cordova-plugin-geolocation.Coordinates",
       "file": "plugins/cordova-plugin-geolocation/www/Coordinates.js",
       "pluginId": "cordova-plugin-geolocation",
@@ -889,38 +848,6 @@
       ]
     },
     {
-      "id": "cordova-plugin-globalization.GlobalizationError",
-      "file": "plugins/cordova-plugin-globalization/www/GlobalizationError.js",
-      "pluginId": "cordova-plugin-globalization",
-      "clobbers": [
-        "window.GlobalizationError"
-      ]
-    },
-    {
-      "id": "cordova-plugin-globalization.globalization",
-      "file": "plugins/cordova-plugin-globalization/www/globalization.js",
-      "pluginId": "cordova-plugin-globalization",
-      "clobbers": [
-        "navigator.globalization"
-      ]
-    },
-    {
-      "id": "cordova-plugin-inappbrowser.inappbrowser",
-      "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
-      "pluginId": "cordova-plugin-inappbrowser",
-      "clobbers": [
-        "cordova.InAppBrowser.open"
-      ]
-    },
-    {
-      "id": "cordova-plugin-ionic-keyboard.keyboard",
-      "file": "plugins/cordova-plugin-ionic-keyboard/www/ios/keyboard.js",
-      "pluginId": "cordova-plugin-ionic-keyboard",
-      "clobbers": [
-        "window.Keyboard"
-      ]
-    },
-    {
       "id": "cordova-plugin-ionic-webview.IonicWebView",
       "file": "plugins/cordova-plugin-ionic-webview/src/www/util.js",
       "pluginId": "cordova-plugin-ionic-webview",
@@ -937,14 +864,6 @@
       ]
     },
     {
-      "id": "cordova-plugin-local-notification.LocalNotification",
-      "file": "plugins/cordova-plugin-local-notification/www/local-notification.js",
-      "pluginId": "cordova-plugin-local-notification",
-      "clobbers": [
-        "cordova.plugins.notification.local"
-      ]
-    },
-    {
       "id": "cordova-plugin-media.MediaError",
       "file": "plugins/cordova-plugin-media/www/MediaError.js",
       "pluginId": "cordova-plugin-media",
@@ -958,68 +877,6 @@
       "pluginId": "cordova-plugin-media",
       "clobbers": [
         "window.Media"
-      ]
-    },
-    {
-      "id": "cordova-plugin-media-capture.CaptureAudioOptions",
-      "file": "plugins/cordova-plugin-media-capture/www/CaptureAudioOptions.js",
-      "pluginId": "cordova-plugin-media-capture",
-      "clobbers": [
-        "CaptureAudioOptions"
-      ]
-    },
-    {
-      "id": "cordova-plugin-media-capture.CaptureImageOptions",
-      "file": "plugins/cordova-plugin-media-capture/www/CaptureImageOptions.js",
-      "pluginId": "cordova-plugin-media-capture",
-      "clobbers": [
-        "CaptureImageOptions"
-      ]
-    },
-    {
-      "id": "cordova-plugin-media-capture.CaptureVideoOptions",
-      "file": "plugins/cordova-plugin-media-capture/www/CaptureVideoOptions.js",
-      "pluginId": "cordova-plugin-media-capture",
-      "clobbers": [
-        "CaptureVideoOptions"
-      ]
-    },
-    {
-      "id": "cordova-plugin-media-capture.CaptureError",
-      "file": "plugins/cordova-plugin-media-capture/www/CaptureError.js",
-      "pluginId": "cordova-plugin-media-capture",
-      "clobbers": [
-        "CaptureError"
-      ]
-    },
-    {
-      "id": "cordova-plugin-media-capture.MediaFileData",
-      "file": "plugins/cordova-plugin-media-capture/www/MediaFileData.js",
-      "pluginId": "cordova-plugin-media-capture",
-      "clobbers": [
-        "MediaFileData"
-      ]
-    },
-    {
-      "id": "cordova-plugin-media-capture.MediaFile",
-      "file": "plugins/cordova-plugin-media-capture/www/MediaFile.js",
-      "pluginId": "cordova-plugin-media-capture",
-      "clobbers": [
-        "MediaFile"
-      ]
-    },
-    {
-      "id": "cordova-plugin-media-capture.helpers",
-      "file": "plugins/cordova-plugin-media-capture/www/helpers.js",
-      "pluginId": "cordova-plugin-media-capture",
-      "runs": true
-    },
-    {
-      "id": "cordova-plugin-media-capture.capture",
-      "file": "plugins/cordova-plugin-media-capture/www/capture.js",
-      "pluginId": "cordova-plugin-media-capture",
-      "clobbers": [
-        "navigator.device.capture"
       ]
     },
     {
@@ -1040,43 +897,11 @@
       ]
     },
     {
-      "id": "cordova-plugin-qrscanner.QRScanner",
-      "file": "plugins/cordova-plugin-qrscanner/www/www.min.js",
-      "pluginId": "cordova-plugin-qrscanner",
-      "clobbers": [
-        "QRScanner"
-      ]
-    },
-    {
-      "id": "cordova-plugin-screen-orientation.screenorientation",
-      "file": "plugins/cordova-plugin-screen-orientation/www/screenorientation.js",
-      "pluginId": "cordova-plugin-screen-orientation",
-      "clobbers": [
-        "cordova.plugins.screenorientation"
-      ]
-    },
-    {
       "id": "cordova-plugin-statusbar.statusbar",
       "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
       "pluginId": "cordova-plugin-statusbar",
       "clobbers": [
         "window.StatusBar"
-      ]
-    },
-    {
-      "id": "cordova-plugin-wkuserscript.WKUserScript",
-      "file": "plugins/cordova-plugin-wkuserscript/www/wkuserscript.js",
-      "pluginId": "cordova-plugin-wkuserscript",
-      "clobbers": [
-        "window.WKUserScript"
-      ]
-    },
-    {
-      "id": "cordova-plugin-wkwebview-cookies.WKWebViewCookies",
-      "file": "plugins/cordova-plugin-wkwebview-cookies/www/wkwebview-cookies.js",
-      "pluginId": "cordova-plugin-wkwebview-cookies",
-      "clobbers": [
-        "window.WKWebViewCookies"
       ]
     },
     {
@@ -1184,10 +1009,68 @@
       ]
     },
     {
-      "id": "es6-promise-plugin.Promise",
-      "file": "plugins/es6-promise-plugin/www/promise.js",
-      "pluginId": "es6-promise-plugin",
-      "runs": true
+      "id": "cordova-plugin-globalization.GlobalizationError",
+      "file": "plugins/cordova-plugin-globalization/www/GlobalizationError.js",
+      "pluginId": "cordova-plugin-globalization",
+      "clobbers": [
+        "window.GlobalizationError"
+      ]
+    },
+    {
+      "id": "cordova-plugin-globalization.globalization",
+      "file": "plugins/cordova-plugin-globalization/www/globalization.js",
+      "pluginId": "cordova-plugin-globalization",
+      "clobbers": [
+        "navigator.globalization"
+      ]
+    },
+    {
+      "id": "cordova-plugin-file-transfer.FileTransferError",
+      "file": "plugins/cordova-plugin-file-transfer/www/FileTransferError.js",
+      "pluginId": "cordova-plugin-file-transfer",
+      "clobbers": [
+        "window.FileTransferError"
+      ]
+    },
+    {
+      "id": "cordova-plugin-file-transfer.FileTransfer",
+      "file": "plugins/cordova-plugin-file-transfer/www/FileTransfer.js",
+      "pluginId": "cordova-plugin-file-transfer",
+      "clobbers": [
+        "window.FileTransfer"
+      ]
+    },
+    {
+      "id": "cordova-plugin-inappbrowser.inappbrowser",
+      "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+      "pluginId": "cordova-plugin-inappbrowser",
+      "clobbers": [
+        "cordova.InAppBrowser.open"
+      ]
+    },
+    {
+      "id": "cordova-plugin-local-notification.LocalNotification",
+      "file": "plugins/cordova-plugin-local-notification/www/local-notification.js",
+      "pluginId": "cordova-plugin-local-notification",
+      "clobbers": [
+        "cordova.plugins.notification.local"
+      ]
+    },
+    {
+      "id": "cordova-plugin-qrscanner.QRScanner",
+      "file": "plugins/cordova-plugin-qrscanner/www/www.min.js",
+      "pluginId": "cordova-plugin-qrscanner",
+      "clobbers": [
+        "QRScanner"
+      ]
+    },
+    {
+      "id": "cordova-plugin-wkuserscript.WKUserScript",
+      "file": "plugins/cordova-plugin-wkuserscript/www/wkuserscript.js",
+      "pluginId": "cordova-plugin-wkuserscript",
+      "clobbers": [
+        "window.WKUserScript"
+      ]
     },
     {
       "id": "phonegap-plugin-push.PushNotification",
@@ -1198,53 +1081,135 @@
       ]
     },
     {
-      "id": "@moodlehq/phonegap-plugin-push.PushNotification",
-      "file": "plugins/@moodlehq/phonegap-plugin-push/www/push.js",
-      "pluginId": "@moodlehq/phonegap-plugin-push",
+      "id": "cordova-plugin-ionic-keyboard.keyboard",
+      "file": "plugins/cordova-plugin-ionic-keyboard/www/ios/keyboard.js",
+      "pluginId": "cordova-plugin-ionic-keyboard",
       "clobbers": [
-        "PushNotification"
+        "window.Keyboard"
+      ]
+    },
+    {
+      "id": "cordova-plugin-media-capture.CaptureAudioOptions",
+      "file": "plugins/cordova-plugin-media-capture/www/CaptureAudioOptions.js",
+      "pluginId": "cordova-plugin-media-capture",
+      "clobbers": [
+        "CaptureAudioOptions"
+      ]
+    },
+    {
+      "id": "cordova-plugin-media-capture.CaptureImageOptions",
+      "file": "plugins/cordova-plugin-media-capture/www/CaptureImageOptions.js",
+      "pluginId": "cordova-plugin-media-capture",
+      "clobbers": [
+        "CaptureImageOptions"
+      ]
+    },
+    {
+      "id": "cordova-plugin-media-capture.CaptureVideoOptions",
+      "file": "plugins/cordova-plugin-media-capture/www/CaptureVideoOptions.js",
+      "pluginId": "cordova-plugin-media-capture",
+      "clobbers": [
+        "CaptureVideoOptions"
+      ]
+    },
+    {
+      "id": "cordova-plugin-media-capture.CaptureError",
+      "file": "plugins/cordova-plugin-media-capture/www/CaptureError.js",
+      "pluginId": "cordova-plugin-media-capture",
+      "clobbers": [
+        "CaptureError"
+      ]
+    },
+    {
+      "id": "cordova-plugin-media-capture.MediaFileData",
+      "file": "plugins/cordova-plugin-media-capture/www/MediaFileData.js",
+      "pluginId": "cordova-plugin-media-capture",
+      "clobbers": [
+        "MediaFileData"
+      ]
+    },
+    {
+      "id": "cordova-plugin-media-capture.MediaFile",
+      "file": "plugins/cordova-plugin-media-capture/www/MediaFile.js",
+      "pluginId": "cordova-plugin-media-capture",
+      "clobbers": [
+        "MediaFile"
+      ]
+    },
+    {
+      "id": "cordova-plugin-media-capture.helpers",
+      "file": "plugins/cordova-plugin-media-capture/www/helpers.js",
+      "pluginId": "cordova-plugin-media-capture",
+      "runs": true
+    },
+    {
+      "id": "cordova-plugin-media-capture.capture",
+      "file": "plugins/cordova-plugin-media-capture/www/capture.js",
+      "pluginId": "cordova-plugin-media-capture",
+      "clobbers": [
+        "navigator.device.capture"
+      ]
+    },
+    {
+      "id": "cordova-plugin-screen-orientation.screenorientation",
+      "file": "plugins/cordova-plugin-screen-orientation/www/screenorientation.js",
+      "pluginId": "cordova-plugin-screen-orientation",
+      "clobbers": [
+        "cordova.plugins.screenorientation"
+      ]
+    },
+    {
+      "id": "cordova-plugin-wkwebview-cookies.WKWebViewCookies",
+      "file": "plugins/cordova-plugin-wkwebview-cookies/www/wkwebview-cookies.js",
+      "pluginId": "cordova-plugin-wkwebview-cookies",
+      "clobbers": [
+        "window.WKWebViewCookies"
+      ]
+    },
+    {
+      "id": "com-darryncampbell-cordova-plugin-intent.IntentShim",
+      "file": "plugins/com-darryncampbell-cordova-plugin-intent/www/IntentShim.js",
+      "pluginId": "com-darryncampbell-cordova-plugin-intent",
+      "clobbers": [
+        "intentShim"
       ]
     }
   ],
   "plugin_metadata": {
-    "com-darryncampbell-cordova-plugin-intent": "1.3.0",
-    "cordova-android-support-gradle-release": "3.0.1",
-    "cordova-clipboard": "1.3.0",
-    "cordova-plugin-add-swift-support": "2.0.2",
     "cordova-plugin-file": "6.0.2",
     "cordova-plugin-advanced-http": "3.1.0",
+    "cordova-clipboard": "1.3.0",
     "cordova-plugin-badge": "0.8.8",
     "cordova-plugin-camera": "5.0.1",
+    "cordova-plugin-add-swift-support": "2.0.2",
     "cordova-plugin-chooser": "1.3.1",
     "cordova-plugin-customurlscheme": "5.0.2",
     "cordova-plugin-device": "2.0.3",
     "cordova-plugin-file-opener2": "3.0.5",
-    "cordova-plugin-file-transfer": "2.0.0-dev",
     "cordova-plugin-geolocation": "4.1.0",
-    "cordova-plugin-globalization": "1.11.0",
-    "cordova-plugin-inappbrowser": "5.0.0",
-    "cordova-plugin-ionic-keyboard": "2.2.0",
     "cordova-plugin-ionic-webview": "5.0.0",
-    "cordova-plugin-local-notification": "0.9.0-beta.3",
     "cordova-plugin-media": "5.0.3",
-    "cordova-plugin-media-capture": "3.0.3",
     "cordova-plugin-network-information": "2.0.2",
-    "cordova-plugin-prevent-override": "1.0.0",
-    "cordova-plugin-qrscanner": "3.0.1",
-    "cordova-plugin-screen-orientation": "3.0.2",
     "cordova-plugin-splashscreen": "6.0.0",
     "cordova-plugin-statusbar": "2.4.3",
     "cordova-plugin-whitelist": "1.3.4",
-    "cordova-plugin-wkuserscript": "1.0.0",
-    "cordova-plugin-wkwebview-cookies": "1.0.0",
     "cordova-plugin-zip": "3.1.0",
     "cordova-sqlite-storage": "6.0.0",
-    "cordova-support-google-services": "1.2.1",
-    "cordova.plugins.diagnostic": "5.0.2",
-    "es6-promise-plugin": "4.2.2",
     "nl.kingsquare.cordova.background-audio": "1.0.1",
-    "phonegap-plugin-multidex": "1.0.0",
+    "cordova-android-support-gradle-release": "3.0.1",
+    "cordova.plugins.diagnostic": "5.0.2",
+    "cordova-plugin-globalization": "1.11.0",
+    "cordova-plugin-file-transfer": "2.0.0-dev",
+    "cordova-plugin-inappbrowser": "5.0.0",
+    "cordova-plugin-local-notification": "0.9.0-beta.3",
+    "cordova-plugin-qrscanner": "3.0.1",
+    "cordova-plugin-wkuserscript": "1.0.0",
     "phonegap-plugin-push": "2.2.3",
-    "@moodlehq/phonegap-plugin-push": "2.0.0-moodle.2"
+    "cordova-plugin-prevent-override": "1.0.0",
+    "cordova-plugin-ionic-keyboard": "2.2.0",
+    "cordova-plugin-media-capture": "3.0.3",
+    "cordova-plugin-screen-orientation": "3.0.2",
+    "cordova-plugin-wkwebview-cookies": "1.0.0",
+    "com-darryncampbell-cordova-plugin-intent": "1.3.0"
   }
 }

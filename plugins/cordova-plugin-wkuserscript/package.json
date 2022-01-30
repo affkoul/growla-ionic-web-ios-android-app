@@ -14,8 +14,8 @@
     "gitCommittish": null
   },
   "_requiredBy": [
-    "#USER",
-    "/"
+    "#DEV:/",
+    "#USER"
   ],
   "_resolved": "git+https://github.com/moodlemobile/cordova-plugin-wkuserscript.git#aa77d0f98a3fb106f2e798e5adf5882f01a2c947",
   "_spec": "git+https://github.com/moodlemobile/cordova-plugin-wkuserscript.git",

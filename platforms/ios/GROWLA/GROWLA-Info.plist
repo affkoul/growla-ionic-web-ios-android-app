@@ -48,16 +48,6 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>We need your location so you can attach it as part of your submissions.</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>We need your location so you can attach it as part of your submissions.</string>
-	<key>NSCameraUsageDescription</key>
-	<string>We need camera access to take pictures so you can attach them as part of your submissions.</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>We need microphone access to record sounds so you can attach them as part of your submissions.</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>We need photo library access to get pictures from there so you can attach them as part of your submissions.</string>
 	<key>FIREBASE_ANALYTICS_COLLECTION_DEACTIVATED</key>
 	<string>YES</string>
 	<key>NSCrossWebsiteTrackingUsageDescription</key>
@@ -449,6 +439,11 @@
 			</array>
 		</dict>
 	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+		<string>remote-notification</string>
+	</array>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>This app requires constant access to your location in order to track your position, even when the screen is off or the app is in the background.</string>
 	<key>NSBluetoothPeripheralUsageDescription</key>
@@ -463,11 +458,16 @@
 	<string>This app requires reminders access to function properly.</string>
 	<key>NSMotionUsageDescription</key>
 	<string>This app requires motion detection access to function properly.</string>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>audio</string>
-		<string>remote-notification</string>
-	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need your location so you can attach it as part of your submissions.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>We need your location so you can attach it as part of your submissions.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>We need camera access to take pictures so you can attach them as part of your submissions.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>We need microphone access to record sounds so you can attach them as part of your submissions.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We need photo library access to get pictures from there so you can attach them as part of your submissions.</string>
 	<key>UISupportsDocumentBrowser</key>
 	<true/>
 	<key>CFBundleShortVersionString</key>

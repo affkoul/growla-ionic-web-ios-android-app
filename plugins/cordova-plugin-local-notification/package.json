@@ -1,31 +1,23 @@
 {
-  "_args": [
-    [
-      "cordova-plugin-local-notification@github:moodlemobile/cordova-plugin-local-notification#moodle",
-      "/Users/gpc/Downloads/EtonKids/GROWLA Project/Soft Launch/App/APP验收 2/growla-app"
-    ]
-  ],
-  "_development": true,
-  "_from": "cordova-plugin-local-notification@github:moodlemobile/cordova-plugin-local-notification#moodle",
-  "_id": "cordova-plugin-local-notification@git+ssh://git@github.com/moodlemobile/cordova-plugin-local-notification.git#0bb96b757fb484553ceabf35a59802f7983a2836",
+  "_from": "github:moodlemobile/cordova-plugin-local-notification#moodle",
+  "_id": "cordova-plugin-local-notification@0.9.0-beta.3",
   "_inBundle": false,
   "_integrity": "",
   "_location": "/cordova-plugin-local-notification",
   "_phantomChildren": {},
   "_requested": {
     "type": "git",
-    "raw": "cordova-plugin-local-notification@github:moodlemobile/cordova-plugin-local-notification#moodle",
-    "name": "cordova-plugin-local-notification",
-    "escapedName": "cordova-plugin-local-notification",
+    "raw": "github:moodlemobile/cordova-plugin-local-notification#moodle",
     "rawSpec": "github:moodlemobile/cordova-plugin-local-notification#moodle",
     "saveSpec": "github:moodlemobile/cordova-plugin-local-notification#moodle",
     "fetchSpec": null,
     "gitCommittish": "moodle"
   },
   "_requiredBy": [
-    "#DEV:/"
+    "#DEV:/",
+    "#USER"
   ],
-  "_resolved": "git+ssh://git@github.com/moodlemobile/cordova-plugin-local-notification.git#0bb96b757fb484553ceabf35a59802f7983a2836",
+  "_resolved": "github:moodlemobile/cordova-plugin-local-notification#0bb96b757fb484553ceabf35a59802f7983a2836",
   "_spec": "github:moodlemobile/cordova-plugin-local-notification#moodle",
   "_where": "/Users/gpc/Downloads/EtonKids/GROWLA Project/Soft Launch/App/APP验收 2/growla-app",
   "author": {
@@ -34,6 +26,7 @@
   "bugs": {
     "url": "https://github.com/katzer/cordova-plugin-local-notifications/issues"
   },
+  "bundleDependencies": false,
   "cordova": {
     "id": "cordova-plugin-local-notification",
     "platforms": [
@@ -42,6 +35,7 @@
       "windows"
     ]
   },
+  "deprecated": false,
   "description": "Schedules and queries for local notifications",
   "engines": [
     {

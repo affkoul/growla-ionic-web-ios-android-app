@@ -4,11 +4,11 @@
   "description": "The official app for GROWLA.",
   "author": {
     "name": "GROWLA Pty Ltd.",
-    "email": "mobile@moodle.com"
+    "email": "info@growla.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/moodlehq/moodlemobile2.git"
+    "url": "https://github.com/affkoul/my-app.git"
   },
   "license": "Apache-2.0",
   "licenses": [
@@ -44,6 +44,8 @@
     "@angular/platform-browser": "10.0.14",
     "@angular/platform-browser-dynamic": "10.0.14",
     "@angular/router": "10.0.14",
+    "@awesome-cordova-plugins/push": "^5.37.3",
+    "@capacitor/core": "3.4.0",
     "@ionic-native/badge": "5.33.0",
     "@ionic-native/camera": "5.33.0",
     "@ionic-native/chooser": "5.33.0",
@@ -94,18 +96,15 @@
     "cordova-plugin-file-opener2": "3.0.5",
     "cordova-plugin-geolocation": "4.1.0",
     "cordova-plugin-globalization": "1.11.0",
-    "cordova-plugin-inappbrowser": "git+https://github.com/moodlemobile/cordova-plugin-inappbrowser.git#moodle-ionic5",
     "cordova-plugin-ionic-keyboard": "2.2.0",
     "cordova-plugin-ionic-webview": "5.0.0",
     "cordova-plugin-media": "5.0.3",
     "cordova-plugin-media-capture": "3.0.3",
     "cordova-plugin-network-information": "2.0.2",
-    "cordova-plugin-qrscanner": "git+https://github.com/moodlemobile/cordova-plugin-qrscanner.git#dist",
     "cordova-plugin-screen-orientation": "3.0.2",
     "cordova-plugin-splashscreen": "6.0.0",
     "cordova-plugin-statusbar": "2.4.3",
     "cordova-plugin-whitelist": "1.3.4",
-    "cordova-plugin-wkuserscript": "git+https://github.com/moodlemobile/cordova-plugin-wkuserscript.git",
     "cordova-plugin-wkwebview-cookies": "git+https://github.com/moodlemobile/cordova-plugin-wkwebview-cookies.git",
     "cordova-plugin-zip": "3.1.0",
     "cordova-sqlite-storage": "6.0.0",
@@ -120,6 +119,7 @@
     "rxjs": "6.5.5",
     "ts-md5": "1.2.7",
     "tslib": "2.0.1",
+    "unorm": "^1.6.0",
     "zone.js": "0.10.3"
   },
   "devDependencies": {
@@ -134,9 +134,9 @@
     "@angular/compiler": "10.0.14",
     "@angular/compiler-cli": "10.0.14",
     "@angular/language-service": "10.0.14",
+    "@capacitor/cli": "3.4.0",
     "@ionic/angular-toolkit": "2.3.3",
     "@ionic/cli": "6.14.1",
-    "@moodlehq/phonegap-plugin-push": "^2.0.0-moodle.2",
     "@types/faker": "5.1.3",
     "@types/node": "12.12.64",
     "@types/resize-observer-browser": "0.1.5",
@@ -144,9 +144,13 @@
     "@typescript-eslint/eslint-plugin": "4.22.0",
     "@typescript-eslint/parser": "4.22.0",
     "check-es-compat": "1.1.1",
+    "cordova-android": "^10.1.1",
     "cordova-plugin-file-transfer": "github:moodlemobile/cordova-plugin-file-transfer",
+    "cordova-plugin-inappbrowser": "git+https://github.com/moodlemobile/cordova-plugin-inappbrowser.git#moodle-ionic5",
     "cordova-plugin-local-notification": "github:moodlemobile/cordova-plugin-local-notification#moodle",
     "cordova-plugin-prevent-override": "github:moodlemobile/cordova-plugin-prevent-override",
+    "cordova-plugin-qrscanner": "git+https://github.com/moodlemobile/cordova-plugin-qrscanner.git#dist",
+    "cordova-plugin-wkuserscript": "git+https://github.com/moodlemobile/cordova-plugin-wkuserscript.git",
     "cordova-support-google-services": "~1.2.0",
     "eslint": "7.25.0",
     "eslint-config-prettier": "8.3.0",
@@ -178,7 +182,9 @@
     "node": ">=12.x"
   },
   "cordova": {
-    "platforms": [],
+    "platforms": [
+      "android"
+    ],
     "plugins": {
       "cordova-plugin-advanced-http": {},
       "cordova-clipboard": {},
@@ -203,9 +209,7 @@
       "cordova-plugin-inappbrowser": {},
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-ionic-webview": {},
-      "cordova-plugin-local-notification": {
-        "ANDROID_SUPPORT_V4_VERSION": "26.+"
-      },
+      "cordova-plugin-local-notification": {},
       "cordova-plugin-media-capture": {},
       "cordova-plugin-media": {
         "KEEP_AVAUDIOSESSION_ALWAYS_ACTIVE": "NO"
@@ -220,10 +224,7 @@
       "cordova-plugin-wkwebview-cookies": {},
       "cordova-plugin-zip": {},
       "cordova-sqlite-storage": {},
-      "phonegap-plugin-push": {
-        "ANDROID_SUPPORT_V13_VERSION": "27.+",
-        "FCM_VERSION": "17.0.+"
-      },
+      "phonegap-plugin-push": {},
       "com-darryncampbell-cordova-plugin-intent": {},
       "nl.kingsquare.cordova.background-audio": {},
       "cordova-android-support-gradle-release": {
@@ -234,10 +235,7 @@
       },
       "cordova-plugin-globalization": {},
       "cordova-plugin-file-transfer": {},
-      "cordova-plugin-prevent-override": {},
-      "@moodlehq/phonegap-plugin-push": {
-        "IOS_FIREBASE_MESSAGING_VERSION": "~> 6.32.2"
-      }
+      "cordova-plugin-prevent-override": {}
     }
   },
   "optionalDependencies": {

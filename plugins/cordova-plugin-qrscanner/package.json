@@ -14,8 +14,8 @@
     "gitCommittish": "dist"
   },
   "_requiredBy": [
-    "#USER",
-    "/"
+    "#DEV:/",
+    "#USER"
   ],
   "_resolved": "git+https://github.com/moodlemobile/cordova-plugin-qrscanner.git#857efee3a7a49104faabd108ff1f00a57d3aca94",
   "_spec": "git+https://github.com/moodlemobile/cordova-plugin-qrscanner.git#dist",

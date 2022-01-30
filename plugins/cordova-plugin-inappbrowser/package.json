@@ -14,8 +14,8 @@
     "gitCommittish": "moodle-ionic5"
   },
   "_requiredBy": [
-    "#USER",
-    "/"
+    "#DEV:/",
+    "#USER"
   ],
   "_resolved": "git+https://github.com/moodlemobile/cordova-plugin-inappbrowser.git#a1ac936fd79596fd5841bd424cc782ee84e4a290",
   "_spec": "git+https://github.com/moodlemobile/cordova-plugin-inappbrowser.git#moodle-ionic5",

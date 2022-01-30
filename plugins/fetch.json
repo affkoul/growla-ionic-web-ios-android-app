@@ -49,6 +49,14 @@
     "is_top_level": true,
     "variables": {}
   },
+  "cordova-plugin-add-swift-support": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-add-swift-support@*"
+    },
+    "is_top_level": false,
+    "variables": {}
+  },
   "cordova-plugin-customurlscheme": {
     "source": {
       "type": "registry",
@@ -116,72 +124,6 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-inappbrowser": {
-    "source": {
-      "type": "registry",
-      "id": "git+https://github.com/moodlemobile/cordova-plugin-inappbrowser.git#moodle-ionic5"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
-  "cordova-plugin-ionic-keyboard": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-ionic-keyboard@2.2.0"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
-  "cordova-plugin-add-swift-support": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-add-swift-support@*"
-    },
-    "is_top_level": false,
-    "variables": {}
-  },
-  "cordova-plugin-local-notification": {
-    "source": {
-      "type": "registry",
-      "id": "github:moodlemobile/cordova-plugin-local-notification#moodle"
-    },
-    "is_top_level": true,
-    "variables": {
-      "ANDROID_SUPPORT_V4_VERSION": "26.+"
-    }
-  },
-  "cordova-plugin-media-capture": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-media-capture@3.0.3"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
-  "cordova-plugin-qrscanner": {
-    "source": {
-      "type": "registry",
-      "id": "git+https://github.com/moodlemobile/cordova-plugin-qrscanner.git#dist"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
-  "cordova-plugin-screen-orientation": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-screen-orientation@3.0.2"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
-  "es6-promise-plugin": {
-    "source": {
-      "type": "registry",
-      "id": "es6-promise-plugin@^4.1.0"
-    },
-    "is_top_level": false,
-    "variables": {}
-  },
   "cordova-plugin-splashscreen": {
     "source": {
       "type": "registry",
@@ -220,33 +162,6 @@
       "id": "cordova-sqlite-storage@6.0.0"
     },
     "is_top_level": true,
-    "variables": {}
-  },
-  "phonegap-plugin-push": {
-    "source": {
-      "type": "registry",
-      "id": "github:moodlemobile/phonegap-plugin-push#moodle-v3"
-    },
-    "is_top_level": true,
-    "variables": {
-      "ANDROID_SUPPORT_V13_VERSION": "27.+",
-      "FCM_VERSION": "17.0.+"
-    }
-  },
-  "cordova-support-google-services": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-support-google-services@~1.2.0"
-    },
-    "is_top_level": false,
-    "variables": {}
-  },
-  "phonegap-plugin-multidex": {
-    "source": {
-      "type": "registry",
-      "id": "phonegap-plugin-multidex@~1.0.0"
-    },
-    "is_top_level": false,
     "variables": {}
   },
   "nl.kingsquare.cordova.background-audio": {
@@ -293,10 +208,28 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-prevent-override": {
+  "cordova-plugin-inappbrowser": {
     "source": {
       "type": "registry",
-      "id": "github:moodlemobile/cordova-plugin-prevent-override"
+      "id": "git+https://github.com/moodlemobile/cordova-plugin-inappbrowser.git#moodle-ionic5"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-local-notification": {
+    "source": {
+      "type": "registry",
+      "id": "github:moodlemobile/cordova-plugin-local-notification#moodle"
+    },
+    "is_top_level": true,
+    "variables": {
+      "ANDROID_SUPPORT_V4_VERSION": "26.+"
+    }
+  },
+  "cordova-plugin-qrscanner": {
+    "source": {
+      "type": "registry",
+      "id": "git+https://github.com/moodlemobile/cordova-plugin-qrscanner.git#dist"
     },
     "is_top_level": true,
     "variables": {}
@@ -309,10 +242,45 @@
     "is_top_level": true,
     "variables": {}
   },
-  "com-darryncampbell-cordova-plugin-intent": {
+  "phonegap-plugin-push": {
     "source": {
       "type": "registry",
-      "id": "com-darryncampbell-cordova-plugin-intent@1.3.0"
+      "id": "github:moodlemobile/phonegap-plugin-push#moodle-v3"
+    },
+    "is_top_level": true,
+    "variables": {
+      "ANDROID_SUPPORT_V13_VERSION": "27.+",
+      "FCM_VERSION": "17.0.+"
+    }
+  },
+  "cordova-plugin-prevent-override": {
+    "source": {
+      "type": "registry",
+      "id": "github:moodlemobile/cordova-plugin-prevent-override"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-ionic-keyboard": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-ionic-keyboard@2.2.0"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-media-capture": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-media-capture@3.0.3"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-screen-orientation": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-screen-orientation@3.0.2"
     },
     "is_top_level": true,
     "variables": {}
@@ -323,6 +291,38 @@
       "id": "git+https://github.com/moodlemobile/cordova-plugin-wkwebview-cookies.git"
     },
     "is_top_level": true,
+    "variables": {}
+  },
+  "com-darryncampbell-cordova-plugin-intent": {
+    "source": {
+      "type": "registry",
+      "id": "com-darryncampbell-cordova-plugin-intent@1.3.0"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "es6-promise-plugin": {
+    "source": {
+      "type": "registry",
+      "id": "es6-promise-plugin@^4.1.0"
+    },
+    "is_top_level": false,
+    "variables": {}
+  },
+  "cordova-support-google-services": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-support-google-services@~1.2.0"
+    },
+    "is_top_level": false,
+    "variables": {}
+  },
+  "phonegap-plugin-multidex": {
+    "source": {
+      "type": "registry",
+      "id": "phonegap-plugin-multidex@~1.0.0"
+    },
+    "is_top_level": false,
     "variables": {}
   }
 }
