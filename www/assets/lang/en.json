@@ -1913,7 +1913,7 @@
     "core.login.youcanstillconnectwithcredentials": "You can still connect to the site by entering your username and password.",
     "core.login.yourenteredsite": "Connect to your site",
     "core.lostconnection": "Your authentication token is invalid or has expired. You will have to reconnect to the site.",
-    "core.mainmenu.changesite": "Change site",
+    "core.mainmenu.changesite": "Change Account",
     "core.mainmenu.help": "Help",
     "core.mainmenu.home": "Home",
     "core.mainmenu.logout": "Log out",

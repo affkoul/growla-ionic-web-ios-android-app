@@ -439,7 +439,7 @@ module.exports = content.locals || {};
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/gpc/Downloads/EtonKids/GROWLA Project/Soft Launch/App/APP验收 2/growla-app/src/theme/theme.scss */"./src/theme/theme.scss");
+module.exports = __webpack_require__(/*! /Users/apple/Desktop/project/my-app/src/theme/theme.scss */"./src/theme/theme.scss");
 
 
 /***/ })

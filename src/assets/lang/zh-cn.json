@@ -1633,6 +1633,9 @@
     "core.login.usernotaddederror": "用户未添加 —— 出错",
     "core.login.visitchangepassword": "您是否想访问站点来更改密码?",
     "core.login.webservicesnotenabled": "您的站点未开启网络服务。如果您觉得应当启用移动接入功能，请与站点管理员联系。",
+    "core.login.onboardingimalearner": "我是学生",
+    "core.login.onboardingimaneducator": "我是老师",
+    "core.login.onboardingwelcome": "欢迎来到生长圈！",
     "core.lostconnection": "您的身份验证令牌无效或已过期。 您必须重新连接到该站点。",
     "core.mainmenu.appsettings": "应用设置",
     "core.mainmenu.changesite": "切换账号",
@@ -1643,6 +1646,7 @@
     "core.min": "分钟",
     "core.mins": "分钟",
     "core.misc": "杂项",
+    "core.skip": "跳过",
     "core.mod_assign": "作业",
     "core.mod_assignment": "作业2.2（已禁用）",
     "core.mod_book": "图书",
@@ -2099,5 +2103,12 @@
     "core.settings.debugdisplaydescription": "如果开启的话那么报错会显示更详情的信息。",
     "addon.badges.isuseremail": "邮箱",
     "core.settings.showdownloadoptions": "查看下载模式",
-    "addon.storagemanager.managestorage": "管理储存空间"
+    "addon.storagemanager.managestorage": "管理储存空间",
+    "core.login.onboardingtoconnect": "你需要一个账户来进行登陆",
+    "core.login.onboardingialreadyhaveasite": "已有账户",
+    "core.login.onboardingineedasite": "创建新账户",
+    "core.login.onboardingcreatemanagecourses": "创建和管理你的课程",
+    "core.login.onboardingenrolmanagestudents": "招收你的学生",
+    "core.login.onboardingprovidefeedback": "提供实时反馈",
+    "core.login.onboardinggetstarted": "开始使用"
 }

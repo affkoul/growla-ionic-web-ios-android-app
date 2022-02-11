@@ -233,8 +233,8 @@ let CoreLoginCredentialsPage = class CoreLoginCredentialsPage {
         this.urlToOpen = _services_navigator__WEBPACK_IMPORTED_MODULE_11__["CoreNavigator"].getRouteParam('urlToOpen');
         this.showScanQR = _features_login_services_login_helper__WEBPACK_IMPORTED_MODULE_7__["CoreLoginHelper"].displayQRInCredentialsScreen();
         this.credForm = this.fb.group({
-            username: [_services_navigator__WEBPACK_IMPORTED_MODULE_11__["CoreNavigator"].getRouteParam('username') || 'admin01', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            password: ['Vendor#2021', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            username: [_services_navigator__WEBPACK_IMPORTED_MODULE_11__["CoreNavigator"].getRouteParam('username') || '', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            password: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
         });
         this.treatSiteConfig();
         this.isFixedUrlSet = _features_login_services_login_helper__WEBPACK_IMPORTED_MODULE_7__["CoreLoginHelper"].isFixedUrlSet();

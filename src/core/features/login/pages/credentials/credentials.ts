@@ -180,8 +180,8 @@ export class CoreLoginCredentialsPage implements OnInit, OnDestroy {
         this.showScanQR = CoreLoginHelper.displayQRInCredentialsScreen();
 
         this.credForm = this.fb.group({
-            username: [CoreNavigator.getRouteParam<string>('username') || 'admin01', Validators.required],
-            password: ['Vendor#2021', Validators.required],
+            username: [CoreNavigator.getRouteParam<string>('username') || '', Validators.required],
+            password: ['', Validators.required],
         });
 
         this.treatSiteConfig();

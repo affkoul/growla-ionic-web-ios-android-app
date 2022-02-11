@@ -144,13 +144,13 @@
     "@typescript-eslint/eslint-plugin": "4.22.0",
     "@typescript-eslint/parser": "4.22.0",
     "check-es-compat": "1.1.1",
-    "cordova-android": "^10.1.1",
+    "cordova-android": "9.1.0",
     "cordova-plugin-file-transfer": "github:moodlemobile/cordova-plugin-file-transfer",
-    "cordova-plugin-inappbrowser": "git+https://github.com/moodlemobile/cordova-plugin-inappbrowser.git#moodle-ionic5",
+    "cordova-plugin-inappbrowser": "github:moodlemobile/cordova-plugin-inappbrowser#moodle-ionic5",
     "cordova-plugin-local-notification": "github:moodlemobile/cordova-plugin-local-notification#moodle",
     "cordova-plugin-prevent-override": "github:moodlemobile/cordova-plugin-prevent-override",
-    "cordova-plugin-qrscanner": "git+https://github.com/moodlemobile/cordova-plugin-qrscanner.git#dist",
-    "cordova-plugin-wkuserscript": "git+https://github.com/moodlemobile/cordova-plugin-wkuserscript.git",
+    "cordova-plugin-qrscanner": "github:moodlemobile/cordova-plugin-qrscanner#dist",
+    "cordova-plugin-wkuserscript": "github:moodlemobile/cordova-plugin-wkuserscript",
     "cordova-support-google-services": "~1.2.0",
     "eslint": "7.25.0",
     "eslint-config-prettier": "8.3.0",
@@ -183,7 +183,8 @@
   },
   "cordova": {
     "platforms": [
-      "android"
+      "android",
+      "ios"
     ],
     "plugins": {
       "cordova-plugin-advanced-http": {},

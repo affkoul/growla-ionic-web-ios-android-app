@@ -222,9 +222,7 @@
       "id": "github:moodlemobile/cordova-plugin-local-notification#moodle"
     },
     "is_top_level": true,
-    "variables": {
-      "ANDROID_SUPPORT_V4_VERSION": "26.+"
-    }
+    "variables": {}
   },
   "cordova-plugin-qrscanner": {
     "source": {
@@ -248,15 +246,12 @@
       "id": "github:moodlemobile/phonegap-plugin-push#moodle-v3"
     },
     "is_top_level": true,
-    "variables": {
-      "ANDROID_SUPPORT_V13_VERSION": "27.+",
-      "FCM_VERSION": "17.0.+"
-    }
+    "variables": {}
   },
   "cordova-plugin-prevent-override": {
     "source": {
       "type": "registry",
-      "id": "github:moodlemobile/cordova-plugin-prevent-override"
+      "id": "moodlemobile/cordova-plugin-prevent-override"
     },
     "is_top_level": true,
     "variables": {}
