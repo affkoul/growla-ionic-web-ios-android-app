@@ -319,5 +319,21 @@
     },
     "is_top_level": false,
     "variables": {}
+  },
+  "cordova-ios-plugin-userdefaults": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-ios-plugin-userdefaults"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-x-toast": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-x-toast@^2.7.3"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }

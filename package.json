@@ -45,7 +45,9 @@
     "@angular/platform-browser-dynamic": "10.0.14",
     "@angular/router": "10.0.14",
     "@awesome-cordova-plugins/push": "^5.37.3",
+    "@awesome-cordova-plugins/toast": "^5.39.1",
     "@capacitor/core": "3.4.0",
+    "@capacitor/storage": "^1.2.4",
     "@ionic-native/badge": "5.33.0",
     "@ionic-native/camera": "5.33.0",
     "@ionic-native/chooser": "5.33.0",
@@ -120,6 +122,7 @@
     "ts-md5": "1.2.7",
     "tslib": "2.0.1",
     "unorm": "^1.6.0",
+    "vconsole": "^3.11.2",
     "zone.js": "0.10.3"
   },
   "devDependencies": {
@@ -145,12 +148,14 @@
     "@typescript-eslint/parser": "4.22.0",
     "check-es-compat": "1.1.1",
     "cordova-android": "9.1.0",
+    "cordova-ios-plugin-userdefaults": "^1.0.0",
     "cordova-plugin-file-transfer": "github:moodlemobile/cordova-plugin-file-transfer",
     "cordova-plugin-inappbrowser": "github:moodlemobile/cordova-plugin-inappbrowser#moodle-ionic5",
     "cordova-plugin-local-notification": "github:moodlemobile/cordova-plugin-local-notification#moodle",
     "cordova-plugin-prevent-override": "github:moodlemobile/cordova-plugin-prevent-override",
     "cordova-plugin-qrscanner": "github:moodlemobile/cordova-plugin-qrscanner#dist",
     "cordova-plugin-wkuserscript": "github:moodlemobile/cordova-plugin-wkuserscript",
+    "cordova-plugin-x-toast": "^2.7.3",
     "cordova-support-google-services": "~1.2.0",
     "eslint": "7.25.0",
     "eslint-config-prettier": "8.3.0",
@@ -236,7 +241,9 @@
       },
       "cordova-plugin-globalization": {},
       "cordova-plugin-file-transfer": {},
-      "cordova-plugin-prevent-override": {}
+      "cordova-plugin-prevent-override": {},
+      "cordova-ios-plugin-userdefaults": {},
+      "cordova-plugin-x-toast": {}
     }
   },
   "optionalDependencies": {

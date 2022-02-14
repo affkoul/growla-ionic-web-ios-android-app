@@ -690,6 +690,22 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "clobbers": [
         "PushNotification"
       ]
+    },
+    {
+      "id": "cordova-ios-plugin-userdefaults.UserDefaults",
+      "file": "plugins/cordova-ios-plugin-userdefaults/www/userdefaults.js",
+      "pluginId": "cordova-ios-plugin-userdefaults",
+      "clobbers": [
+        "UserDefaults"
+      ]
+    },
+    {
+      "id": "cordova-plugin-x-toast.Toast",
+      "file": "plugins/cordova-plugin-x-toast/www/Toast.js",
+      "pluginId": "cordova-plugin-x-toast",
+      "clobbers": [
+        "window.plugins.toast"
+      ]
     }
   ];
   module.exports.metadata = {
@@ -730,6 +746,8 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "es6-promise-plugin": "4.2.2",
     "nl.kingsquare.cordova.background-audio": "1.0.1",
     "phonegap-plugin-multidex": "1.0.0",
-    "phonegap-plugin-push": "2.2.3"
+    "phonegap-plugin-push": "2.2.3",
+    "cordova-ios-plugin-userdefaults": "1.0.0",
+    "cordova-plugin-x-toast": "2.7.3"
   };
 });

@@ -18,7 +18,7 @@ import { CoreConfig } from '@services/config';
 import { CoreUtils } from '@services/utils/utils';
 import { CoreLoginHelperProvider } from '@features/login/services/login-helper';
 import { ModalController } from '@singletons';
-
+import { Storage } from '@capacitor/storage';
 /**
  * Component that displays onboarding help regarding the CoreLoginSitePage.
  */
@@ -88,9 +88,25 @@ export class CoreLoginSiteOnboardingComponent {
 
     /**
      * Saves the onboarding has finished.
+     * 设置是否进入开机模式
      */
     protected saveOnboardingDone(): void {
-        CoreConfig.set(CoreLoginHelperProvider.ONBOARDING_DONE, 1);
+        // localStorage.setItem("ONBOARDING_DONE","1")
+        if(navigator.platform=="iPhone"){
+            var options = { key: "ONBOARDING_DONE", value: "1", suite: "group.com.example" };
+            (<any>window).UserDefaults.save(
+                options,
+                () => console.log("success"),
+                () => console.log("error")
+                );
+                
+            }else{
+             CoreConfig.set(CoreLoginHelperProvider.ONBOARDING_DONE, 1);
+            // onboardingDone  = await CoreConfig.get(CoreLoginHelperProvider.ONBOARDING_DONE, false);
+         }
+     
+
+       
     }
 
 }

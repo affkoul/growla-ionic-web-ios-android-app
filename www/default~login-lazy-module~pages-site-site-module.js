@@ -207,9 +207,18 @@ let CoreLoginSiteOnboardingComponent = class CoreLoginSiteOnboardingComponent {
     }
     /**
      * Saves the onboarding has finished.
+     * 设置是否进入开机模式
      */
     saveOnboardingDone() {
-        _services_config__WEBPACK_IMPORTED_MODULE_3__["CoreConfig"].set(_features_login_services_login_helper__WEBPACK_IMPORTED_MODULE_5__["CoreLoginHelperProvider"].ONBOARDING_DONE, 1);
+        // localStorage.setItem("ONBOARDING_DONE","1")
+        if (navigator.platform == "iPhone") {
+            var options = { key: "ONBOARDING_DONE", value: "1", suite: "group.com.example" };
+            window.UserDefaults.save(options, () => console.log("success"), () => console.log("error"));
+        }
+        else {
+            _services_config__WEBPACK_IMPORTED_MODULE_3__["CoreConfig"].set(_features_login_services_login_helper__WEBPACK_IMPORTED_MODULE_5__["CoreLoginHelperProvider"].ONBOARDING_DONE, 1);
+            // onboardingDone  = await CoreConfig.get(CoreLoginHelperProvider.ONBOARDING_DONE, false);
+        }
     }
 };
 CoreLoginSiteOnboardingComponent.ctorParameters = () => [

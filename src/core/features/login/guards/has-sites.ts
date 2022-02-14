@@ -43,13 +43,13 @@ export class CoreLoginHasSitesGuard implements CanActivate, CanLoad {
      */
     private async guard(): Promise<true | UrlTree> {
         const sites = await CoreUtils.ignoreErrors(CoreSites.getSites(), []);
-        console.log(sites)
         if (sites.length > 0) {
             return true;
         }
-
+        
         const [path, params] = CoreLoginHelper.getAddSiteRouteInfo();
         const route = Router.parseUrl(path);
+        console.log("route.....",route)
 
         route.queryParams = params;
 

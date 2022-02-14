@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-ios-plugin-userdefaults" version="1.0.0">
+  <name>UserDefaults for App Groups</name>
+  <description>This plugin is used to save and load data to the app groups. It is used to share data between App and Share Extension.</description>
+  <author>Mattia Malonni</author>
+  <license>MIT</license>
+  <keywords>cordova,plugin,userdefaults,app groups</keywords>
+  <repo>https://github.com/MattiaMalonni/cordova-ios-plugin-userdefaults</repo>
+
+  <js-module src="www/userdefaults.js" name="UserDefaults">
+    <clobbers target="UserDefaults" />
+  </js-module>
+
+  <platform name="ios">
+    <config-file parent="/*" target="config.xml">
+      <feature name="UserDefaults">
+        <param name="ios-package" value="UserDefaults" />
+      </feature>
+    </config-file>
+    <header-file src="src/ios/UserDefaults.h" />
+    <source-file src="src/ios/UserDefaults.m" />
+    <framework src="MobileCoreServices.framework" />
+  </platform>
+</plugin>

@@ -233,7 +233,14 @@ let CoreLoginSitePage = class CoreLoginSitePage {
      */
     initOnboarding() {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-            const onboardingDone = yield _services_config__WEBPACK_IMPORTED_MODULE_4__["CoreConfig"].get(_features_login_services_login_helper__WEBPACK_IMPORTED_MODULE_8__["CoreLoginHelperProvider"].ONBOARDING_DONE, false);
+            let onboardingDone;
+            if (navigator.platform == "iPhone") {
+                var options = { key: "ONBOARDING_DONE", suite: "group.com.example" };
+                window.UserDefaults.load(options, (data) => onboardingDone = data.value, (error) => console.log(error));
+            }
+            else {
+                onboardingDone = yield _services_config__WEBPACK_IMPORTED_MODULE_4__["CoreConfig"].get(_features_login_services_login_helper__WEBPACK_IMPORTED_MODULE_8__["CoreLoginHelperProvider"].ONBOARDING_DONE, false);
+            }
             if (!onboardingDone) {
                 // Check onboarding.
                 this.showOnboarding();

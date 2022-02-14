@@ -59,6 +59,7 @@ let CoreLoginHasSitesGuard = class CoreLoginHasSitesGuard {
             }
             const [path, params] = _services_login_helper__WEBPACK_IMPORTED_MODULE_5__["CoreLoginHelper"].getAddSiteRouteInfo();
             const route = _singletons__WEBPACK_IMPORTED_MODULE_4__["Router"].parseUrl(path);
+            console.log("route.....", route);
             route.queryParams = params;
             return route;
         });

@@ -117,6 +117,12 @@
       "ANDROID_SUPPORT_V13_VERSION": "27.+",
       "FCM_VERSION": "17.0.+",
       "PACKAGE_NAME": "com.growlaapp.mobile"
+    },
+    "cordova-ios-plugin-userdefaults": {
+      "PACKAGE_NAME": "com.growlaapp.mobile"
+    },
+    "cordova-plugin-x-toast": {
+      "PACKAGE_NAME": "com.growlaapp.mobile"
     }
   },
   "dependent_plugins": {

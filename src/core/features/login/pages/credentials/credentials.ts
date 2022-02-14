@@ -38,7 +38,7 @@ import { CoreUtils } from '@services/utils/utils';
 @Component({
     selector: 'page-core-login-credentials',
     templateUrl: 'credentials.html',
-    styleUrls: ['../../login.scss'],
+    styleUrls: ['../../login.scss', 'credentials.scss'],
 })
 export class CoreLoginCredentialsPage implements OnInit, OnDestroy {
 
@@ -68,6 +68,7 @@ export class CoreLoginCredentialsPage implements OnInit, OnDestroy {
     filteredSites?: CoreLoginSiteInfoExtended[];
     siteSelector: CoreLoginSiteSelectorListMethod = 'sitefinder';
     siteFinderSettings: SiteFinderSettings;
+    isShow:boolean=false
     constructor(
         protected fb: FormBuilder,
     ) {
@@ -115,11 +116,28 @@ export class CoreLoginCredentialsPage implements OnInit, OnDestroy {
      * @return Promise resolved when done.
      */
      protected async initOnboarding(): Promise<void> {
-        const onboardingDone = await CoreConfig.get(CoreLoginHelperProvider.ONBOARDING_DONE, false);
-
+        let onboardingDone:any
+         if(navigator.platform=="iPhone"){
+            onboardingDone = false
+            // var options = { key: "ONBOARDING_DONE", suite: "group.com.example" };
+            // await (<any>window).UserDefaults.load(
+            //     options,
+            //     (data) => {
+            //         onboardingDone = data.value
+            //     },
+            //     (error) => console.log(error)
+            //   );
+            
+         }else{
+            onboardingDone  = await CoreConfig.get(CoreLoginHelperProvider.ONBOARDING_DONE, false);
+         }
         if (!onboardingDone) {
+            if(navigator.platform=="iPhone"){
+                this.isShow = true
+            }else{
+                this.showOnboarding();
+            }
             // Check onboarding.
-            this.showOnboarding();
         }
     }
     /**

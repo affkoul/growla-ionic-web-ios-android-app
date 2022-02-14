@@ -143,8 +143,18 @@ export class CoreLoginSitePage implements OnInit {
      * @return Promise resolved when done.
      */
     protected async initOnboarding(): Promise<void> {
-        const onboardingDone = await CoreConfig.get(CoreLoginHelperProvider.ONBOARDING_DONE, false);
-
+        let onboardingDone:any
+        if(navigator.platform=="iPhone"){
+            var options = { key: "ONBOARDING_DONE", suite: "group.com.example" };
+            (<any>window).UserDefaults.load(
+                options,
+                (data) => onboardingDone = data.value,
+                (error) => console.log(error)
+              );
+            
+         }else{
+            onboardingDone  = await CoreConfig.get(CoreLoginHelperProvider.ONBOARDING_DONE, false);
+         }
         if (!onboardingDone) {
             // Check onboarding.
             this.showOnboarding();
