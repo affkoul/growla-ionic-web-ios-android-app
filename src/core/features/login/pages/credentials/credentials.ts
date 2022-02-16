@@ -32,13 +32,14 @@ import { CoreConfig } from '@services/config';
 import { CoreLoginSiteOnboardingComponent } from '@features/login/components/site-onboarding/site-onboarding';
 import { CoreUrl } from '@singletons/url';
 import { CoreUtils } from '@services/utils/utils';
+import { Http } from '@singletons';
 /**
  * Page to enter the user credentials.
  */
 @Component({
     selector: 'page-core-login-credentials',
     templateUrl: 'credentials.html',
-    styleUrls: ['../../login.scss', 'credentials.scss'],
+    styleUrls: ['../../login.scss'],
 })
 export class CoreLoginCredentialsPage implements OnInit, OnDestroy {
 
@@ -68,7 +69,6 @@ export class CoreLoginCredentialsPage implements OnInit, OnDestroy {
     filteredSites?: CoreLoginSiteInfoExtended[];
     siteSelector: CoreLoginSiteSelectorListMethod = 'sitefinder';
     siteFinderSettings: SiteFinderSettings;
-    isShow:boolean=false
     constructor(
         protected fb: FormBuilder,
     ) {
@@ -86,7 +86,7 @@ export class CoreLoginCredentialsPage implements OnInit, OnDestroy {
         // Load fixed sites if they're set.
         if (CoreLoginHelper.hasSeveralFixedSites()) {
             url = this.initSiteSelector();
-        } else if (CoreConstants.CONFIG.enableonboarding && !CoreApp.isIOS()) {
+        } else if (CoreConstants.CONFIG.enableonboarding) {
             this.initOnboarding();
         }
     }
@@ -116,28 +116,11 @@ export class CoreLoginCredentialsPage implements OnInit, OnDestroy {
      * @return Promise resolved when done.
      */
      protected async initOnboarding(): Promise<void> {
-        let onboardingDone:any
-         if(navigator.platform=="iPhone"){
-            onboardingDone = false
-            // var options = { key: "ONBOARDING_DONE", suite: "group.com.example" };
-            // await (<any>window).UserDefaults.load(
-            //     options,
-            //     (data) => {
-            //         onboardingDone = data.value
-            //     },
-            //     (error) => console.log(error)
-            //   );
-            
-         }else{
-            onboardingDone  = await CoreConfig.get(CoreLoginHelperProvider.ONBOARDING_DONE, false);
-         }
+        const onboardingDone = await CoreConfig.get(CoreLoginHelperProvider.ONBOARDING_DONE, false);
+
         if (!onboardingDone) {
-            if(navigator.platform=="iPhone"){
-                this.isShow = true
-            }else{
-                this.showOnboarding();
-            }
             // Check onboarding.
+            this.showOnboarding();
         }
     }
     /**

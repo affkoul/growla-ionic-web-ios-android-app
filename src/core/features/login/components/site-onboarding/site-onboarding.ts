@@ -17,8 +17,11 @@ import { Router } from '@angular/router';
 import { CoreConfig } from '@services/config';
 import { CoreUtils } from '@services/utils/utils';
 import { CoreLoginHelperProvider } from '@features/login/services/login-helper';
-import { ModalController } from '@singletons';
+import { DomSanitizer, ModalController } from '@singletons';
 import { Storage } from '@capacitor/storage';
+import { Http } from '@singletons';
+import { async } from '@angular/core/testing';
+import { promises } from 'fs';
 /**
  * Component that displays onboarding help regarding the CoreLoginSitePage.
  */
@@ -28,8 +31,9 @@ import { Storage } from '@capacitor/storage';
     styleUrls: ['site-onboarding.scss', '../../login.scss'],
 })
 export class CoreLoginSiteOnboardingComponent {
-
+    iframeSrc:any = ""
     step = 0;
+    isShow:boolean = true
     constructor(
         protected router: Router,
     ) { }
@@ -76,16 +80,32 @@ export class CoreLoginSiteOnboardingComponent {
      *
      * @param e Click event.
      */
-    gotoWeb(e: Event): void {
+   async gotoWeb(e: Event): Promise<void> {
         e.stopPropagation();
 
         this.saveOnboardingDone();
-
-        CoreUtils.openInBrowser('https://growlaglobal.com/faqs-growla.php#cn');
-
-        ModalController.dismiss();
+      
+        let data:any = await Http.get('https://ipinfo.io?token=258330d34cc6b3').toPromise()
+        if( data.country == 'CN') {
+           this.iframeSrc = DomSanitizer.bypassSecurityTrustResourceUrl('https://growlaasia.com/register.php#cn')
+        }else{
+            this.iframeSrc = DomSanitizer.bypassSecurityTrustResourceUrl('https://growlaglobal.com/register.php#en')
+        }
+        console.log( this.iframeSrc)
+        this.isShow = false
+        // ModalController.dismiss();
     }
-
+    // async function reqAddress() {
+    //     let param = {
+    //         url: 'https://ipinfo.io?token=258330d34cc6b3'
+    //     }
+    //     let data = await request(param)
+    //     if( data.country == 'CN') {
+    //         $('#phonenumber-box').css('display', 'block')
+    //     } else {
+    //         $('#phonenumber-box').css('display', 'none')
+    //     }
+    // }
     /**
      * Saves the onboarding has finished.
      * 设置是否进入开机模式

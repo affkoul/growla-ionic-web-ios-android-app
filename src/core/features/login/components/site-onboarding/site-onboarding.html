@@ -7,14 +7,19 @@
         </ion-buttons>
 
         <ion-buttons slot="end">
-            <ion-button fill="clear" (click)="skip($event)" [attr.aria-label]="'core.skip' | translate">
+            <ion-button fill="clear" *ngIf="isShow; else elseBtn" (click)="skip($event)" [attr.aria-label]="'core.skip' | translate">
                 {{'core.skip' | translate}}
             </ion-button>
+            <ng-template #elseBtn>
+                <ion-button fill="clear"  (click)="skip($event)" [attr.aria-label]="'core.skip' | translate">
+                    {{'addon.competency.planstatuscomplete' | translate}}
+                </ion-button>
+            </ng-template>
         </ion-buttons>
     </ion-toolbar>
 </ion-header>
 <ion-content class="ion-padding">
-    <div>
+    <div *ngIf="isShow; else elseShow">
         <div class="ion-text-center ion-padding core-login-site-logo">
             <img src="assets/img/login_logo.png" class="avatar-full login-logo" role="presentation" alt="">
         </div>
@@ -65,4 +70,8 @@
             </ion-button>
         </div>
     </div>
+    <ng-template #elseShow>
+
+        <iframe  class="rej" [src]="iframeSrc" frameborder="0"></iframe>
+    </ng-template>
 </ion-content>

@@ -795,7 +795,8 @@ ion-fab[core-fab] ion-fab-button::part(close-icon) {
 }
 
 .core-media-adapt-width {
-    max-width: 100%;
+    width: 100%;
+    background-color: #000;
 }
 
 img.core-media-adapt-width {
