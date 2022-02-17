@@ -18,19 +18,24 @@ import { IonRefresher } from '@ionic/angular';
 import { CoreSites } from '@services/sites';
 import { CoreDomUtils } from '@services/utils/dom';
 import { CoreCourses, CoreCourseSearchedData } from '../../services/courses';
-
+import { IonInfiniteScroll } from '@ionic/angular';
+import { ViewChild } from '@angular/core';
 /**
  * Page that displays available courses in current site.
  */
 @Component({
     selector: 'page-core-courses-available-courses',
     templateUrl: 'available-courses.html',
+    styleUrls: ['./available-courses.scss'],
 })
-export class CoreCoursesAvailableCoursesPage implements OnInit {
 
+export class CoreCoursesAvailableCoursesPage implements OnInit {
+    @ViewChild(IonInfiniteScroll)
+    infiniteScroll!: IonInfiniteScroll;
     courses: CoreCourseSearchedData[] = [];
     coursesLoaded = false;
-
+    array: CoreCourseSearchedData[] = [];
+    IsILastPage:boolean = false
     /**
      * View loaded.
      */
@@ -50,13 +55,33 @@ export class CoreCoursesAvailableCoursesPage implements OnInit {
 
         try {
             const courses = await CoreCourses.getCoursesByField();
-
-            this.courses = courses.filter((course) => course.id != frontpageCourseId);
+             this.array = await courses.filter((course) => course.id != frontpageCourseId);
+            let arr = await JSON.parse(JSON.stringify(this.array))
+             this.array = await arr.splice(20)
+             this.courses = await arr
         } catch (error) {
             CoreDomUtils.showErrorModalDefault(error, 'core.courses.errorloadcourses', true);
         }
     }
-
+    loadData(event) {
+        setTimeout(() => {
+          event.target.complete();
+          let arr =JSON.parse(JSON.stringify(this.array))
+          this.array = arr.splice(20)
+          this.courses = [...this.courses,...arr]
+          // App logic to determine if all data is loaded
+          // and disable the infinite scroll
+          if (this.array.length <20) {
+           this.courses = this.courses.concat(this.array)
+            event.target.disabled = true;
+            this.IsILastPage = true
+          }
+        }, 500);
+      }
+    toggleInfiniteScroll() {
+        
+        this.infiniteScroll.disabled = !this.infiniteScroll.disabled;
+      }
     /**
      * Refresh the courses.
      *

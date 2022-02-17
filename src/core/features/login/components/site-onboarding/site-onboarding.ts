@@ -31,9 +31,9 @@ import { promises } from 'fs';
     styleUrls: ['site-onboarding.scss', '../../login.scss'],
 })
 export class CoreLoginSiteOnboardingComponent {
-    iframeSrc:any = ""
+    iframeSrc: any = ""
     step = 0;
-    isShow:boolean = true
+    isShow: boolean = true
     constructor(
         protected router: Router,
     ) { }
@@ -80,18 +80,18 @@ export class CoreLoginSiteOnboardingComponent {
      *
      * @param e Click event.
      */
-   async gotoWeb(e: Event): Promise<void> {
+    async gotoWeb(e: Event): Promise<void> {
         e.stopPropagation();
 
         this.saveOnboardingDone();
-      
-        let data:any = await Http.get('https://ipinfo.io?token=258330d34cc6b3').toPromise()
-        if( data.country == 'CN') {
-           this.iframeSrc = DomSanitizer.bypassSecurityTrustResourceUrl('https://growlaasia.com/register.php#cn')
-        }else{
+
+        let data: any = await Http.get('https://ipinfo.io?token=258330d34cc6b3').toPromise()
+        if (data.country == 'CN') {
+            this.iframeSrc = DomSanitizer.bypassSecurityTrustResourceUrl('https://growlaasia.com/register.php#cn')
+        } else {
             this.iframeSrc = DomSanitizer.bypassSecurityTrustResourceUrl('https://growlaglobal.com/register.php#en')
         }
-        console.log( this.iframeSrc)
+        console.log(this.iframeSrc)
         this.isShow = false
         // ModalController.dismiss();
     }
@@ -111,22 +111,7 @@ export class CoreLoginSiteOnboardingComponent {
      * 设置是否进入开机模式
      */
     protected saveOnboardingDone(): void {
-        // localStorage.setItem("ONBOARDING_DONE","1")
-        if(navigator.platform=="iPhone"){
-            var options = { key: "ONBOARDING_DONE", value: "1", suite: "group.com.example" };
-            (<any>window).UserDefaults.save(
-                options,
-                () => console.log("success"),
-                () => console.log("error")
-                );
-                
-            }else{
-             CoreConfig.set(CoreLoginHelperProvider.ONBOARDING_DONE, 1);
-            // onboardingDone  = await CoreConfig.get(CoreLoginHelperProvider.ONBOARDING_DONE, false);
-         }
-     
-
-       
+        CoreConfig.set(CoreLoginHelperProvider.ONBOARDING_DONE, 1);
     }
 
 }

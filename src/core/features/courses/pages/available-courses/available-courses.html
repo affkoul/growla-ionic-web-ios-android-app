@@ -11,9 +11,23 @@
         <ion-refresher-content pullingText="{{ 'core.pulltorefresh' | translate }}"></ion-refresher-content>
     </ion-refresher>
     <core-loading [hideUntil]="coursesLoaded">
+        <!-- 现有课程列表 -->
         <ng-container *ngIf="courses.length > 0">
             <core-courses-course-list-item *ngFor="let course of courses" [course]="course"></core-courses-course-list-item>
         </ng-container>
         <core-empty-box *ngIf="!courses.length" icon="fas-graduation-cap" [message]="'core.courses.nocourses' | translate"></core-empty-box>
     </core-loading>
+    <ion-infinite-scroll class="scroll" threshold="100px" (ionInfinite)="loadData($event)">
+        <ion-infinite-scroll-content
+          loadingSpinner="bubbles"
+          loadingText="正在加载...">
+        </ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+      <div *ngIf="IsILastPage" >
+        <ion-row>
+            <ion-col text-center class="text">
+              没有更多内容
+            </ion-col>
+        </ion-row>
+      </div>
 </ion-content>

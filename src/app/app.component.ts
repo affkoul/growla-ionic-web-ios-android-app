@@ -91,6 +91,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
         // Listen for session expired events.
         CoreEvents.on(CoreEvents.SESSION_EXPIRED, (data) => {
+            console.log(data)
             CoreLoginHelper.sessionExpired(data);
         });
 

@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button [text]=\"'core.back' | translate\"></ion-back-button>\n        </ion-buttons>\n        <h1>{{ 'core.courses.availablecourses' | translate }}</h1>\n    </ion-toolbar>\n</ion-header>\n<ion-content>\n    <ion-refresher slot=\"fixed\" [disabled]=\"!coursesLoaded\" (ionRefresh)=\"refreshCourses($event.target)\">\n        <ion-refresher-content pullingText=\"{{ 'core.pulltorefresh' | translate }}\"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]=\"coursesLoaded\">\n        <ng-container *ngIf=\"courses.length > 0\">\n            <core-courses-course-list-item *ngFor=\"let course of courses\" [course]=\"course\"></core-courses-course-list-item>\n        </ng-container>\n        <core-empty-box *ngIf=\"!courses.length\" icon=\"fas-graduation-cap\" [message]=\"'core.courses.nocourses' | translate\"></core-empty-box>\n    </core-loading>\n</ion-content>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button [text]=\"'core.back' | translate\"></ion-back-button>\n        </ion-buttons>\n        <h1>{{ 'core.courses.availablecourses' | translate }}</h1>\n    </ion-toolbar>\n</ion-header>\n<ion-content>\n    <ion-refresher slot=\"fixed\" [disabled]=\"!coursesLoaded\" (ionRefresh)=\"refreshCourses($event.target)\">\n        <ion-refresher-content pullingText=\"{{ 'core.pulltorefresh' | translate }}\"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]=\"coursesLoaded\">\n        <!-- 现有课程列表 -->\n        <ng-container *ngIf=\"courses.length > 0\">\n            <core-courses-course-list-item *ngFor=\"let course of courses\" [course]=\"course\"></core-courses-course-list-item>\n        </ng-container>\n        <core-empty-box *ngIf=\"!courses.length\" icon=\"fas-graduation-cap\" [message]=\"'core.courses.nocourses' | translate\"></core-empty-box>\n    </core-loading>\n    <ion-infinite-scroll class=\"scroll\" threshold=\"100px\" (ionInfinite)=\"loadData($event)\">\n        <ion-infinite-scroll-content\n          loadingSpinner=\"bubbles\"\n          loadingText=\"正在加载...\">\n        </ion-infinite-scroll-content>\n      </ion-infinite-scroll>\n      <div *ngIf=\"IsILastPage\" >\n        <ion-row>\n            <ion-col text-center class=\"text\">\n              没有更多内容\n            </ion-col>\n        </ion-row>\n      </div>\n</ion-content>\n");
 
 /***/ }),
 
@@ -74,6 +74,19 @@ CoreCoursesAvailableCoursesPageModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0_
 
 /***/ }),
 
+/***/ "./src/core/features/courses/pages/available-courses/available-courses.scss":
+/*!**********************************************************************************!*\
+  !*** ./src/core/features/courses/pages/available-courses/available-courses.scss ***!
+  \**********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".text {\n  text-align: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9jb3JlL2ZlYXR1cmVzL2NvdXJzZXMvcGFnZXMvYXZhaWxhYmxlLWNvdXJzZXMvYXZhaWxhYmxlLWNvdXJzZXMuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGtCQUFBO0FBQ0oiLCJmaWxlIjoic3JjL2NvcmUvZmVhdHVyZXMvY291cnNlcy9wYWdlcy9hdmFpbGFibGUtY291cnNlcy9hdmFpbGFibGUtY291cnNlcy5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnRleHR7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xufSJdfQ== */");
+
+/***/ }),
+
 /***/ "./src/core/features/courses/pages/available-courses/available-courses.ts":
 /*!********************************************************************************!*\
   !*** ./src/core/features/courses/pages/available-courses/available-courses.ts ***!
@@ -89,6 +102,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_sites__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @services/sites */ "./src/core/services/sites.ts");
 /* harmony import */ var _services_utils_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @services/utils/dom */ "./src/core/services/utils/dom.ts");
 /* harmony import */ var _services_courses__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../services/courses */ "./src/core/features/courses/services/courses.ts");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
 // (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -107,6 +121,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
 /**
  * Page that displays available courses in current site.
  */
@@ -114,6 +130,8 @@ let CoreCoursesAvailableCoursesPage = class CoreCoursesAvailableCoursesPage {
     constructor() {
         this.courses = [];
         this.coursesLoaded = false;
+        this.array = [];
+        this.IsILastPage = false;
     }
     /**
      * View loaded.
@@ -133,12 +151,33 @@ let CoreCoursesAvailableCoursesPage = class CoreCoursesAvailableCoursesPage {
             const frontpageCourseId = _services_sites__WEBPACK_IMPORTED_MODULE_2__["CoreSites"].getCurrentSiteHomeId();
             try {
                 const courses = yield _services_courses__WEBPACK_IMPORTED_MODULE_4__["CoreCourses"].getCoursesByField();
-                this.courses = courses.filter((course) => course.id != frontpageCourseId);
+                this.array = yield courses.filter((course) => course.id != frontpageCourseId);
+                let arr = yield JSON.parse(JSON.stringify(this.array));
+                this.array = yield arr.splice(20);
+                this.courses = yield arr;
             }
             catch (error) {
                 _services_utils_dom__WEBPACK_IMPORTED_MODULE_3__["CoreDomUtils"].showErrorModalDefault(error, 'core.courses.errorloadcourses', true);
             }
         });
+    }
+    loadData(event) {
+        setTimeout(() => {
+            event.target.complete();
+            let arr = JSON.parse(JSON.stringify(this.array));
+            this.array = arr.splice(20);
+            this.courses = [...this.courses, ...arr];
+            // App logic to determine if all data is loaded
+            // and disable the infinite scroll
+            if (this.array.length < 20) {
+                this.courses = this.courses.concat(this.array);
+                event.target.disabled = true;
+                this.IsILastPage = true;
+            }
+        }, 500);
+    }
+    toggleInfiniteScroll() {
+        this.infiniteScroll.disabled = !this.infiniteScroll.disabled;
     }
     /**
      * Refresh the courses.
@@ -156,10 +195,14 @@ let CoreCoursesAvailableCoursesPage = class CoreCoursesAvailableCoursesPage {
         });
     }
 };
+CoreCoursesAvailableCoursesPage.propDecorators = {
+    infiniteScroll: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"], args: [_ionic_angular__WEBPACK_IMPORTED_MODULE_5__["IonInfiniteScroll"],] }]
+};
 CoreCoursesAvailableCoursesPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'page-core-courses-available-courses',
         template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./available-courses.html */ "./node_modules/raw-loader/dist/cjs.js!./src/core/features/courses/pages/available-courses/available-courses.html")).default,
+        styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./available-courses.scss */ "./src/core/features/courses/pages/available-courses/available-courses.scss")).default]
     })
 ], CoreCoursesAvailableCoursesPage);
 
