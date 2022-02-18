@@ -28,6 +28,7 @@ export type CoreMainMenuHandler = CoreDelegateDisplayHandler<CoreMainMenuHandler
  * Data needed to render a main menu handler. It's returned by the handler.
  */
 export interface CoreMainMenuHandlerData {
+    titles?: string;
     /**
      * Name of the page to load for the handler.
      */

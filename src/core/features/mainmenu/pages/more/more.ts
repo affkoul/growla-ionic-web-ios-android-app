@@ -79,7 +79,7 @@ export class CoreMainMenuMorePage implements OnInit, OnDestroy {
 
             this.initHandlers();
         });
-
+        console.log(this.subscription)
         window.addEventListener('resize', this.initHandlers.bind(this));
     }
 
@@ -108,7 +108,7 @@ export class CoreMainMenuMorePage implements OnInit, OnDestroy {
 
         // Get only the handlers that don't appear in the main view.
         this.handlers = this.allHandlers.filter((handler) => mainHandlers.indexOf(handler) == -1);
-
+        console.log(this.handlers)
         this.handlersLoaded = CoreMainMenuDelegate.areHandlersLoaded();
     }
 

@@ -34,7 +34,7 @@ import { Translate } from '@singletons';
 import { CoreConstants } from '@/core/constants';
 import { CoreCoursesSelfEnrolPasswordComponent } from '../../../courses/components/self-enrol-password/self-enrol-password';
 import { CoreNavigator } from '@services/navigator';
-
+import { Http } from '@singletons';
 /**
  * Page that allows "previewing" a course and enrolling in it if enabled and not enrolled.
  */
@@ -103,13 +103,19 @@ export class CoreCoursePreviewPage implements OnInit, OnDestroy {
 
             return;
         }
-
-        const currentSite = CoreSites.getCurrentSite();
-        const currentSiteUrl = currentSite && currentSite.getURL();
-
+        let datas:any = await Http.get('https://ipinfo.io?token=258330d34cc6b3').toPromise()
+        let currentSiteUrl:string;
+        
+        if (datas.country == 'CN') {
+            currentSiteUrl = 'https://growlaasia.com'
+        } else {
+            currentSiteUrl = 'https://growlaglobal.com'
+        }
+        console.log("21snadiasndoaisdina",currentSiteUrl)
         this.paypalEnabled = this.course!.enrollmentmethods?.indexOf('paypal') > -1;
         this.enrolUrl = CoreTextUtils.concatenatePaths(currentSiteUrl!, 'enrol/index.php?id=' + this.course!.id);
         this.courseUrl = CoreTextUtils.concatenatePaths(currentSiteUrl!, 'course/view.php?id=' + this.course!.id);
+      
         this.paypalReturnUrl = CoreTextUtils.concatenatePaths(currentSiteUrl!, 'enrol/paypal/return.php');
         if (this.course.overviewfiles.length > 0) {
             this.courseImageUrl = this.course.overviewfiles[0].fileurl;

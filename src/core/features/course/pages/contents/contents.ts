@@ -255,7 +255,7 @@ export class CoreCourseContentsPage implements OnInit, OnDestroy {
     protected async loadSections(refresh?: boolean): Promise<void> {
         // Get all the sections.
         const sections = await CoreCourse.getSections(this.course.id, false, true);
-
+        
         if (refresh) {
             // Invalidate the recently downloaded module list. To ensure info can be prefetched.
             const modules = CoreCourse.getSectionsModules(sections);
@@ -292,7 +292,7 @@ export class CoreCourseContentsPage implements OnInit, OnDestroy {
             true,
         );
         this.sections = result.sections;
-
+            console.log(this.sections)
         if (CoreCourseFormatDelegate.canViewAllSections(this.course)) {
             // Add a fake first section (all sections).
             this.sections.unshift(CoreCourseHelper.createAllSectionsSection());

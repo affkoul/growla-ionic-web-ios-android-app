@@ -91,7 +91,6 @@ export class CoreLoginSiteOnboardingComponent {
         } else {
             this.iframeSrc = DomSanitizer.bypassSecurityTrustResourceUrl('https://growlaglobal.com/register.php#en')
         }
-        console.log(this.iframeSrc)
         this.isShow = false
         // ModalController.dismiss();
     }

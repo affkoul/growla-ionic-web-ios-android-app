@@ -1,5 +1,9 @@
 @import "~theme/globals";
-
+.bottom-title{
+    display: block;
+    font-size: 13px;
+    margin-top: 4px;
+}
 :host{
     --menutabbar-size: var(--bottom-tabs-size);
 

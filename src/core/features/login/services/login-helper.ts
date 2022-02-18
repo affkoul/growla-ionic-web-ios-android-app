@@ -430,7 +430,7 @@ export class CoreLoginHelperProvider {
 
         // return ['/login/site', { showKeyboard:true }];
 
-        return ['/login/credentials', { siteUrl: 'https://gn.growla.com' }];
+        return ['/login/credentials', { siteUrl: 'https://growlaasia.com' }];
     }
 
     /**

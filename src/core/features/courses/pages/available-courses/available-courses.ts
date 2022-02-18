@@ -56,6 +56,7 @@ export class CoreCoursesAvailableCoursesPage implements OnInit {
         try {
             const courses = await CoreCourses.getCoursesByField();
              this.array = await courses.filter((course) => course.id != frontpageCourseId);
+             
             let arr = await JSON.parse(JSON.stringify(this.array))
              this.array = await arr.splice(20)
              this.courses = await arr

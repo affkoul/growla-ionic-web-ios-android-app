@@ -2110,5 +2110,7 @@
     "core.login.onboardingcreatemanagecourses": "创建和管理你的课程",
     "core.login.onboardingenrolmanagestudents": "招收你的学生",
     "core.login.onboardingprovidefeedback": "提供实时反馈",
-    "core.login.onboardinggetstarted": "开始使用"
+    "core.login.onboardinggetstarted": "开始使用",
+    "plugin.local_xp.levelup":"晋级",
+    "core.mainmenu.home":"首页"
 }

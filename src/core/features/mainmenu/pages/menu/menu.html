@@ -20,8 +20,8 @@
             <ion-icon [name]="tab.icon" aria-hidden="true"></ion-icon>
             <ion-label aria-hidden="true">{{ tab.title | translate }}</ion-label>
             <ion-badge *ngIf="tab.badge" aria-hidden="true">{{ tab.badge }}</ion-badge>
-            <span class="sr-only">{{ tab.title | translate }}</span>
-            <span *ngIf="tab.badge && tab.badgeA11yText" class="sr-only">
+            <span class="bottom-title">{{ tab.title | translate }}</span>
+            <span *ngIf="tab.badge && tab.badgeA11yText" class="bottom-title">
                 {{ tab.badgeA11yText | translate: {$a : tab.badge } }}
             </span>
         </ion-tab-button>
@@ -38,7 +38,7 @@
         >
             <ion-icon name="fas-bars" aria-hidden="true"></ion-icon>
             <ion-label aria-hidden="true">{{ 'core.more' | translate }}</ion-label>
-            <span class="sr-only">{{ 'core.more' | translate }}</span>
+            <span class="bottom-title">{{ 'core.more' | translate }}</span>
         </ion-tab-button>
     </ion-tab-bar>
 </ion-tabs>
