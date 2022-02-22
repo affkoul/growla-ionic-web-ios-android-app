@@ -169,6 +169,7 @@ let CoreMainMenuMorePage = class CoreMainMenuMorePage {
             this.allHandlers = handlers;
             this.initHandlers();
         });
+        console.log(this.subscription);
         window.addEventListener('resize', this.initHandlers.bind(this));
     }
     /**
@@ -194,6 +195,7 @@ let CoreMainMenuMorePage = class CoreMainMenuMorePage {
             .slice(0, _services_mainmenu__WEBPACK_IMPORTED_MODULE_6__["CoreMainMenu"].getNumItems());
         // Get only the handlers that don't appear in the main view.
         this.handlers = this.allHandlers.filter((handler) => mainHandlers.indexOf(handler) == -1);
+        console.log(this.handlers);
         this.handlersLoaded = _services_mainmenu_delegate__WEBPACK_IMPORTED_MODULE_5__["CoreMainMenuDelegate"].areHandlersLoaded();
     }
     /**

@@ -16,7 +16,10 @@ import { Component, Input, OnInit } from '@angular/core';
 
 import { CoreSites } from '@services/sites';
 import { CoreContentLinksDelegate, CoreContentLinksAction } from '@features/contentlinks/services/contentlinks-delegate';
-
+import { Http } from '@singletons';
+import { CoreDomUtils } from '@services/utils/dom';
+import { CoreLoginSitesComponent } from '../site-onboarding/site-onboarding';
+import { DomSanitizer } from '@singletons';
 /**
  * Component that displays the actions for a notification.
  */
@@ -29,9 +32,9 @@ export class AddonNotificationsActionsComponent implements OnInit {
     @Input() contextUrl?: string;
     @Input() courseId?: number;
     @Input() data?: Record<string, unknown>; // Extra data to handle the URL.
+    @Input() iframeSrc?:any
 
     actions: CoreContentLinksAction[] = [];
-
     /**
      * Component being initialized.
      */
@@ -67,7 +70,10 @@ export class AddonNotificationsActionsComponent implements OnInit {
             });
         }
 
+        console.log(this.contextUrl)
+        console.log(this.data)
         this.actions = actions;
+        console.log(this.actions)
     }
 
     /**
@@ -81,10 +87,29 @@ export class AddonNotificationsActionsComponent implements OnInit {
         if (!url) {
             return;
         }
+        let params = url.split("?")[1]
+        let address = url.split("/")
+        console.log(address)
+        let data: any = await Http.get('https://ipinfo.io?token=258330d34cc6b3').toPromise()
+        if (data.country == 'CN') {
+            address[2]="growlaasia.com"
+            this.iframeSrc =DomSanitizer.bypassSecurityTrustResourceUrl(address.join("/")) 
+            console.log(this.iframeSrc)
+           // this.iframeSrc = DomSanitizer.bypassSecurityTrustResourceUrl('https://growlaasia.com/report/insights/insights.php?'+params)
+        } else {
+            address[2]="growlaasia.com"
+            this.iframeSrc =DomSanitizer.bypassSecurityTrustResourceUrl(address.join("/")) 
+           // this.iframeSrc =  DomSanitizer.bypassSecurityTrustResourceUrl('https://growlaglobal.com/report/insights/insights.php?'+params)
+        }
+        // const site = await CoreSites.getSite(siteId);
 
-        const site = await CoreSites.getSite(siteId);
-
-        site.openInBrowserWithAutoLogin(url);
+           await CoreDomUtils.openModal({
+            component: CoreLoginSitesComponent,
+            cssClass: 'core-modal-fullscreen',
+            componentProps: {
+                shows:false,
+                iframeSrc:this.iframeSrc
+            }
+        });
     }
-
 }

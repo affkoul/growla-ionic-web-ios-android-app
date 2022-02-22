@@ -2112,5 +2112,6 @@
     "core.login.onboardingprovidefeedback": "提供实时反馈",
     "core.login.onboardinggetstarted": "开始使用",
     "plugin.local_xp.levelup":"晋级",
-    "core.mainmenu.home":"首页"
+    "core.mainmenu.home":"首页",
+    "register":"注册"
 }

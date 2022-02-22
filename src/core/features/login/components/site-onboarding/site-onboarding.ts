@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { CoreConfig } from '@services/config';
 import { CoreUtils } from '@services/utils/utils';
@@ -31,12 +31,18 @@ import { promises } from 'fs';
     styleUrls: ['site-onboarding.scss', '../../login.scss'],
 })
 export class CoreLoginSiteOnboardingComponent {
-    iframeSrc: any = ""
+    @Input() shows=true;
+    @Input() iframeSrc: any = ""
     step = 0;
     isShow: boolean = true
     constructor(
         protected router: Router,
     ) { }
+    ngOnInit() {
+        if(!this.shows){
+            this.isShow = false
+        }
+    }
     /**
      * Go to next step.
      *
@@ -87,9 +93,9 @@ export class CoreLoginSiteOnboardingComponent {
 
         let data: any = await Http.get('https://ipinfo.io?token=258330d34cc6b3').toPromise()
         if (data.country == 'CN') {
-            this.iframeSrc = DomSanitizer.bypassSecurityTrustResourceUrl('https://growlaasia.com/register.php#cn')
+            this.iframeSrc ='https://growlaasia.com/register.php#cn'
         } else {
-            this.iframeSrc = DomSanitizer.bypassSecurityTrustResourceUrl('https://growlaglobal.com/register.php#en')
+            this.iframeSrc = 'https://growlaglobal.com/register.php#en'
         }
         this.isShow = false
         // ModalController.dismiss();

@@ -284,6 +284,7 @@ export class CoreCourseFormatComponent implements OnInit, OnChanges, OnDestroy {
      */
     protected async loadAllSectionsComponent(): Promise<void> {
         this.allSectionsComponent = await CoreCourseFormatDelegate.getAllSectionsComponent(this.course!);
+        console.log("all===============",this.allSectionsComponent)
     }
 
     /**

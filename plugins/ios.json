@@ -16,6 +16,9 @@
     "cordova-clipboard": {
       "PACKAGE_NAME": "com.growlaapp.mobile"
     },
+    "cordova-ios-plugin-userdefaults": {
+      "PACKAGE_NAME": "com.growlaapp.mobile"
+    },
     "cordova-plugin-advanced-http": {
       "PACKAGE_NAME": "com.growlaapp.mobile"
     },
@@ -94,6 +97,9 @@
     "cordova-plugin-wkwebview-cookies": {
       "PACKAGE_NAME": "com.growlaapp.mobile"
     },
+    "cordova-plugin-x-toast": {
+      "PACKAGE_NAME": "com.growlaapp.mobile"
+    },
     "cordova-plugin-zip": {
       "PACKAGE_NAME": "com.growlaapp.mobile"
     },
@@ -107,12 +113,6 @@
       "PACKAGE_NAME": "com.growlaapp.mobile"
     },
     "phonegap-plugin-push": {
-      "PACKAGE_NAME": "com.growlaapp.mobile"
-    },
-    "cordova-ios-plugin-userdefaults": {
-      "PACKAGE_NAME": "com.growlaapp.mobile"
-    },
-    "cordova-plugin-x-toast": {
       "PACKAGE_NAME": "com.growlaapp.mobile"
     }
   },

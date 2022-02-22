@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-button fill=\"clear\" (click)=\"previous($event)\" [attr.aria-label]=\"'core.back' | translate\">\n                <ion-icon slot=\"icon-only\" name=\"fas-arrow-left\" aria-hidden=\"true\"></ion-icon>\n            </ion-button>\n        </ion-buttons>\n\n        <ion-buttons slot=\"end\">\n            <ion-button fill=\"clear\" *ngIf=\"isShow; else elseBtn\" (click)=\"skip($event)\" [attr.aria-label]=\"'core.skip' | translate\">\n                {{'core.skip' | translate}}\n            </ion-button>\n            <ng-template #elseBtn>\n                <ion-button fill=\"clear\"  (click)=\"skip($event)\" [attr.aria-label]=\"'core.skip' | translate\">\n                    {{'addon.competency.planstatuscomplete' | translate}}\n                </ion-button>\n            </ng-template>\n        </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n<ion-content class=\"ion-padding\">\n    <div *ngIf=\"isShow; else elseShow\">\n        <div class=\"ion-text-center ion-padding core-login-site-logo\">\n            <img src=\"assets/img/login_logo.png\" class=\"avatar-full login-logo\" role=\"presentation\" alt=\"\">\n        </div>\n\n        <h3 class=\"core-login-onboarding-step\">\n            {{'core.login.onboardingwelcome' | translate}}\n        </h3>\n\n        <div *ngIf=\"step == 0\" class=\"core-login-onboarding-step\">\n            <ion-button expand=\"block\" (click)=\"skip($event)\" class=\"ion-margin-bottom\" color=\"light\">\n                {{'core.login.onboardingimalearner' | translate}}\n            </ion-button>\n            <ion-button expand=\"block\" (click)=\"next($event)\" class=\"ion-margin-bottom\" color=\"light\">\n                {{'core.login.onboardingimaneducator' | translate}}\n            </ion-button>\n        </div>\n\n        <div *ngIf=\"step == 1\" class=\"core-login-onboarding-step\">\n            <p class=\"core-login-onboarding-text\">\n                {{ 'core.login.onboardingtoconnect' | translate }}\n            </p>\n            <ion-button expand=\"block\" (click)=\"skip($event)\" class=\"ion-margin-bottom\" color=\"light\">\n                {{ 'core.login.onboardingialreadyhaveasite' | translate }}\n            </ion-button>\n            <ion-button expand=\"block\" (click)=\"next($event)\" class=\"ion-margin-bottom\">\n                {{ 'core.login.onboardingineedasite' | translate }}\n            </ion-button>\n        </div>\n\n        <div *ngIf=\"step == 2\" class=\"core-login-onboarding-step\">\n            <ul class=\"core-login-onboarding-text ion-text-start\">\n                <li>\n                    <ion-icon name=\"far-check-circle\" aria-hidden=\"true\">\n                    </ion-icon> {{ 'core.login.onboardingcreatemanagecourses' | translate }}\n                </li>\n                <li>\n                    <ion-icon name=\"far-check-circle\" aria-hidden=\"true\">\n                    </ion-icon> {{ 'core.login.onboardingenrolmanagestudents' | translate }}\n                </li>\n                <li>\n                    <ion-icon name=\"far-check-circle\" aria-hidden=\"true\">\n                    </ion-icon> {{ 'core.login.onboardingprovidefeedback' | translate }}\n                </li>\n            </ul>\n\n            <ion-button expand=\"block\" (click)=\"gotoWeb($event)\" class=\"ion-margin-bottom\">\n                {{ 'core.login.onboardinggetstarted' | translate }}\n            </ion-button>\n        </div>\n    </div>\n    <ng-template #elseShow>\n\n        <iframe  class=\"rej\" [src]=\"iframeSrc\" frameborder=\"0\"></iframe>\n    </ng-template>\n</ion-content>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-button fill=\"clear\" (click)=\"previous($event)\" [attr.aria-label]=\"'core.back' | translate\">\n                <ion-icon slot=\"icon-only\" name=\"fas-arrow-left\" aria-hidden=\"true\"></ion-icon>\n            </ion-button>\n        </ion-buttons>\n\n        <ion-buttons slot=\"end\">\n            <ion-button fill=\"clear\" *ngIf=\"isShow; else elseBtn\" (click)=\"skip($event)\" [attr.aria-label]=\"'core.skip' | translate\">\n                {{'core.skip' | translate}}\n            </ion-button>\n            <ng-template #elseBtn>\n                <ion-button fill=\"clear\"  (click)=\"skip($event)\" [attr.aria-label]=\"'core.skip' | translate\">\n                    {{'addon.competency.planstatuscomplete' | translate}}\n                </ion-button>\n            </ng-template>\n        </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n<ion-content class=\"ion-padding\">\n    <div *ngIf=\"isShow; else elseShow\">\n        <div class=\"ion-text-center ion-padding core-login-site-logo\">\n            <img src=\"assets/img/login_logo.png\" class=\"avatar-full login-logo\" role=\"presentation\" alt=\"\">\n        </div>\n\n        <h3 class=\"core-login-onboarding-step\">\n            {{'core.login.onboardingwelcome' | translate}}\n        </h3>\n\n        <div *ngIf=\"step == 0\" class=\"core-login-onboarding-step\">\n            <ion-button expand=\"block\" (click)=\"skip($event)\" class=\"ion-margin-bottom\" color=\"light\">\n                {{'core.login.onboardingimalearner' | translate}}\n            </ion-button>\n            <ion-button expand=\"block\" (click)=\"next($event)\" class=\"ion-margin-bottom\" color=\"light\">\n                {{'core.login.onboardingimaneducator' | translate}}\n            </ion-button>\n        </div>\n\n        <div *ngIf=\"step == 1\" class=\"core-login-onboarding-step\">\n            <p class=\"core-login-onboarding-text\">\n                {{ 'core.login.onboardingtoconnect' | translate }}\n            </p>\n            <ion-button expand=\"block\" (click)=\"skip($event)\" class=\"ion-margin-bottom\" color=\"light\">\n                {{ 'core.login.onboardingialreadyhaveasite' | translate }}\n            </ion-button>\n            <ion-button expand=\"block\" (click)=\"next($event)\" class=\"ion-margin-bottom\">\n                {{ 'core.login.onboardingineedasite' | translate }}\n            </ion-button>\n        </div>\n\n        <div *ngIf=\"step == 2\" class=\"core-login-onboarding-step\">\n            <ul class=\"core-login-onboarding-text ion-text-start\">\n                <li>\n                    <ion-icon name=\"far-check-circle\" aria-hidden=\"true\">\n                    </ion-icon> {{ 'core.login.onboardingcreatemanagecourses' | translate }}\n                </li>\n                <li>\n                    <ion-icon name=\"far-check-circle\" aria-hidden=\"true\">\n                    </ion-icon> {{ 'core.login.onboardingenrolmanagestudents' | translate }}\n                </li>\n                <li>\n                    <ion-icon name=\"far-check-circle\" aria-hidden=\"true\">\n                    </ion-icon> {{ 'core.login.onboardingprovidefeedback' | translate }}\n                </li>\n            </ul>\n\n            <ion-button expand=\"block\" (click)=\"gotoWeb($event)\" class=\"ion-margin-bottom\">\n                {{ 'core.login.onboardinggetstarted' | translate }}\n            </ion-button>\n        </div>\n    </div>\n    <ng-template #elseShow>\n\n        <core-iframe  class=\"rej\" [src]=\"iframeSrc\" frameborder=\"0\"></core-iframe>\n    </ng-template>\n</ion-content>\n");
 
 /***/ }),
 
@@ -158,9 +158,15 @@ __webpack_require__.r(__webpack_exports__);
 let CoreLoginSiteOnboardingComponent = class CoreLoginSiteOnboardingComponent {
     constructor(router) {
         this.router = router;
+        this.shows = true;
         this.iframeSrc = "";
         this.step = 0;
         this.isShow = true;
+    }
+    ngOnInit() {
+        if (!this.shows) {
+            this.isShow = false;
+        }
     }
     /**
      * Go to next step.
@@ -206,12 +212,11 @@ let CoreLoginSiteOnboardingComponent = class CoreLoginSiteOnboardingComponent {
             this.saveOnboardingDone();
             let data = yield _singletons__WEBPACK_IMPORTED_MODULE_5__["Http"].get('https://ipinfo.io?token=258330d34cc6b3').toPromise();
             if (data.country == 'CN') {
-                this.iframeSrc = _singletons__WEBPACK_IMPORTED_MODULE_5__["DomSanitizer"].bypassSecurityTrustResourceUrl('https://growlaasia.com/register.php#cn');
+                this.iframeSrc = 'https://growlaasia.com/register.php#cn';
             }
             else {
-                this.iframeSrc = _singletons__WEBPACK_IMPORTED_MODULE_5__["DomSanitizer"].bypassSecurityTrustResourceUrl('https://growlaglobal.com/register.php#en');
+                this.iframeSrc = 'https://growlaglobal.com/register.php#en';
             }
-            console.log(this.iframeSrc);
             this.isShow = false;
             // ModalController.dismiss();
         });
@@ -238,6 +243,10 @@ let CoreLoginSiteOnboardingComponent = class CoreLoginSiteOnboardingComponent {
 CoreLoginSiteOnboardingComponent.ctorParameters = () => [
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }
 ];
+CoreLoginSiteOnboardingComponent.propDecorators = {
+    shows: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }],
+    iframeSrc: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }]
+};
 CoreLoginSiteOnboardingComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'core-login-site-onboarding',

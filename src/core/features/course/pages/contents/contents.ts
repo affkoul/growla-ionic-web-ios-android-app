@@ -101,7 +101,7 @@ export class CoreCourseContentsPage implements OnInit, OnDestroy {
         this.sectionId = CoreNavigator.getRouteNumberParam('sectionId');
         this.sectionNumber = CoreNavigator.getRouteNumberParam('sectionNumber');
         this.moduleId = CoreNavigator.getRouteNumberParam('moduleId');
-
+        console.log(this.course)
         this.displayEnableDownload = !CoreSites.getCurrentSite()?.isOfflineDisabled() &&
             CoreCourseFormatDelegate.displayEnableDownload(this.course);
         this.downloadCourseEnabled = !CoreCourses.isDownloadCourseDisabledInSite();

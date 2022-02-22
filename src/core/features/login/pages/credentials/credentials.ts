@@ -69,6 +69,7 @@ export class CoreLoginCredentialsPage implements OnInit, OnDestroy {
     filteredSites?: CoreLoginSiteInfoExtended[];
     siteSelector: CoreLoginSiteSelectorListMethod = 'sitefinder';
     siteFinderSettings: SiteFinderSettings;
+    iframeSrc:string=""
     constructor(
         protected fb: FormBuilder,
     ) {
@@ -90,7 +91,23 @@ export class CoreLoginCredentialsPage implements OnInit, OnDestroy {
             this.initOnboarding();
         }
     }
-
+    // 去注册
+    async toRegister():Promise<void> {
+        let data: any = await Http.get('https://ipinfo.io?token=258330d34cc6b3').toPromise()
+        if (data.country == 'CN') {
+            this.iframeSrc ='https://growlaasia.com/register.php#cn'
+        } else {
+            this.iframeSrc = 'https://growlaglobal.com/register.php#en'
+        }
+        await CoreDomUtils.openModal({
+            component: CoreLoginSiteOnboardingComponent,
+            cssClass: 'core-modal-fullscreen',
+            componentProps: {
+                shows:false,
+                iframeSrc:this.iframeSrc
+            }
+        });
+    }
     /**
      * Initialize the site selector.
      *
