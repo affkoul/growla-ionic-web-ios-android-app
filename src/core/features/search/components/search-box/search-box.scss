@@ -7,7 +7,7 @@
         position: absolute;
         left: 0;
         right: 0;
-        z-index: 4;
+        z-index: 9999;
         margin-top: 10px;
         margin-bottom: 10px;
     }
@@ -20,7 +20,6 @@
     .core-search-history {
         max-height: calc(-120px + 80vh);
         overflow-y: auto;
-
         .item:hover {
             --background: var(--gray-lighter);
             cursor: pointer;

@@ -159,10 +159,12 @@ let CoreSettingsGeneralPage = class CoreSettingsGeneralPage {
             // Get the supported languages.
             const languages = _core_constants__WEBPACK_IMPORTED_MODULE_2__["CoreConstants"].CONFIG.languages;
             for (const code in languages) {
-                this.languages.push({
-                    code: code,
-                    name: languages[code],
-                });
+                if (code == "zh-cn" || code == "en") {
+                    this.languages.push({
+                        code: code,
+                        name: languages[code],
+                    });
+                }
             }
             // Sort them by name.
             this.languages.sort((a, b) => a.name.localeCompare(b.name));

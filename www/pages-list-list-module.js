@@ -13,6 +13,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/addons/notifications/components/site-onboarding/site-onboarding.html":
+/*!************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/addons/notifications/components/site-onboarding/site-onboarding.html ***!
+  \************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"end\">\n                <ion-button fill=\"clear\"  (click)=\"skip($event)\">\n                    {{planstatuscomplete}}\n                </ion-button>\n        </ion-buttons> \n    </ion-toolbar>\n</ion-header>\n<ion-content class=\"ion-padding\">\n    <core-iframe  class=\"rej\" [src]=\"iframeSrc\" frameborder=\"0\"></core-iframe>\n</ion-content>\n");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/addons/notifications/pages/list/list.html":
 /*!*********************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/addons/notifications/pages/list/list.html ***!
@@ -40,20 +53,107 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _services_sites__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @services/sites */ "./src/core/services/sites.ts");
 /* harmony import */ var _features_contentlinks_services_contentlinks_delegate__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @features/contentlinks/services/contentlinks-delegate */ "./src/core/features/contentlinks/services/contentlinks-delegate.ts");
-// (C) Copyright 2015 GROWLA Pty Ltd.
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
+// // (C) Copyright 2015 GROWLA Pty Ltd.
+// //
+// // Licensed under the Apache License, Version 2.0 (the "License");
+// // you may not use this file except in compliance with the License.
+// // You may obtain a copy of the License at
+// //
+// //     http://www.apache.org/licenses/LICENSE-2.0
+// //
+// // Unless required by applicable law or agreed to in writing, software
+// // distributed under the License is distributed on an "AS IS" BASIS,
+// // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// // See the License for the specific language governing permissions and
+// // limitations under the License.
 
+// import { Component, Input, OnInit } from '@angular/core';
+// import { CoreSites } from '@services/sites';
+// import { CoreContentLinksDelegate, CoreContentLinksAction } from '@features/contentlinks/services/contentlinks-delegate';
+// import { Http } from '@singletons';
+// import { CoreDomUtils } from '@services/utils/dom';
+// import { CoreLoginSitesComponent } from '../site-onboarding/site-onboarding';
+// import { DomSanitizer } from '@singletons';
+// /**
+//  * Component that displays the actions for a notification.
+//  */
+// @Component({
+//     selector: 'addon-notifications-actions',
+//     templateUrl: 'addon-notifications-actions.html',
+// })
+// export class AddonNotificationsActionsComponent implements OnInit {
+//     @Input() contextUrl?: string;
+//     @Input() courseId?: number;
+//     @Input() data?: Record<string, unknown>; // Extra data to handle the URL.
+//     @Input() iframeSrc?:any
+//     actions: CoreContentLinksAction[] = [];
+//     /**
+//      * Component being initialized.
+//      */
+//     async ngOnInit(): Promise<void> {
+//         if (!this.contextUrl && (!this.data || !this.data.appurl)) {
+//             // No URL, nothing to do.
+//             return;
+//         }
+//         let actions: CoreContentLinksAction[] = [];
+//         // Treat appurl first if any.
+//         if (this.data?.appurl) {
+//             actions = await CoreContentLinksDelegate.getActionsFor(
+//                 <string> this.data.appurl,
+//                 this.courseId,
+//                 undefined,
+//                 this.data,
+//             );
+//         }
+//         if (!actions.length && this.contextUrl) {
+//             // No appurl or cannot handle it. Try with contextUrl.
+//             actions = await CoreContentLinksDelegate.getActionsFor(this.contextUrl, this.courseId, undefined, this.data);
+//         }
+//         if (!actions.length) {
+//             // URL is not supported. Add an action to open it in browser.
+//             actions.push({
+//                 message: 'core.view',
+//                 icon: 'fas-eye',
+//                 action: this.openInBrowser.bind(this),
+//             });
+//         }
+//         this.actions = actions;
+//     }
+//     /**
+//      * Default action. Open in browser.
+//      *
+//      * @param siteId Site ID to use.
+//      */
+//     protected async openInBrowser(siteId?: string): Promise<void> {
+//         const url = <string> this.data?.appurl || this.contextUrl;
+//         if (!url) {
+//             return;
+//         }
+//         let params = url.split("?")[1]
+//         let address = url.split("/")
+//         let data: any = await Http.get('https://ipinfo.io?token=258330d34cc6b3').toPromise()
+//         if (data.country == 'CN') {
+//             address[2]="growlaasia.com"
+//             // this.iframeSrc =address.join("/")
+//             this.iframeSrc = "https://test.growlaasia.com/report/insights/insights.php?modelid=2&contextid=1"
+//             console.log(this.iframeSrc)
+//            // this.iframeSrc = DomSanitizer.bypassSecurityTrustResourceUrl('https://growlaasia.com/report/insights/insights.php?'+params)
+//         } else {
+//             address[2]="growlaasia.com"
+//             this.iframeSrc = address.join("/")
+//            // this.iframeSrc =  DomSanitizer.bypassSecurityTrustResourceUrl('https://growlaglobal.com/report/insights/insights.php?'+params)
+//         }
+//         // const site = await CoreSites.getSite(siteId);
+//            await CoreDomUtils.openModal({
+//             component: CoreLoginSitesComponent,
+//             cssClass: 'core-modal-fullscreen',
+//             componentProps: {
+//                 shows:false,
+//                 iframeSrc:this.iframeSrc
+//             }
+//         });
+//     }
+// }
 
 
 
@@ -141,6 +241,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _core_shared_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/core/shared.module */ "./src/core/shared.module.ts");
 /* harmony import */ var _actions_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./actions/actions */ "./src/addons/notifications/components/actions/actions.ts");
+/* harmony import */ var _site_onboarding_site_onboarding__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./site-onboarding/site-onboarding */ "./src/addons/notifications/components/site-onboarding/site-onboarding.ts");
 // (C) Copyright 2015 GROWLA Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -158,21 +259,188 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 let AddonNotificationsComponentsModule = class AddonNotificationsComponentsModule {
 };
 AddonNotificationsComponentsModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
         declarations: [
             _actions_actions__WEBPACK_IMPORTED_MODULE_3__["AddonNotificationsActionsComponent"],
+            _site_onboarding_site_onboarding__WEBPACK_IMPORTED_MODULE_4__["CoreLoginSitesComponent"]
         ],
         imports: [
             _core_shared_module__WEBPACK_IMPORTED_MODULE_2__["CoreSharedModule"],
         ],
         exports: [
             _actions_actions__WEBPACK_IMPORTED_MODULE_3__["AddonNotificationsActionsComponent"],
+            _site_onboarding_site_onboarding__WEBPACK_IMPORTED_MODULE_4__["CoreLoginSitesComponent"]
         ],
     })
 ], AddonNotificationsComponentsModule);
+
+
+
+/***/ }),
+
+/***/ "./src/addons/notifications/components/site-onboarding/site-onboarding.scss":
+/*!**********************************************************************************!*\
+  !*** ./src/addons/notifications/components/site-onboarding/site-onboarding.scss ***!
+  \**********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".rej {\n  width: 100%;\n  height: 100%;\n  position: fixed;\n  left: 0;\n  top: -8px;\n  z-index: 100;\n}\n\n:host .core-login-onboarding-step {\n  padding: 10px 20px;\n  text-align: center;\n  margin: 0 auto;\n}\n\n@media (min-width: 768px) {\n  :host .core-login-onboarding-step {\n    max-width: 80%;\n  }\n}\n\n:host .core-login-onboarding-step p {\n  margin-bottom: 10px;\n}\n\n:host .core-login-onboarding-step ul {\n  margin-bottom: 30px;\n  list-style-type: none;\n  -webkit-padding-start: 10px;\n          padding-inline-start: 10px;\n}\n\n:host .core-login-onboarding-step ul li {\n  margin-bottom: 10px;\n}\n\n:host .core-login-onboarding-step .button-block {\n  margin-top: 20px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hZGRvbnMvbm90aWZpY2F0aW9ucy9jb21wb25lbnRzL3NpdGUtb25ib2FyZGluZy9zaXRlLW9uYm9hcmRpbmcuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLFdBQUE7RUFDQSxZQUFBO0VBQ0EsZUFBQTtFQUNBLE9BQUE7RUFDQSxTQUFBO0VBQ0EsWUFBQTtBQUNKOztBQUVJO0VBQ0ksa0JBQUE7RUFDQSxrQkFBQTtFQUlBLGNBQUE7QUFGUjs7QUFEUTtFQUhKO0lBSVEsY0FBQTtFQUlWO0FBQ0Y7O0FBRFE7RUFDSSxtQkFBQTtBQUdaOztBQUFRO0VBQ0ksbUJBQUE7RUFDQSxxQkFBQTtFQUNBLDJCQUFBO1VBQUEsMEJBQUE7QUFFWjs7QUFEWTtFQUNJLG1CQUFBO0FBR2hCOztBQUNRO0VBQ0ksZ0JBQUE7QUFDWiIsImZpbGUiOiJzcmMvYWRkb25zL25vdGlmaWNhdGlvbnMvY29tcG9uZW50cy9zaXRlLW9uYm9hcmRpbmcvc2l0ZS1vbmJvYXJkaW5nLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIucmVqe1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGhlaWdodDogMTAwJTtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgbGVmdDogMDtcbiAgICB0b3A6IC04cHg7XG4gICAgei1pbmRleDogMTAwO1xufVxuOmhvc3Qge1xuICAgIC5jb3JlLWxvZ2luLW9uYm9hcmRpbmctc3RlcCB7XG4gICAgICAgIHBhZGRpbmc6IDEwcHggMjBweDtcbiAgICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgICAgICBAbWVkaWEgKG1pbi13aWR0aDogNzY4cHgpIHtcbiAgICAgICAgICAgIG1heC13aWR0aDogODAlO1xuICAgICAgICB9XG4gICAgICAgIG1hcmdpbjogMCBhdXRvO1xuXG4gICAgICAgIHAge1xuICAgICAgICAgICAgbWFyZ2luLWJvdHRvbTogMTBweDtcbiAgICAgICAgfVxuXG4gICAgICAgIHVsIHtcbiAgICAgICAgICAgIG1hcmdpbi1ib3R0b206IDMwcHg7XG4gICAgICAgICAgICBsaXN0LXN0eWxlLXR5cGU6IG5vbmU7XG4gICAgICAgICAgICBwYWRkaW5nLWlubGluZS1zdGFydDogMTBweDtcbiAgICAgICAgICAgIGxpIHtcbiAgICAgICAgICAgICAgICBtYXJnaW4tYm90dG9tOiAxMHB4O1xuICAgICAgICAgICAgfVxuICAgICAgICB9XG5cbiAgICAgICAgLmJ1dHRvbi1ibG9jayB7XG4gICAgICAgICAgICBtYXJnaW4tdG9wOiAyMHB4O1xuICAgICAgICB9XG4gICAgfVxufVxuIl19 */");
+
+/***/ }),
+
+/***/ "./src/addons/notifications/components/site-onboarding/site-onboarding.ts":
+/*!********************************************************************************!*\
+  !*** ./src/addons/notifications/components/site-onboarding/site-onboarding.ts ***!
+  \********************************************************************************/
+/*! exports provided: CoreLoginSitesComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreLoginSitesComponent", function() { return CoreLoginSitesComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var _services_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @services/config */ "./src/core/services/config.ts");
+/* harmony import */ var _features_login_services_login_helper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @features/login/services/login-helper */ "./src/core/features/login/services/login-helper.ts");
+/* harmony import */ var _singletons__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @singletons */ "./src/core/singletons/index.ts");
+/* harmony import */ var _services_lang__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @services/lang */ "./src/core/services/lang.ts");
+// (C) Copyright 2015 GROWLA Pty Ltd.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+
+
+
+
+
+
+
+/**
+ * Component that displays onboarding help regarding the CoreLoginSitePage.
+ */
+let CoreLoginSitesComponent = class CoreLoginSitesComponent {
+    constructor(router) {
+        this.router = router;
+        this.shows = true;
+        this.iframeSrc = "";
+        this.step = 0;
+        this.isShow = true;
+    }
+    ngOnInit() {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            this.selectedLanguage = yield _services_lang__WEBPACK_IMPORTED_MODULE_6__["CoreLang"].getCurrentLanguage();
+            if (this.selectedLanguage == "zh-cn") {
+                this.planstatuscomplete = "关闭";
+            }
+            else {
+                this.planstatuscomplete = "close";
+            }
+        });
+    }
+    /**
+     * Go to next step.
+     *
+     * @param e Click event.
+     */
+    next(e) {
+        e.stopPropagation();
+        this.step++;
+    }
+    /**
+     * Go to previous step.
+     *
+     * @param e Click event.
+     */
+    previous(e) {
+        e.stopPropagation();
+        if (this.step == 0) {
+            _singletons__WEBPACK_IMPORTED_MODULE_5__["ModalController"].dismiss();
+        }
+        else {
+            this.step--;
+        }
+    }
+    /**
+     * Close modal.
+     *
+     * @param e Click event.
+     */
+    skip(e) {
+        e.stopPropagation();
+        this.saveOnboardingDone();
+        _singletons__WEBPACK_IMPORTED_MODULE_5__["ModalController"].dismiss();
+    }
+    /**
+     * Create a site.
+     *
+     * @param e Click event.
+     */
+    gotoWeb(e) {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            e.stopPropagation();
+            this.saveOnboardingDone();
+            let data = yield _singletons__WEBPACK_IMPORTED_MODULE_5__["Http"].get('https://ipinfo.io?token=258330d34cc6b3').toPromise();
+            if (data.country == 'CN') {
+                this.iframeSrc = _singletons__WEBPACK_IMPORTED_MODULE_5__["DomSanitizer"].bypassSecurityTrustResourceUrl('https://growlaasia.com/register.php#cn');
+            }
+            else {
+                this.iframeSrc = 'https://growlaglobal.com/register.php#en';
+            }
+            this.isShow = false;
+            // ModalController.dismiss();
+        });
+    }
+    // async function reqAddress() {
+    //     let param = {
+    //         url: 'https://ipinfo.io?token=258330d34cc6b3'
+    //     }
+    //     let data = await request(param)
+    //     if( data.country == 'CN') {
+    //         $('#phonenumber-box').css('display', 'block')
+    //     } else {
+    //         $('#phonenumber-box').css('display', 'none')
+    //     }
+    // }
+    /**
+     * Saves the onboarding has finished.
+     * 设置是否进入开机模式
+     */
+    saveOnboardingDone() {
+        _services_config__WEBPACK_IMPORTED_MODULE_3__["CoreConfig"].set(_features_login_services_login_helper__WEBPACK_IMPORTED_MODULE_4__["CoreLoginHelperProvider"].ONBOARDING_DONE, 1);
+    }
+};
+CoreLoginSitesComponent.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }
+];
+CoreLoginSitesComponent.propDecorators = {
+    shows: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }],
+    iframeSrc: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"] }]
+};
+CoreLoginSitesComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'core-login-site-onboarding',
+        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./site-onboarding.html */ "./node_modules/raw-loader/dist/cjs.js!./src/addons/notifications/components/site-onboarding/site-onboarding.html")).default,
+        styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./site-onboarding.scss */ "./src/addons/notifications/components/site-onboarding/site-onboarding.scss")).default]
+    })
+], CoreLoginSitesComponent);
 
 
 

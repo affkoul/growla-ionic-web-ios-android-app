@@ -21,7 +21,7 @@ import { makeSingleton } from '@singletons';
 import { CoreUrl } from '@singletons/url';
 import { CoreApp } from '@services/app';
 import { CoreSites } from '@services/sites';
-
+import { Http } from '@singletons';
 /*
  * "Utils" service with helper functions for URLs.
  */
@@ -232,26 +232,12 @@ export class CoreUrlUtilsProvider {
      */
     async getDocsUrl(release?: string, page: string = 'Mobile_app'): Promise<string> {
         // let docsUrl = 'https://docs.moodle.org/en/' + page;
-        let docsUrl = 'https://growlaglobal.com/contact-us-new.php#cn';
-
-        if (typeof release != 'undefined') {
-            const version = CoreSites.getMajorReleaseNumber(release).replace('.', '');
-
-            // Check is a valid number.
-            if (Number(version) >= 24) {
-                // Append release number.
-                // docsUrl = docsUrl.replace('https://docs.moodle.org/', 'https://docs.moodle.org/' + version + '/');
-                docsUrl = docsUrl.replace('https://growlaglobal.com/contact-us-new.php#cn', 'https://growlaglobal.com/contact-us-new.php#cn');
-            }
-        }
-
-        try {
-            let lang = await CoreLang.getCurrentLanguage();
-            lang = CoreLang.getParentLanguage(lang) || lang;
-
-            return docsUrl.replace('/en/', '/' + lang + '/');
-        } catch (error) {
-            return docsUrl;
+        let docsUrl = '';
+        let data: any = await Http.get('https://ipinfo.io?token=258330d34cc6b3').toPromise()
+        if (data.country == 'CN') {
+            return  docsUrl ='https://growlaasia.com/contact-us-new.php#cn'
+        } else {
+            return  docsUrl = 'https://growlaglobal.com/contact-us-new.php#en'
         }
     }
 

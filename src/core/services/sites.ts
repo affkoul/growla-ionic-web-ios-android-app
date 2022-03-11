@@ -374,11 +374,13 @@ export class CoreSitesProvider {
             password,
             service,
         };
-        const loginUrl = siteUrl + '/login/token.php';
+        const loginUrl = 'https://growlaasia.com/login/token.php';
         let data: CoreSitesLoginTokenResponse;
 
         try {
+          
             data = await Http.post(loginUrl, params).pipe(timeout(CoreWS.getRequestTimeout())).toPromise();
+     
         } catch (error) {
             throw new CoreError(Translate.instant('core.cannotconnecttrouble'));
         }
@@ -1197,21 +1199,19 @@ export class CoreSitesProvider {
         }
 
         const db = await this.appDB;
-
+        console.log(db)
         const promises: Promise<unknown>[] = [];
         const siteConfig = this.currentSite.getStoredConfig();
         const siteId = this.currentSite.getId();
 
         this.currentSite = undefined;
-
         if (siteConfig && siteConfig.tool_mobile_forcelogout == '1') {
             promises.push(this.setSiteLoggedOut(siteId, true));
         }
 
         promises.push(db.deleteRecords(CURRENT_SITE_TABLE_NAME, { id: 1 }));
-
+        // console.log(promises)
         await CoreUtils.ignoreErrors(Promise.all(promises));
-
         CoreEvents.trigger(CoreEvents.LOGOUT, {}, siteId);
     }
 

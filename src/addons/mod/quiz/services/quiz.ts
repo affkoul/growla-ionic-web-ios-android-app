@@ -243,7 +243,9 @@ export class AddonModQuizProvider {
                 'value',
                 true,
             ),
+            //lang: "zh_cn",
         };
+       // console.log(params)
         const preSets: CoreSiteWSPreSets = {
             cacheKey: this.getAttemptDataCacheKey(attemptId, page),
             component: AddonModQuizProvider.COMPONENT,
@@ -2012,6 +2014,7 @@ export type AddonModQuizGetAttemptDataWSParams = {
     attemptid: number; // Attempt id.
     page: number; // Page number.
     preflightdata?: AddonModQuizPreflightDataWSParam[]; // Preflight required data (like passwords).
+    lang?:string
 };
 
 /**

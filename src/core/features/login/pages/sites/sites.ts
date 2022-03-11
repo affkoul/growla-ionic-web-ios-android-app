@@ -60,6 +60,7 @@ export class CoreLoginSitesPage implements OnInit {
         }));
 
         this.showDelete = false;
+        this.add()
     }
 
     /**
@@ -67,6 +68,7 @@ export class CoreLoginSitesPage implements OnInit {
      */
     add(): void {
         CoreLoginHelper.goToAddSite(false, true);
+        this.sites =[]
     }
 
     /**

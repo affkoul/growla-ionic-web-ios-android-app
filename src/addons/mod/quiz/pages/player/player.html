@@ -42,7 +42,7 @@
 <ion-content>
     <core-loading [hideUntil]="loaded">
         <!-- Navigation arrows if there's no timer. -->
-        <ion-toolbar *ngIf="!endTime && questions.length && !quizAborted && !showSummary" color="light">
+        <!-- <ion-toolbar *ngIf="!endTime && questions.length && !quizAborted && !showSummary" color="light">
             <ion-buttons slot="end">
                 <ion-button fill="clear" *ngIf="previousPage >= 0" (click)="changePage(previousPage)"
                     [attr.aria-label]="'core.previous' | translate">
@@ -52,7 +52,7 @@
                     <ion-icon name="fas-chevron-right" slot="icon-only" aria-hidden="true"></ion-icon>
                 </ion-button>
             </ion-buttons>
-        </ion-toolbar>
+        </ion-toolbar> -->
 
         <!-- Button to start attempting. -->
         <ion-button *ngIf="!attempt" expand="block" class="ion-margin" (click)="start()">

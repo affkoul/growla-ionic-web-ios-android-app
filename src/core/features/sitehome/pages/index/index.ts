@@ -100,6 +100,7 @@ export class CoreSiteHomeIndexPage implements OnInit, OnDestroy {
         const config = this.currentSite!.getStoredConfig() || { numsections: 1, frontpageloggedin: undefined };
 
         this.items = await CoreSiteHome.getFrontPageItems(config.frontpageloggedin);
+        console.log(this.items)
         this.hasContent = this.items.length > 0;
 
         if (this.items.some((item) => item == 'NEWS_ITEMS')) {

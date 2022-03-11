@@ -1518,6 +1518,7 @@ let AddonModQuizPlayerPage = class AddonModQuizPlayerPage {
                     question.type = 'description';
                 }
             });
+            console.log(this.questions);
             // Mark the page as viewed.
             _services_utils_utils__WEBPACK_IMPORTED_MODULE_10__["CoreUtils"].ignoreErrors(_services_quiz__WEBPACK_IMPORTED_MODULE_15__["AddonModQuiz"].logViewAttempt(this.attempt.id, page, this.preflightData, this.offline, this.quiz));
             // Start looking for changes.

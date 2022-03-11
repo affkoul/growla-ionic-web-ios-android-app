@@ -101,7 +101,7 @@ export class CoreCourseContentsPage implements OnInit, OnDestroy {
         this.sectionId = CoreNavigator.getRouteNumberParam('sectionId');
         this.sectionNumber = CoreNavigator.getRouteNumberParam('sectionNumber');
         this.moduleId = CoreNavigator.getRouteNumberParam('moduleId');
-        console.log(this.course)
+        //console.log(this.course)
         this.displayEnableDownload = !CoreSites.getCurrentSite()?.isOfflineDisabled() &&
             CoreCourseFormatDelegate.displayEnableDownload(this.course);
         this.downloadCourseEnabled = !CoreCourses.isDownloadCourseDisabledInSite();
@@ -292,7 +292,7 @@ export class CoreCourseContentsPage implements OnInit, OnDestroy {
             true,
         );
         this.sections = result.sections;
-            console.log(this.sections)
+            //console.log(this.sections)
         if (CoreCourseFormatDelegate.canViewAllSections(this.course)) {
             // Add a fake first section (all sections).
             this.sections.unshift(CoreCourseHelper.createAllSectionsSection());

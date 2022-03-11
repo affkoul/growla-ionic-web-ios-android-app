@@ -66,8 +66,8 @@ export class CoreConstants {
     static readonly SETTINGS_ANALYTICS_ENABLED = 'CoreSettingsAnalyticsEnabled';
 
     // WS constants.
-    static readonly WS_TIMEOUT = 30000; // Timeout when not in WiFi.
-    static readonly WS_TIMEOUT_WIFI = 30000; // Timeout when in WiFi.
+    static readonly WS_TIMEOUT = 60000; // Timeout when not in WiFi.
+    static readonly WS_TIMEOUT_WIFI = 60000; // Timeout when in WiFi.
     static readonly WS_PREFIX = 'local_mobile_';
 
     // Login constants.

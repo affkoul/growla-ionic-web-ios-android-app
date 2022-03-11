@@ -34,9 +34,9 @@
                         <core-spacer *ngIf="section && section!.hasContent"></core-spacer>
                         <ng-container *ngFor="let item of items">
                             <ng-container [ngSwitch]="item">
-                                <ng-container *ngSwitchCase="'LIST_OF_COURSE'">
+                                <!-- <ng-container *ngSwitchCase="'LIST_OF_COURSE'">
                                     <ng-template *ngTemplateOutlet="allCourseList"></ng-template>
-                                </ng-container>
+                                </ng-container> -->
                                 <ng-container *ngSwitchCase="'LIST_OF_CATEGORIES'">
                                     <ng-template *ngTemplateOutlet="categories"></ng-template>
                                 </ng-container>
@@ -46,9 +46,9 @@
                                 <ng-container *ngSwitchCase="'ENROLLED_COURSES'">
                                     <ng-template *ngTemplateOutlet="enrolledCourseList"></ng-template>
                                 </ng-container>
-                                <ng-container *ngSwitchCase="'NEWS_ITEMS'">
+                                <!-- <ng-container *ngSwitchCase="'NEWS_ITEMS'">
                                     <ng-template *ngTemplateOutlet="news"></ng-template>
-                                </ng-container>
+                                </ng-container> -->
                             </ng-container>
                         </ng-container>
                     </ng-container>

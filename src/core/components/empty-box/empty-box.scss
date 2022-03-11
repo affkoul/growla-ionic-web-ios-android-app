@@ -21,11 +21,12 @@
             text-align: center;
             vertical-align: middle;
             pointer-events: auto;
+            z-index: 0;
         }
 
         &.core-empty-box-inline {
             position: relative;
-            z-index: initial;
+            z-index: 0;
             top: initial;
             right: initial;
             bottom: 0;
@@ -34,7 +35,8 @@
         }
 
         ion-icon {
-            font-size: 120px;
+            margin-top: 60px;
+            font-size: 100px;
         }
         img {
             height: 125px;

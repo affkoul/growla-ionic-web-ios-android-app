@@ -90,6 +90,7 @@
                 <core-dynamic-component [component]="allSectionsComponent" [data]="data">
                     <ng-container *ngFor="let section of sections; index as i">
                         <ng-container *ngIf="i <= showSectionId">
+                            <!-- {{section |json }} -->
                             <ng-container *ngTemplateOutlet="sectionTemplate; context: {section: section}"></ng-container>
                         </ng-container>
                     </ng-container>

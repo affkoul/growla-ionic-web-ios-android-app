@@ -125,9 +125,12 @@ export class CoreMainMenuPage implements OnInit, OnDestroy {
             }
 
             this.tabs = newTabs;
-
             // Sort them by priority so new handlers are in the right position.
             this.tabs.sort((a, b) => (b.priority || 0) - (a.priority || 0));
+            if(this.tabs.length==4){
+                this.tabs.splice(3,1)
+            }
+            // console.log(this.tabs)
             this.loaded = CoreMainMenuDelegate.areHandlersLoaded();
         }
     }

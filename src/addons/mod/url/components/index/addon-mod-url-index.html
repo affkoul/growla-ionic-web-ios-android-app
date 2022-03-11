@@ -3,8 +3,6 @@
     <core-context-menu>
         <core-context-menu-item *ngIf="externalUrl" [priority]="900" [content]="'core.openinbrowser' | translate"
             [href]="externalUrl" iconAction="fas-external-link-alt"></core-context-menu-item>
-        <core-context-menu-item *ngIf="description" [priority]="800" [content]="'core.moduleintro' | translate"
-            (action)="expandDescription()" iconAction="fas-arrow-right"></core-context-menu-item>
         <core-context-menu-item *ngIf="blog" [priority]="750" content="{{'addon.blog.blog' | translate}}"
             iconAction="far-newspaper" (action)="gotoBlog()"></core-context-menu-item>
         <core-context-menu-item [priority]="700" [content]="'core.refresh' | translate" (action)="doRefresh(null, $event)"
@@ -32,27 +30,29 @@
         <ion-item *ngIf="shouldEmbed">
             <ion-label>
                 <img *ngIf="isImage" [alt]="name" [src]="url">
-                <video *ngIf="isVideo" [title]="name" controls>
-                    <source [src]="url" [type]="mimetype">
-                </video>
+                <div *ngIf="isVideo" class="videos">
+                    <video [title]="name" controls controlslist="nodownload">
+                        <source [src]="url" [type]="mimetype">
+                    </video>
+                </div>
                 <audio *ngIf="isAudio" [title]="name" controls>
                     <source [src]="url" [type]="mimetype">
                 </audio>
             </ion-label>
         </ion-item>
-        <ion-item class="ion-text-wrap">
+        <!-- <ion-item class="ion-text-wrap">
             <ion-label>
                 <h2>{{ 'addon.mod_url.pointingtourl' | translate }}</h2>
                 <p>{{ url }}</p>
             </ion-label>
-        </ion-item>
-        <ion-item class="ion-text-wrap">
+        </ion-item> -->
+        <!-- <ion-item class="ion-text-wrap">
             <ion-label>
                 <ion-button expand="block" (click)="go()">
                     <ion-icon name="fas-link" slot="start" aria-hidden="true"></ion-icon>
                     {{ 'addon.mod_url.accessurl' | translate }}
                 </ion-button>
             </ion-label>
-        </ion-item>
+        </ion-item> -->
     </ion-list>
 </core-loading>

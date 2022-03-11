@@ -16,16 +16,18 @@ import { NgModule } from '@angular/core';
 import { CoreSharedModule } from '@/core/shared.module';
 
 import { AddonNotificationsActionsComponent } from './actions/actions';
-
+import { CoreLoginSitesComponent } from './site-onboarding/site-onboarding';
 @NgModule({
     declarations: [
         AddonNotificationsActionsComponent,
+        CoreLoginSitesComponent
     ],
     imports: [
         CoreSharedModule,
     ],
     exports: [
         AddonNotificationsActionsComponent,
+        CoreLoginSitesComponent
     ],
 })
 export class AddonNotificationsComponentsModule {}

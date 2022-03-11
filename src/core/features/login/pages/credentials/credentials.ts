@@ -361,13 +361,14 @@ export class CoreLoginCredentialsPage implements OnInit, OnDestroy {
         }
 
         const modal = await CoreDomUtils.showModalLoading();
-
+        console.log(siteUrl)
         // Start the authentication process.
         try {
+            // console.log(123132)
             const data = await CoreSites.getUserToken(siteUrl, username, password);
-
+            // console.log("data",data)
             const id = await CoreSites.newSite(data.siteUrl, data.token, data.privateToken);
-
+            // console.log(id)
             // Reset fields so the data is not in the view anymore.
             this.credForm.controls['username'].reset();
             this.credForm.controls['password'].reset();

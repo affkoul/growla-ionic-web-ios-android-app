@@ -494,7 +494,6 @@ export class AddonModQuizPlayerPage implements OnInit, OnDestroy, CanLeave {
         // Update attempt, status could change during the execution.
         this.attempt = data.attempt;
         this.attempt.currentpage = page;
-
         this.questions = data.questions;
         this.nextPage = data.nextpage;
         this.previousPage = this.isSequential ? -1 : page - 1;
@@ -512,7 +511,7 @@ export class AddonModQuizPlayerPage implements OnInit, OnDestroy, CanLeave {
                 question.type = 'description';
             }
         });
-
+        console.log(this.questions[0].html)
         // Mark the page as viewed.
         CoreUtils.ignoreErrors(
             AddonModQuiz.logViewAttempt(this.attempt.id, page, this.preflightData, this.offline, this.quiz),
