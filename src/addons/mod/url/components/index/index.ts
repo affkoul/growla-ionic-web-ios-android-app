@@ -18,6 +18,7 @@ import { CoreError } from '@classes/errors/error';
 import { CoreCourseModuleMainResourceComponent } from '@features/course/classes/main-resource-component';
 import { CoreCourseContentsPage } from '@features/course/pages/contents/contents';
 import { CoreCourse } from '@features/course/services/course';
+import { CoreApp } from '@services/app';
 import { CoreSites } from '@services/sites';
 import { CoreMimetypeUtils } from '@services/utils/mimetype';
 import { CoreTextUtils } from '@services/utils/text';
@@ -39,12 +40,14 @@ export class AddonModUrlIndexComponent extends CoreCourseModuleMainResourceCompo
     canGetUrl = false;
     url?: string;
     name?: string;
+    isIOS: boolean | undefined;
     shouldEmbed = false;
     shouldIframe = false;
     isImage = false;
     isAudio = false;
     isVideo = false;
     isOther = false;
+    isShow = true
     mimetype?: string;
     displayDescription = true;
 
@@ -56,6 +59,14 @@ export class AddonModUrlIndexComponent extends CoreCourseModuleMainResourceCompo
      * Component being initialized.
      */
     async ngOnInit(): Promise<void> {
+        // setTimeout(() => {
+            
+        //     let videos:any = document.getElementById("video")
+        //     videos.currentTime = 30
+        //     console.log(videos)
+        // }, 2000);
+        // 
+        this.isIOS = CoreApp.isIOS();
         super.ngOnInit();
 
         this.canGetUrl = AddonModUrl.isGetUrlWSAvailable();
@@ -68,7 +79,12 @@ export class AddonModUrlIndexComponent extends CoreCourseModuleMainResourceCompo
             this.logView();
         }
     }
-
+    play(){
+        let video: any = document.getElementById('video'); 
+        video.play()
+        // console.log(video)
+        this.isShow = false
+    }
     /**
      * Perform the invalidate content function.
      *

@@ -33,6 +33,7 @@ import { AddonModQuizAttempt, AddonModQuizHelper, AddonModQuizQuizData } from '.
 @Component({
     selector: 'page-addon-mod-quiz-attempt',
     templateUrl: 'attempt.html',
+    styleUrls:["attempt.scss"]
 })
 export class AddonModQuizAttemptPage implements OnInit {
 

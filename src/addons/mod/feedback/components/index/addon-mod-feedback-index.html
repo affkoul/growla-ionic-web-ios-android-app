@@ -110,7 +110,7 @@
 <!-- Template to render the overview. -->
 <ng-template #tabOverview>
     <core-loading [hideUntil]="tabsLoaded.overview">
-        <ng-container *ngTemplateOutlet="basicInfo"></ng-container>
+        <!-- <ng-container *ngTemplateOutlet="basicInfo"></ng-container> -->
 
         <!-- Feedback done in offline but not synchronized -->
         <ion-card class="core-warning-card" *ngIf="hasOffline">
@@ -165,12 +165,12 @@
                 </ion-item>
                 <ion-grid>
                     <ion-row class="ion-align-items-center">
-                        <ion-col>
+                        <!-- <ion-col>
                             <ion-button expand="block" fill="outline" (click)="gotoAnswerQuestions(true)" class="ion-text-wrap">
                                 <ion-icon name="fas-search" slot="start" aria-hidden="true"></ion-icon>
                                 {{ 'addon.mod_feedback.preview' | translate }}
                             </ion-button>
-                        </ion-col>
+                        </ion-col> -->
                         <ion-col *ngIf="access.cancomplete && access.cansubmit && access.isopen">
                             <ion-button expand="block" (click)="gotoAnswerQuestions()" class="ion-text-wrap">
                                 <ng-container *ngIf="!goPage">

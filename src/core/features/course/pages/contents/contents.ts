@@ -98,6 +98,7 @@ export class CoreCourseContentsPage implements OnInit, OnDestroy {
         }
 
         this.course = course;
+        console.log(this.course)
         this.sectionId = CoreNavigator.getRouteNumberParam('sectionId');
         this.sectionNumber = CoreNavigator.getRouteNumberParam('sectionNumber');
         this.moduleId = CoreNavigator.getRouteNumberParam('moduleId');
@@ -292,7 +293,7 @@ export class CoreCourseContentsPage implements OnInit, OnDestroy {
             true,
         );
         this.sections = result.sections;
-            //console.log(this.sections)
+            console.log(this.sections)
         if (CoreCourseFormatDelegate.canViewAllSections(this.course)) {
             // Add a fake first section (all sections).
             this.sections.unshift(CoreCourseHelper.createAllSectionsSection());

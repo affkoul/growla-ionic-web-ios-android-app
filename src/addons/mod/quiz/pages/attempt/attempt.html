@@ -44,7 +44,7 @@
             <ion-item class="ion-text-wrap" *ngIf="quiz!.showFeedbackColumn && feedback">
                 <ion-label>
                     <h2>{{ 'addon.mod_quiz.feedback' | translate }}</h2>
-                    <p>
+                    <p class="texts">
                         <core-format-text [component]="component" [componentId]="componentId" [text]="feedback"
                             contextLevel="module" [contextInstanceId]="cmId" [courseId]="courseId">
                         </core-format-text>

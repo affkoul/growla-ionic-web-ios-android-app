@@ -249,7 +249,7 @@ export class AddonModQuizPlayerPage implements OnInit, OnDestroy, CanLeave {
         if (!this.attempt) {
             return;
         }
-
+        console.log(page , fromModal, slot)
         if (page != -1 && (this.attempt.state == AddonModQuizProvider.ATTEMPT_OVERDUE || this.attempt.finishedOffline)) {
             // We can't load a page if overdue or the local attempt is finished.
             return;
@@ -399,7 +399,6 @@ export class AddonModQuizPlayerPage implements OnInit, OnDestroy, CanLeave {
             }
 
             modal = await CoreDomUtils.showModalLoading('core.sending', true);
-
             await this.processAttempt(userFinish, timeUp);
 
             // Trigger an event to notify the attempt was finished.
@@ -628,7 +627,6 @@ export class AddonModQuizPlayerPage implements OnInit, OnDestroy, CanLeave {
         if (!this.showSummary) {
             answers = await this.prepareAnswers();
         }
-
         try {
             // Send the answers.
             await AddonModQuiz.processAttempt(

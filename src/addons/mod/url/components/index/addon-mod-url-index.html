@@ -14,9 +14,9 @@
 <core-loading [hideUntil]="loaded" class="core-loading-fullheight">
 
     <!-- Activity info. -->
-    <core-course-module-info *ngIf="showCompletion" [module]="module" [showManualCompletion]="true"
+    <!-- <core-course-module-info *ngIf="showCompletion" [module]="module" [showManualCompletion]="true"
         (completionChanged)="onCompletionChange()">
-    </core-course-module-info>
+    </core-course-module-info> -->
 
     <core-course-module-description *ngIf="displayDescription" [description]="description" [component]="component"
         [componentId]="componentId" contextLevel="module" [contextInstanceId]="module.id" [courseId]="courseId">
@@ -31,9 +31,10 @@
             <ion-label>
                 <img *ngIf="isImage" [alt]="name" [src]="url">
                 <div *ngIf="isVideo" class="videos">
-                    <video [title]="name" controls controlslist="nodownload">
+                    <video  id="video" (click)="play()" poster="../../../../../assets/img/partner_index_template.png" [title]="name" controls controlslist="nodownload">
                         <source [src]="url" [type]="mimetype">
                     </video>
+                    <img (click)="play()" *ngIf="isShow && isIOS" src="../../../../../assets/img/play.png" alt="">
                 </div>
                 <audio *ngIf="isAudio" [title]="name" controls>
                     <source [src]="url" [type]="mimetype">

@@ -59,7 +59,6 @@ export class CoreSitePreferencesPage implements AfterViewInit, OnDestroy {
         this.isIOS = CoreApp.isIOS();
         this.siteId = CoreSites.getCurrentSiteId();
         this.handlers = new CoreSettingsSitePreferencesManager(CoreSitePreferencesPage);
-
         this.sitesObserver = CoreEvents.on(CoreEvents.SITE_UPDATED, (data) => {
             if (data.siteId == this.siteId) {
                 this.refreshData();
@@ -185,18 +184,17 @@ export class CoreSitePreferencesPage implements AfterViewInit, OnDestroy {
  * Helper class to manage sections.
  */
 class CoreSettingsSitePreferencesManager extends CorePageItemsListManager<CoreSettingsHandlerToDisplay> {
-
     /**
      * @inheritdoc
      */
-    protected getItemPath(handler: CoreSettingsHandlerToDisplay): string {
+     getItemPath(handler: CoreSettingsHandlerToDisplay): string {
         return handler.page;
     }
-
+    itemsList:any
     /**
      * @inheritdoc
      */
-    protected getItemQueryParams(handler: CoreSettingsHandlerToDisplay): Params {
+     getItemQueryParams(handler: CoreSettingsHandlerToDisplay): Params {
         return handler.params || {};
     }
 
