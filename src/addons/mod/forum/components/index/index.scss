@@ -5,7 +5,12 @@
     .addon-forum-star {
         color: var(--core-star-color);
     }
-
+    ::ng-deep{
+        .hydrated{
+            position: relative;
+            z-index: 100;
+        }
+    } 
     .addon-mod-forum-discussion.item {
 
         ion-label {

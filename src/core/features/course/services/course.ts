@@ -758,7 +758,7 @@ export class CoreCourseProvider {
             params.options!.splice(-1, 1);
             sections = await site.read('core_course_get_contents', params, preSets);
         }
-
+        console.log(sections)
         const siteHomeId = site.getSiteHomeId();
         let showSections = true;
         if (courseId == siteHomeId) {

@@ -1210,8 +1210,9 @@ export class CoreSitesProvider {
         }
 
         promises.push(db.deleteRecords(CURRENT_SITE_TABLE_NAME, { id: 1 }));
-        // console.log(promises)
+        //  console.log(promises)
         await CoreUtils.ignoreErrors(Promise.all(promises));
+        // return
         CoreEvents.trigger(CoreEvents.LOGOUT, {}, siteId);
     }
 
