@@ -2,11 +2,11 @@
 
 This is the primary repository of source code for the official GROWLA Mobile app.
 
-- [User documentation](https://growlaglobal.com/faqs-users.php#en)
-- [Partner documentation](https://growlagolbal.com/faqs-partners.php#en)
-- [Collaboration setup](https://growlagobal.com/collaborate-with-us.php#en)
-- [Ticketing Tracker](https://growlagobal.com/contact-us-new.php#en)
-- [Release Notes](https://growlaglobal.com/summit.php#en)
+- [User documentation](https://geniusandcourage.com/growla/faqs-users.php#en)
+- [Partner documentation](https://geniusandcourage.com/growla/faqs-partners.php#en)
+- [Collaboration setup](https://geniusandcourage.com/growla/collaborate-with-us.php#en)
+- [Ticketing Tracker](https://geniusandcourage.com/growla/contact-us-new.php#en)
+- [Release Notes](https://geniusandcourage.com/growla/summit.php#en)
 
 ## License
 
@@ -16,4 +16,4 @@ This is the primary repository of source code for the official GROWLA Mobile app
 
 World Wide Integrated Education PaaS Provided by [GROWLA Limited](https://growla.com)
 
-![GROWLA Logo](https://growla.oss-cn-beijing.aliyuncs.com/images/new-logo.png)
+![GROWLA Logo](https://geniusandcourage.com/growla/favicon.ico)
