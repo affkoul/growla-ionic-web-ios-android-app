@@ -25,3 +25,7 @@ This is the primary repository of source code for the official GROWLA Mobile app
 World Wide Integrated Education PaaS Provided by [GROWLA Limited](https://growla.com)
 
 ![GROWLA Logo](https://geniusandcourage.com/growla/favicon.ico)
+
+Built by [GAC DEV](https://geniusandcourage.com)
+
+![World Wide Integrated Education PaaS](https://geniusandcourage.com/growla/Growla_PaaS.png)
