@@ -8,7 +8,13 @@ This is the primary repository of source code for the official GROWLA Mobile app
 - [Ticketing Tracker](https://geniusandcourage.com/growla/contact-us-new.php#en)
 - [Release Notes](https://geniusandcourage.com/growla/summit.php#en)
 
-# App Store Link
+## App Store Link
+
+[GROWLA](https://apps.apple.com/us/app/growla/id1607456960)
+
+## Google Playstore Link
+
+[GROWLA](https://play.google.com/store/apps/details?id=org.growlamobile.app)
 
 ## License
 
